@@ -1,0 +1,269 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>维思迈财经-提供中立的理财投资知识服务</title>
+    <meta name="description" content='维思迈财经网提供中立的理财投资知识服务，汇集信用卡、基金、贷款、股票、保险等财经领域常识，助力您的财智人生！'/>
+    <meta name="keywords" content='维思迈财经，财经知识类网站，理财投资，如何投资'/>
+    <link th:href="@{${#httpServletRequest.getContextPath()}+'/new_pc/css/reset.css'}" rel="stylesheet"
+          type="text/css"/>
+    <script type="text/javascript"
+            th:src="@{${#httpServletRequest.getContextPath()}+'/new_pc/js/jquery-1.10.1.min.js'}"></script>
+    <link th:href="@{${#httpServletRequest.getContextPath()}+'/new_pc/css/public.css'}" rel="stylesheet"
+          type="text/css"/>
+    <link th:href="@{${#httpServletRequest.getContextPath()}+'/new_pc/css/ot.css'}" rel="stylesheet" type="text/css"/>
+    <link th:href="@{${#httpServletRequest.getContextPath()}+'/new_pc/css/swiper.min.css'}" rel="stylesheet"
+          type="text/css">
+    <script type="text/javascript"
+            th:src="@{${#httpServletRequest.getContextPath()}+'/new_pc/js/swiper.min.js'}"></script>
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?dc514ac2d86a287446d54c8b1504b4b2";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</head>
+<body>
+<div class="nav">
+    <div class="center">
+        <ul>
+            <li><a href="/index.html"><h1><img
+                    th:src="@{${#httpServletRequest.getContextPath()}+'/new_pc/images/logo.png'}" class="logo"/></h1>
+            </a></li>
+            <li><a href="/index.html">首页</a></li>
+            <li><a href="/ot/ot_xyk.html">信用卡</a></li>
+            <li class="cur"><a href="/ot/ot_bx.html">保险</a></li>
+            <li><a href="/ot/ot_lc.html">理财</a></li>
+            <li><a href="/ot/ot_gp.html">股票</a></li>
+            <li><a href="/ot/ot_dk.html">贷款</a></li>
+            <li><a href="/wd.html">问答</a></li>
+            <li><a href="/aboutus.html">关于我们</a></li>
+
+        </ul>
+    </div>
+</div>
+<div class="choose">
+    <div class="center choosebg">
+        <div class="option">
+            <span>按险种：</span>
+            <ul class="all1 all">
+                <li class="cur" data-value="all1">全部</li>
+                <li data-value="rsbx">人寿保险</li>
+                <li data-value="jkbx">健康保险</li>
+                <li data-value="jcbx">家财保险</li>
+                <li data-value="lybx">旅游保险</li>
+                <li data-value="ywbx">意外保险</li>
+            </ul>
+        </div>
+        <div class="option option2">
+            <span>按人群：</span>
+            <ul class="all2 all">
+                <li class="cur" data-value="all2">全部</li>
+                <li data-value="laoren">老人</li>
+                <li data-value="xiaohai">小孩</li>
+                <li data-value="danshen">单身贵族</li>
+                <li data-value="xingfu">幸福之家</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="product">
+    <div class="center">
+        <ul class="productlist" id="bxcpli">
+            <li><img th:src="@{${#httpServletRequest.getContextPath()}+'/bxcpimg/1.jpg'}" /><div class="details"><h2>金盈年年养老年金保险</h2><p>满期一次性领取10倍基本保额</p><p>资金灵活支配</p><span><s>￥</s><b>5000</b><s>元起</s></span><a href="https://cps.qixin18.com/apps/cps/bjy1093998/product/detail?prodId=104446&planId=129312&tenantId=0
+">查看详情></a></div></li>
+            <li><img th:src="@{${#httpServletRequest.getContextPath()}+'/bxcpimg/4.jpg'}" /><div class="details"><h2>太平e养添年养老年金</h2><p>满期一次性领取10倍基本保额</p><p>资金灵活支配</p><span><s>￥</s><b>100</b><s>元起</s></span><a href="https://cps.qixin18.com/apps/cps/bjy1093998/product/detail?prodId=104424&planId=129280&tenantId=0
+">查看详情></a></div></li>
+        </ul>
+    </div>
+</div>
+<div class="otherall">
+<!--    <div class="fixed-banner l">-->
+<!--        <a href="https://www.xiaolu.io/"><img th:src="@{${#httpServletRequest.getContextPath()} + '/pc/images/两侧悬浮-左450_900.jpg'}" /></a>-->
+<!--    </div>-->
+<!--    <div class="fixed-banner r">-->
+<!--        <a href="https://www.xiaolu.io/"><img th:src="@{${#httpServletRequest.getContextPath()} + '/pc/images/两侧悬浮-右450_900.jpg'}" /></a>-->
+<!--    </div>-->
+    <div class="center">
+        <div class="otherleft">
+            <div class="knowledge">
+                <h2>保险知识</h2>
+                <ul class="knowledgenav">
+                    <li class="cur">新手必读</li>
+                    <li>避坑指南</li>
+                </ul>
+                <div class="knowledgelist">
+                    <ul class="cur">
+                        <li>
+                            <a th:href="@{${#httpServletRequest.getContextPath()}+'/'+${recommend[20].columnurlname2}+'/article/'+${recommend[20].id}+'.html'}"><span
+                                    th:text="${#strings.abbreviate(recommend[20].title,28)}">闭坑还再纠结买不买年虑增额终身寿险</span></a>
+                        </li>
+                        <li th:each="recommendobj,recommendstat:${recommend}"
+                            th:if="${recommendstat.count}>=11 and ${recommendstat.count}<15"><a
+                                th:href="@{${#httpServletRequest.getContextPath()}+'/'+${recommendobj.columnurlname2}+'/article/'+${recommendobj.id}+'.html'}"><span
+                                th:text="${#strings.abbreviate(recommendobj.title,28)}">还再纠结买不买年虑增额终身寿险</span><s
+                                th:text="${recommendobj.insertdate}">2022-09-10</s></a>
+                        </li>
+
+                    </ul>
+                    <ul class="bkzn">
+                        <li>
+                            <a th:href="@{${#httpServletRequest.getContextPath()}+'/'+${recommend[19].columnurlname2}+'/article/'+${recommend[19].id}+'.html'}"><span
+                                    th:text="${#strings.abbreviate(recommend[19].title,28)}">闭坑还再纠结买不买年虑增额终身寿险</span></a>
+                        </li>
+                        <li th:each="recommendobj,recommendstat:${recommend}"
+                            th:if="${recommendstat.count}>=15 and ${recommendstat.count}<19"><a
+                                th:href="@{${#httpServletRequest.getContextPath()}+'/'+${recommendobj.columnurlname2}+'/article/'+${recommendobj.id}+'.html'}"><span
+                                th:text="${#strings.abbreviate(recommendobj.title,28)}">还再纠结买不买年虑增额终身寿险</span><s
+                                th:text="${recommendobj.insertdate}">2022-09-10</s></a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="baoxianvideo">
+                <h2>保险视频</h2>
+                 <ul>
+             <li><a  href="/video/14.html"><img th:src="@{${#httpServletRequest.getContextPath()}+'/new_pc/images/nv4.jpg'}" class="nvibg"><img th:src="@{${#httpServletRequest.getContextPath()}+'/new_pc/images/bf2.png'}" class="nbf"><h4>社保和新农合交哪个...</h4><span>新农合必看</span></a></li>
+             <li><a  href="/video/15.html"><img th:src="@{${#httpServletRequest.getContextPath()}+'/new_pc/images/nv5.jpg'}" class="nvibg"><img th:src="@{${#httpServletRequest.getContextPath()}+'/new_pc/images/bf2.png'}" class="nbf"><h4>农村医保卡如何使用?</h4><span>医保必看</span></a></li>
+             <li><a  href="/video/16.html"><img th:src="@{${#httpServletRequest.getContextPath()}+'/new_pc/images/nv6.jpg'}" class="nvibg"><img th:src="@{${#httpServletRequest.getContextPath()}+'/new_pc/images/bf2.png'}" class="nbf"><h4>手机上如何交医疗保险?</h4><span>医疗保险必看</span></a></li>
+             <li><a  href="/video/34.html"><img th:src="@{${#httpServletRequest.getContextPath()}+'/new_pc/images/nv7.jpg'}" class="nvibg"><img th:src="@{${#httpServletRequest.getContextPath()}+'/new_pc/images/bf2.png'}" class="nbf"><h4>失业保险领取相关规定?</h4><span>失业保险必看</span></a></li>
+                </ul>
+            </div>
+            <div class="baoxianinformation">
+                <h2>保险资讯</h2>
+                <div class="informationbg">
+                    <ul class="listimg">
+                        <li th:each="recommendobj,recommendstat:${recommend}"
+                            th:if="${recommendstat.count}>=8 and ${recommendstat.count}<11"><a
+                                th:href="@{${#httpServletRequest.getContextPath()}+'/'+${recommendobj.columnurlname2}+'/article/'+${recommendobj.id}+'.html'}"><img
+                                th:src="@{${#httpServletRequest.getContextPath()}+'/image/'+${recommendstat.count}+'.jpg'}"/>
+                            <div><p th:text="${#strings.abbreviate(recommendobj.title,28)}">还再纠结买不买年金？不如考虑增额终身寿险</p>
+                                <span th:text="${recommendobj.insertdate}">2022-09-09</span></div>
+                        </a></li>
+
+                    </ul>
+                    <ul class="listnoimg">
+                        <li th:each="recommendobj,recommendstat:${recommend}"
+                            th:if="${recommendstat.count}<8"><a
+                                th:href="@{${#httpServletRequest.getContextPath()}+'/'+${recommendobj.columnurlname2}+'/article/'+${recommendobj.id}+'.html'}"><span
+                                th:text="${#strings.abbreviate(recommendobj.title,28)}">还再纠结买不买年虑增额终身寿险</span><s
+                                th:text="${recommendobj.insertdate}">2022-09-10</s></a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="otherright">
+            <div class="gongzhonghao">
+                <div class="follow">
+                    <h3>不知道如何选产品？</h3>
+                    <p>关注公众号<br/> 预约一对一咨询服务 </p>
+                </div>
+                <img th:src="@{${#httpServletRequest.getContextPath()}+'/new_pc/images/gzh.jpg'}" class="gzh"/>
+            </div>
+            <div class="baoxianask">
+                <h3>保险热门问答</h3>
+                <ul>
+                    <li th:each="askobj,askstat:${ask}" th:if="${askstat.count}<6 "><a
+                            th:href="@{${#httpServletRequest.getContextPath()}+'/'+${askobj.columnurlname2}+'/ask/'+${askobj.id}+'.html'}">
+                        <p th:text="${#strings.abbreviate(askobj.ask,20)}">贷款未到期，我可以提前还款吗？</p>
+                        <p th:text="${#strings.abbreviate(askobj.bestanswer,20)}">可以提前还，只需按流程提起还...</p></a></li>
+
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="copyright">
+    <div class="center">
+        <p class="bqlianxi">维思迈财经网提供中立的理财投资知识服务，汇集信用卡、基金、贷款、股票、保险等财经领域常识，用浅显的生活语言把专业金融知识变成您生活的一部分，助力您的财智人生！</p>
+       <!-- <p class="bqlianxi"><a href="javascript:void(0);">关于我们</a> | <a href="javascript:void(0);">商务洽谈</a> | <a
+                href="javascript:void(0);">内容合作</a> | 电话0351-7020802 | 邮箱contact@openvsm.com </p>-->
+        <p class="information">
+            <a href="http://beian.miit.gov.cn/state/outPortal/loginPortal.action;jsessionid=b4ojmap5WXcjMNUhGdqvr97kMZymlITl_4rhbxCDVnUgF6Mv2nn5!1935156451">
+                版权所有： 维思迈财经
+                <img th:src="@{${#httpServletRequest.getContextPath()}+'/new_pc/images/kx.png'}"/>
+            </a>
+          <!--  <a href="javascript:void(0);"> 违法和不良信息举报电话：0351-7020802</a>-->
+        </p>
+    </div>
+</div>
+
+<script type="text/javascript" th:src="@{${#httpServletRequest.getContextPath()}+'/new_pc/js/index.js'}"></script>
+<script type="text/javascript">
+</script>
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        slidesPerView: 1,
+        paginationClickable: true,
+        spaceBetween: 30,
+        loop: true
+    });
+</script>
+<script type="text/javascript">
+    //产品分类切换
+    $(".choose ul li").click(function () {
+        $(this).addClass("cur").siblings().removeClass("cur");
+    });
+    //保险知识切换
+    $(".knowledgenav li").click(function () {
+        $(this).addClass("cur").siblings().removeClass("cur");
+        $(".knowledgelist ul").eq($(this).index()).addClass("cur");
+        $(".knowledgelist ul").eq($(this).index()).siblings().removeClass("cur");
+    });
+    $(".all li").click(function () {
+        var para1 = $(".all1 li.cur").attr("data-value");
+        var para2 = $(".all2 li.cur").attr("data-value");
+        // alert(para1);
+        // alert(para2);
+
+        var xhr;
+        if (window.XMLHttpRequest) {    //常规，如果有，直接使用
+            xhr = new XMLHttpRequest();
+        } else {   //如果没有，老版本IE
+            xhr = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+
+        xhr.open('POST', '/bx_products/' + para1 + '/' + para2, true);
+        // 3.5  在发送post请求的时候，你得告诉服务器你发送的是一个什么
+        xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xhr.send();
+        // alert("success")
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState == 4) {
+                if (xhr.status == 200) {
+                    $("#bxcpli").html("");
+                    var htmls = xhr.responseText
+                    var json = JSON.parse(htmls)
+                    var htmlss = ""
+                    var a = 'th:src="@{${#httpServletRequest.getContextPath()}'
+                    var b = '"'
+                    for (var i = 0; i <json.length; i++) {
+                        // alert(json[i].name)
+                        //html = "<li><img "+a+"'+/new_pc/images/bx1.jpg'}"+b+"/><div class=" + '"details"' + "><h2>" + json[i].name + "</h2><p>" + json[i].t1 + "</p><p>" + json[i].t2 + "</p><span><s>￥</s><b>" + json[i].price + "</b><s>元起</s></span><a >查看详情></a></div></li></li>"
+                        html = "<li><img src='https://www.openvsm.com/bxcpimg/"+json[i].img+".jpg'/><div class=" + '"details"' + "><h2>" + json[i].name + "</h2><p>" + json[i].t1 + "</p><p>" + json[i].t2 + "</p><span><s>￥</s><b>" + json[i].money + "</b><s>元起</s></span><a href='https://www.openvsm.com/bx_product/"+json[i].id+".html'>查看详情></a></div></li></li>"
+                        htmlss += html
+                    }
+
+                    document.getElementById("bxcpli").innerHTML = htmlss
+                    //  document.getElementById("demobiaoti").innerText = document.getElementById("gen_name").value;
+                }
+            }
+            // // 示例发出ajax请求，拼接动态参数
+            // alert('示例发出ajax请求')
+            // // 示例发出ajax请求，拼接动态参数
+            // alert('示例发出ajax请求')
+        }
+    });
+</script>
+</body>
+</html>

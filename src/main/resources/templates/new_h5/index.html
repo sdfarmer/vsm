@@ -1,0 +1,301 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>维思迈财经—提供中立的理财投资知识服务</title>
+    <meta name="description" content="维思迈财经网提供中立的理财投资知识服务，汇集信用卡、基金、贷款、股票、保险等财经领域常识，助力您的财智人生！">
+    <meta name="keywords" content="维思迈财经，财经知识类网站，理财投资，如何投资">
+    <link href="new_h5/css/reset.css" rel="stylesheet" type="text/css">
+    <link href="new_h5/css/index.css?20220730" rel="stylesheet" type="text/css">
+    <link href="new_h5/css/swiper-bundle.min.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="new_h5/js/jquery-1.10.1.min.js"></script>
+    <script src="new_h5/js/swiper-bundle.min.js"></script>
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?dc514ac2d86a287446d54c8b1504b4b2";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+</head>
+<body id="top">
+    <div class="banner">
+        <div class="top">
+            <h1 class="logoh1"><a href="index.html"><img src="new_h5/images/logo.png" class="logo" /></a></h1>
+            <div class="swiper mySwiper nav">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide cur"><a href="/">首页</a></div>
+                    <div class="swiper-slide"><a href="#baoxian">保险</a></div>
+                    <div class="swiper-slide"><a href="#daikuan">贷款</a></div>
+                    <div class="swiper-slide"><a href="#xinyongka">信用卡</a></div>
+                    <div class="swiper-slide"><a href="#wenda">问答</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper mySwiper2">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide banner1">
+                    <a href="https://cps.qixin18.com/apps/cps/bjy1093998/product/detail?prodId=104446&planId=129312&tenantId=0
+"><img src="new_h5/images/banner1.jpg" /><span></span></a>
+                </div>
+                <div class="swiper-slide banner2"><img src="new_h5/images/banner2.jpg" /></div>
+            </div>
+            <div class="swiper-pagination" id="swiper-pagination"></div>
+        </div>
+    </div>
+    <div class="productnav bx" id="baoxian">
+        <h2>保险产品</h2>
+        <ul class="navlist">
+            <li class="cur">人寿险</li>
+            <li>健康险</li>
+            <li>家财险</li>
+            <li>旅游险</li>
+            <li>意外险</li>
+        </ul>
+    </div>
+    <div class="baoxianpro">
+        <ul class="baoxianlist cur">
+            <li th:each="rsbxpobj,rsbxpstat:${rsbxp}">
+                <a th:href="@{${#httpServletRequest.getContextPath()}+'/bx_product/'+${rsbxpobj.id}+'.html'}">
+                    <img th:src="@{${#httpServletRequest.getContextPath()}+'/bxcpimg/'+${rsbxpobj.img}+'.jpg'}">
+                    <h3 th:text="${#strings.abbreviate(rsbxpobj.name,8)}">金盈年年养老年金保险</h3>
+                    <p th:text="${#strings.abbreviate(rsbxpobj.t1,10)}">满期一次性领取10倍基本保额</p>
+                    <div><span class="price"><b th:text="${rsbxpobj.money}">￥666.00</b>元起</span><span class="more">详情</span></div>
+                </a>
+            </li>
+
+        </ul>
+        <ul class="baoxianlist">
+            <li th:each="jkbxpobj,jkbxpstat:${jkbxp}">
+                <a th:href="@{${#httpServletRequest.getContextPath()}+'/bx_product/'+${jkbxpobj.id}+'.html'}">
+                    <img th:src="@{${#httpServletRequest.getContextPath()}+'/bxcpimg/'+${jkbxpobj.img}+'.jpg'}">
+                    <h3 th:text="${#strings.abbreviate(jkbxpobj.name,8)}">金盈年年养老年金保险</h3>
+                    <p th:text="${#strings.abbreviate(jkbxpobj.t1,10)}">满期一次性领取10倍基本保额</p>
+                    <div><span class="price"><b th:text="${jkbxpobj.money}">￥666.00</b>元起</span><span class="more">详情</span></div>
+                </a>
+            </li>
+        </ul>
+        <ul class="baoxianlist">
+            <li th:each="jcbxpobj,jcbxpstat:${jcbxp}">
+                <a th:href="@{${#httpServletRequest.getContextPath()}+'/bx_product/'+${jcbxpobj.id}+'.html'}">
+                    <img th:src="@{${#httpServletRequest.getContextPath()}+'/bxcpimg/'+${jcbxpobj.img}+'.jpg'}">
+                    <h3 th:text="${#strings.abbreviate(jcbxpobj.name,10)}">金盈年年养老年金保险</h3>
+                    <p th:text="${#strings.abbreviate(jcbxpobj.t1,8)}">满期一次性领取10倍基本保额</p>
+                    <div><span class="price"><b th:text="${jcbxpobj.money}">￥666.00</b>元起</span><span class="more">详情</span></div>
+                </a>
+            </li>
+        </ul>
+        <ul class="baoxianlist">
+            <li th:each="lybxpobj,lybxpstat:${lybxp}">
+                <a th:href="@{${#httpServletRequest.getContextPath()}+'/bx_product/'+${lybxpobj.id}+'.html'}">
+                    <img th:src="@{${#httpServletRequest.getContextPath()}+'/bxcpimg/'+${lybxpobj.img}+'.jpg'}">
+                    <h3 th:text="${#strings.abbreviate(lybxpobj.name,10)}">金盈年年养老年金保险</h3>
+                    <p th:text="${#strings.abbreviate(lybxpobj.t1,8)}">满期一次性领取10倍基本保额</p>
+                    <div><span class="price"><b th:text="${lybxpobj.money}">￥666.00</b>元起</span><span class="more">详情</span></div>
+                </a>
+            </li>
+        </ul>
+        <ul class="baoxianlist">
+            <li th:each="ywbxpobj,ywbxpstat:${ywbxp}">
+                <a th:href="@{${#httpServletRequest.getContextPath()}+'/bx_product/'+${ywbxpobj.id}+'.html'}">
+                    <img th:src="@{${#httpServletRequest.getContextPath()}+'/bxcpimg/'+${ywbxpobj.img}+'.jpg'}">
+                    <h3 th:text="${#strings.abbreviate(ywbxpobj.name,10)}">金盈年年养老年金保险</h3>
+                    <p th:text="${#strings.abbreviate(ywbxpobj.t1,8)}">满期一次性领取10倍基本保额</p>
+                    <div><span class="price"><b th:text="${ywbxpobj.money}">￥666.00</b>元起</span><span class="more">详情</span></div>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="productnav dk" id="daikuan">
+        <h2>贷款产品</h2>
+        <ul class="navlist">
+            <li class="cur">信用贷款</li>
+            <li>无抵押贷款</li>
+            <li>小额贷款</li>
+        </ul>
+    </div>
+    <div class="daikuanpro">
+        <div class="swiper mySwiper_d3 cur">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide d3"><div class="box"><h3>信用贷款</h3> <p>20，000-50，000</p> <div class="daikuaninfo"><span>最快1天内到账</span></div></div></div>
+                <div class="swiper-slide d3"><div class="box"><h3>信用贷款</h3> <p>60，000-100，000</p> <div class="daikuaninfo"><span>月入4000即刻贷</span></div></div></div>
+                <div class="swiper-slide d3"><div class="box"><h3>信用贷款</h3> <p>200，000-300，000</p> <div class="daikuaninfo"><span>无抵押无担保</span></div></div></div>
+            </div>
+        </div>
+        <div class="swiper mySwiper_d3">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide d3"><div class="box"><h3>无抵押贷款</h3> <p>10，000-30，000</p> <div class="daikuaninfo"><span>最快1天内到账</span></div></div></div>
+                <div class="swiper-slide d3"><div class="box"><h3>无抵押贷款</h3> <p>40，000-600，000</p> <div class="daikuaninfo"><span>月入4000即刻贷</span></div></div></div>
+                <div class="swiper-slide d3"><div class="box"><h3>无抵押贷款</h3> <p>60，000-80，000</p> <div class="daikuaninfo"><span>无抵押无担保</span></div></div></div>
+            </div>
+        </div>
+        <div class="swiper mySwiper_d3">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide d3"><div class="box"><h3>小额贷款</h3> <p>10，000-30，000</p> <div class="daikuaninfo"><span>最快1天内到账</span></div></div></div>
+                <div class="swiper-slide d3"><div class="box"><h3>小额贷款</h3> <p>20，000-60，000</p> <div class="daikuaninfo"><span>月入4000即刻贷</span></div></div></div>
+                <div class="swiper-slide d3"><div class="box"><h3>小额贷款</h3> <p>80，000-100，000</p> <div class="daikuaninfo"><span>无抵押无担保</span></div></div></div>
+            </div>
+        </div>
+    </div>
+    <div class="productnav xyk" id="xinyongka">
+        <h2>信用卡产品</h2>
+        <ul class="navlist">
+            <li class="cur">白金卡</li>
+            <li>购物卡</li>
+            <li>旅游卡</li>
+        </ul>
+    </div>
+    <div class="xinyongkapro">
+        <ul class="xinyongkalist cur">
+            <li><img src="new_h5/images/ka1.png"><div><h3>中信银行白金卡</h3><p>终身免年费，部分商品半价</p><b>512人申请</b><s>了解详情</s></div></li>
+            <li><img src="new_h5/images/ka2.png"><h3>平安银行白金卡</h3><p>刷卡免年费</p><b>314人申请</b><s>了解详情</s></li>
+        </ul>
+        <ul class="xinyongkalist">
+            <li><img src="new_h5/images/ka3.png"><div><h3>工伤银行信用卡</h3><p>终身免年费，部分商品半价</p><b>886人申请</b><s>了解详情</s></div></li>
+            <li><img src="new_h5/images/ka4.png"><h3>兴业银行信用卡</h3><p>刷卡免年费</p><b>314人申请</b><s>了解详情</s></li>
+        </ul>
+        <ul class="xinyongkalist">
+            <li><img src="new_h5/images/ka5.png"><div><h3>招商银行旅游卡</h3><p>终身免年费，部分商品半价</p><b>304人申请</b><s>了解详情</s></div></li>
+        </ul>
+    </div>
+    <div class="video">
+        <h2>视频精选</h2>
+        <ul class="videolist">
+            <li><a href="/video/1.html"> <div class="nextbg"><img th:src="@{${#httpServletRequest.getContextPath()}+'/new_h5/images/video/vibg.jpg'}" class="sy" /><img th:src="@{${#httpServletRequest.getContextPath()}+'/new_h5/images/video/bf2.png'}" class="bfbut" /></div><h4>怎么查看房贷利息</h4></a></li>
+            <li><a href="/video/2.html"> <div class="nextbg"><img th:src="@{${#httpServletRequest.getContextPath()}+'/new_h5/images/video/vibg2.jpg'}" class="sy" /><img th:src="@{${#httpServletRequest.getContextPath()}+'/new_h5/images/video/bf2.png'}" class="bfbut" /></div><h4>房贷还完需要办理什么</h4></a></li>
+            <li><a href="/video/3.html"> <div class="nextbg"><img th:src="@{${#httpServletRequest.getContextPath()}+'/new_h5/images/video/vibg3.jpg'}" class="sy" /><img th:src="@{${#httpServletRequest.getContextPath()}+'/new_h5/images/video/bf2.png'}" class="bfbut" /></div><h4>申请公积金贷款需...</h4></a></li>
+            <li><a href="/video/4.html"> <div class="nextbg"><img th:src="@{${#httpServletRequest.getContextPath()}+'/new_h5/images/video/vibg4.jpg'}" class="sy" /><img th:src="@{${#httpServletRequest.getContextPath()}+'/new_h5/images/video/bf2.png'}" class="bfbut" /></div><h4>如何取消工行信用卡</h4></a></li>
+
+        </ul>
+    </div>
+    <div class="infomation">
+        <ul class="navlist">
+            <li class="cur">推荐资讯</li>
+            <li>百科大全</li>
+            <li>财经课堂</li>
+        </ul>
+    </div>
+    <div class="infomationpro">
+        <ul class="infomationlist cur">
+            <li th:each="recommendobj,recommendstat:${recommend}" th:if="${recommendstat.count}<=4">
+                <a th:href="@{${#httpServletRequest.getContextPath()}+'/'+${recommendobj.columnurlname2}+'/article/'+${recommendobj.id}+'.html'}">
+                    <div><p th:text="${#strings.abbreviate(recommendobj.title,15)}">评论：财富管理行业仍是一片蓝海</p><span><s>维思迈财经</s><s th:text="${recommendobj.insertdate}">3小时前</s></span></div><img th:src="@{${#httpServletRequest.getContextPath()}+'/image/zx'+${recommendstat.count}+'.jpg'}" />
+                </a>
+            </li>
+
+        </ul>
+        <ul class="infomationlist">
+            <li th:each="recommendobj,recommendstat:${recommend}" th:if="${recommendstat.count}>4 and ${recommendstat.count}<=8">
+                <a th:href="@{${#httpServletRequest.getContextPath()}+'/'+${recommendobj.columnurlname2}+'/article/'+${recommendobj.id}+'.html'}">
+                    <div><p th:text="${#strings.abbreviate(recommendobj.title,15)}">评论：财富管理行业仍是一片蓝海</p><span><s>维思迈财经</s><s th:text="${recommendobj.insertdate}">3小时前</s></span></div><img th:src="@{${#httpServletRequest.getContextPath()}+'/image/zx'+${recommendstat.count}+'.jpg'}" />
+                </a>
+            </li>
+        </ul>
+        <ul class="infomationlist">
+            <li th:each="recommendobj,recommendstat:${recommend}" th:if="${recommendstat.count}>9 and ${recommendstat.count}<=13">
+                <a th:href="@{${#httpServletRequest.getContextPath()}+'/'+${recommendobj.columnurlname2}+'/article/'+${recommendobj.id}+'.html'}">
+                    <div><p th:text="${#strings.abbreviate(recommendobj.title,15)}">评论：财富管理行业仍是一片蓝海</p><span><s>维思迈财经</s><s th:text="${recommendobj.insertdate}">3小时前</s></span></div><img th:src="@{${#httpServletRequest.getContextPath()}+'/image/zx'+${recommendstat.count}+'.jpg'}" />
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="ask" id="wenda">
+        <h2>问答精选</h2>
+    </div>
+    <div class="askpro">
+        <ul>
+            <li th:each="dkaskobj,dkaskstat:${dkask}"
+                th:if="${dkaskstat.count}<6 ">
+                <a th:href="@{${#httpServletRequest.getContextPath()}+'/'+${dkaskobj.columnurlname2}+'/ask/'+${dkaskobj.id}+'.html'}">
+                    <p th:text="${#strings.abbreviate(dkaskobj.ask,15)}">贷款未到期，我可以提前还款吗？</p> <span th:text="${dkaskobj.id%200}+'人问过'">1234人问过</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="copyright">
+        <p>维思迈财经网提供中立的理财投资知识服务，汇集信用卡、基金、贷款、股票、保险等财经领域常识，用浅显的生活语言把专业金融知识变成您生活的一部分，助力您的财智人生！</p>
+        <p> 版权所有： 维思迈财经</p>
+        <p> 违法和不良信息举报电话：0351-7020802</p>
+        <img src="new_h5/images/kx.png" />
+    </div>
+    <div class="back"><a href="#top"><img src="new_h5/images/top.png" /></a></div>
+    <script type="text/javascript">
+        //锚点缓动
+        $('a[href*=#]').click(function () {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                var $target = $(this.hash);
+                $target = $target.length && $target || $('[name=' + this.hash.slice(1) + ']');
+                if ($target.length) {
+                    var targetOffset = $target.offset().top;
+                    $('html,body').animate({
+                        scrollTop: targetOffset
+                    },
+                        800);
+                    return false;
+                }
+            }
+        });
+    </script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 4.5,
+            spaceBetween: 0,
+            freeMode: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+        var swiper2 = new Swiper(".mySwiper2", {
+            loop: true, // 循环模式选项
+            autoplay: {
+                delay: 3000, //自动切换的时间间隔，单位ms
+                disableOnInteraction: false //用户操作swiper之后，是否禁止autoplay
+            },
+            pagination: {
+                el: ".swiper-pagination",
+            },
+        });
+
+        var swiperd3 = new Swiper(".mySwiper_d3", {
+            slidesPerView: 1.1,
+            spaceBetween: 10,
+            freeMode: true,
+            pagination: {
+                //  el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+    </script>
+    <script type="text/javascript">
+        //保险产品切换
+        $(".bx .navlist li").click(function () {
+            $(this).addClass("cur").siblings().removeClass("cur");
+            $(".baoxianpro ul").eq($(this).index()).addClass("cur");
+            $(".baoxianpro ul").eq($(this).index()).siblings().removeClass("cur");
+        });
+        //资讯课堂百科切换
+        $(".infomation .navlist li").click(function () {
+            $(this).addClass("cur").siblings().removeClass("cur");
+            $(".infomationpro ul").eq($(this).index()).addClass("cur");
+            $(".infomationpro ul").eq($(this).index()).siblings().removeClass("cur");
+        });
+        //贷款产品切换
+        $(".dk .navlist li").click(function () {
+            $(this).addClass("cur").siblings().removeClass("cur");
+            $(".daikuanpro .mySwiper_d3").eq($(this).index()).addClass("cur");
+            $(".daikuanpro .mySwiper_d3").eq($(this).index()).siblings().removeClass("cur");
+        });
+        //信用卡产品切换
+        $(".xyk .navlist li").click(function () {
+            $(this).addClass("cur").siblings().removeClass("cur");
+            $(".xinyongkapro ul").eq($(this).index()).addClass("cur");
+            $(".xinyongkapro ul").eq($(this).index()).siblings().removeClass("cur");
+        });
+    </script>
+</body>
+</html>

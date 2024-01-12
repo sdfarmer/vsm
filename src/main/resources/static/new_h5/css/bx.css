@@ -1,0 +1,349 @@
+body {
+    background: #f7f7f7;
+    padding-bottom: 20px;
+    color: #0e0e0e;
+}
+a {
+    text-decoration: none;
+    color: #0e0e0e;
+}
+.detail_title {
+    text-align: center;
+    line-height: 50px;
+    font-size: 18px;
+    background: #fff;
+    position: relative;
+    color: #0071e3;
+}
+    .detail_title .backsy {
+  position:absolute;
+  top:10px;
+  left:10px;
+  width:30px;
+    }
+/*保险产品*/
+.productnav {
+    width: 96%;
+    margin: 0 auto;
+    margin-top: 5px;
+    padding: 10px 2%;
+    background: #fff;
+}
+.productnav h2 {
+    font-size: 22px;
+    height: 40px;
+    line-height: 40px;
+    font-weight: bold;
+    margin-bottom:8px;
+}
+.navlist {
+    width: 100%;
+    overflow: hidden;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+    .navlist li {
+        float: left;
+        text-align: left;
+        line-height: 24px;
+        border-bottom: 1px solid #fff;
+        margin-right: 3%;
+        padding-bottom:8px;
+    }
+        .navlist li.cur {
+            color: #0071e3;
+            position: relative;
+            border-bottom: 1px solid #0071e3;
+        }
+    .navlist li:before {
+            width: 20px;
+            height: 2px;
+            background: #0071e3;
+            position:absolute;
+            bottom:-10px;
+            left:50%;
+        }
+.baoxianpro{
+    width:100%;
+    margin:0 auto;
+}
+.baoxianlist {
+    display: none;
+    overflow:hidden;
+}
+    .baoxianlist.cur {
+        display: block;
+    }
+
+    .baoxianlist li {
+        width: 100%;
+        background: #fff;
+        border-radius: 5px;
+        padding-top: 10px;
+        padding-bottom: 12px;
+        cursor: pointer;
+        border-bottom: 1px solid #f0f0f0;
+        overflow: hidden;
+        position: relative;
+    }
+        .baoxianlist li img {
+            width: 32%;
+        float:left;
+            margin-bottom:5px;
+            margin-right:2%;
+            margin-left:1%;
+        }
+        .baoxianlist li div {
+           float:left;
+           width:65%;
+        }
+        .baoxianlist li h3 {
+            font-size: 18px;
+            padding-left: 3px;
+            font-weight: bold;
+            line-height: 30px;
+        }
+
+        .baoxianlist li p {
+            font-size: 14px;
+            margin-bottom: 10px;
+            background: #ecf3ff;
+            color: #0071e3;
+            display:inline;
+            padding:2px 3px;
+        }
+
+
+
+            .baoxianlist li div span.price {
+                margin-right: 20px;
+                font-size: 14px;
+                color:#757575;
+                display:block;
+                margin-top:10px;
+            }
+            .baoxianlist li div span.price b {
+                color: #ff9110;
+                font-size:20px;
+                margin-right:2px;
+            }
+            .baoxianlist li div span.more {
+               
+                background: #0071e3;
+                color: #fff;
+                border-radius:20px;
+                font-size:16px;
+                padding:2px 8px;
+                margin-right:5px;
+                position:absolute;
+                bottom:10px;
+                right:5px;
+            }
+/*视频*/
+.video{
+    width:96%;
+    margin:0 auto;
+    margin-top:10px;
+}
+.video h2 {
+    font-size: 22px;
+    height: 40px;
+    line-height: 40px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+.videolist {
+    overflow: hidden;
+}
+
+ .videolist li {
+    width: 49%;
+    margin-right: 2%;
+    float: left;
+    margin-bottom:10px;
+    background:#fff;
+    border-radius:3px;
+    padding-bottom:6px;
+}
+    .videolist li p{
+        padding-left:5px;
+        margin-top:6px;
+    }
+        .videolist li  span{
+            padding-left:5px;
+            color:#757575;
+            font-size:14px;
+        }
+        .videolist li:nth-child(2n) {
+            margin-right: 0;
+        }
+
+ .videolist li video {
+        width: 100%;
+    }
+ /*资讯*/
+.infomation{
+    width:94%;
+    margin:0 auto;
+    margin-top:15px;
+}
+    .infomation .navlist{
+        border:0;
+    }
+    .infomation .navlist li {
+        background: #f0f0f0;
+        border-radius: 30px;
+        margin-right: 3%;
+        text-align: center;
+        padding: 0 10px;
+        border:0;
+    }
+    .infomation .navlist li.cur {
+        color: #fff;
+        background: #0071e3;
+    }
+
+.infomationpro {
+    width: 96%;
+    margin: 0 auto;
+    background:#fff;
+    border-radius:3px;
+    padding:10px 13px;
+    box-sizing:border-box;
+    margin-top:10px;
+}
+.infomationlist{
+    display:none;
+}
+    .infomationlist.cur{
+        display:block;
+    }
+    .infomationlist li {
+        border-bottom: 1px solid #eeeef6;
+        margin-bottom: 8px;
+        padding-bottom: 16px;
+        padding-top: 10px;
+        overflow: hidden;
+    }
+    .infomationlist li:last-child{
+        border-bottom:0;
+        padding-bottom:0;
+    }
+    .infomationlist li div {
+        float: left;
+        width: 67%;
+        margin-right: 3%;
+    }
+
+        .infomationlist li img {
+            float: left;
+            width: 30%;
+            border-radius: 3px;
+            margin-top: 5px;
+        }
+
+        .infomationlist li div p {
+            line-height: 30px;
+            font-size: 18px;
+            color: #080808;
+        }
+
+            .infomationlist li div p span {
+                float: left;
+                height: 22px;
+                line-height: 22px;
+                padding: 0px 5px;
+                background: #e45a3b;
+                color: #fff;
+                text-align: center;
+                font-size: 14px;
+                border-radius: 3px;
+                margin-top: 4px;
+                margin-right: 3px;
+            }
+
+        .infomationlist li div span s {
+            font-size: 14px;
+            margin-right: 10px;
+            text-decoration: none;
+            color: #8e8e8e;
+        }
+/*问答*/
+.ask{
+    width:94%;
+    margin:0 auto;
+    margin-top:20px;
+}
+.ask h2 {
+    font-size: 22px;
+    height: 40px;
+    line-height: 40px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.askpro {
+    width: 96%;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 3px;
+    padding: 10px 13px;
+    box-sizing: border-box;
+    margin-top: 10px;
+}
+
+.askpro ul li {
+    border-bottom: 1px solid #f0f0f0;
+    padding: 14px 0;
+}
+    .askpro ul li:last-child{
+        border-bottom:0;
+    }
+    .askpro ul li p {
+        padding-left: 28px;
+        background: url(../images/wh.png) left center no-repeat;
+        background-size: 22px;
+        margin-bottom: 8px;
+    }
+
+        .askpro ul li p:hover {
+            text-decoration: underline;
+        }
+
+    .askpro ul li span {
+        padding-left: 28px;
+        font-size: 14px;
+        color: #757575;
+    }
+
+
+
+.copyright {
+    padding: 20px 0;
+}
+.copyright p {
+    width: 94%;
+    margin: 0 auto;
+    font-size: 12px;
+    text-align: center;
+    color: #8e8e8e;
+   line-height:22px;
+   margin-bottom:5px;
+}
+    .copyright img{
+        display:block;
+        margin:0 auto;
+        width:26%;
+        margin-top:5px;
+    }
+    .back {
+        position: fixed;
+        right: 2%;
+        bottom: 5%;
+        z-index: 88;
+    }
+.back img{
+    width:34px;
+    display:block;
+    margin:0 auto;
+}

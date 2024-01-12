@@ -1,0 +1,183 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title th:text="${article.title}+'—维思迈财经'"></title>
+    <meta name="description" th:attr="content=${#strings.abbreviate(article.articlecontent,200)}">
+    <meta name="keywords" th:attr="content=${article.keywords}">
+    <link th:href="@{${#httpServletRequest.getContextPath()}+'/h5/css/reset.css'}" rel="stylesheet" type="text/css">
+    <link th:href="@{${#httpServletRequest.getContextPath()}+'/h5/css/product.css?20'}" rel="stylesheet" type="text/css">
+    <script type="text/javascript"
+            th:src="@{${#httpServletRequest.getContextPath()}+'/h5/js/jquery-1.10.1.min.js'}"></script>
+    <!--<link href="css/reset.css" rel="stylesheet" type="text/css">
+    <link href="css/product.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript"
+            src="js/jquery-1.10.1.min.js"></script>-->
+           
+
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?dc514ac2d86a287446d54c8b1504b4b2";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</head>
+<body>
+	 
+    <div class="top">
+        <h2>
+            <a href="/">
+                <img th:src="@{${#httpServletRequest.getContextPath()}+'/h5/images/logo.png'}" class="logo" />
+            </a>
+        </h2>
+    </div>
+    <div class="biaoti">
+        <h1 th:text="${article.title}">去屑洗发水用了一年还是有头屑，产品不对还是方法不对？</h1>
+        
+        <section class="author">
+            <div class="headbg"><img th:src="@{${#httpServletRequest.getContextPath()}+'/h5/images/tu/tx0.jpg'}" class="headimg" /><img th:src="@{${#httpServletRequest.getContextPath()}+'/h5/images/tu/vvip.png'}" class="vvip" /></div>
+
+            <div class="author_des">
+                <span class="author_name">大喜美妆</span>
+                <span class="author_detail"><s class="author_signature">优质护肤领域博主</s>&nbsp;&nbsp;|&nbsp;&nbsp;<s class="author_position">山西</s><s class="author_time">2023-09-06 10:00</s></span>
+            </div>
+        </section>
+    </div>
+    <div class="neirong" th:utext="${article.articlecontent}">
+    </div>
+    <div class="comment">
+        <h4 style="font-weight:bold;">精彩评论</h4>
+        <ul class="comlist">
+            <li th:each="commentobj,commentstat:${comment}">
+                <img class="com_headimg" th:src="@{${#httpServletRequest.getContextPath()}+'/headimg/tx'+${commentobj.userimg}+'.jpg'}">
+                <div class="desbg">
+                    <span class="com_name" th:text="${commentobj.user}">边同民</span>
+                    <span class="com_time"><s th:text="${commentobj.insertdate}+'分钟前'">11分钟前</s><s th:text="${commentobj.city}">济南</s></span>
+                    <span class="com_inner" th:text="${commentobj.txt}">头头屑为我们带来了烦屑头屑为我们带来了烦为头屑为我们带来了烦我们头屑为我们带来了烦带来了烦恼。</span>
+                    <div class="feedback">
+                        <span class="dianzan" th:text="${commentobj.num}">11</span>
+                    </div>
+                </div>
+            </li>
+
+        </ul>
+    </div>
+<!--    <div class="fenlei">-->
+<!--        <h2>相似商品</h2>-->
+<!--        <ul>-->
+<!--            <li>-->
+<!--                <div class="product">-->
+<!--                    <a href="#">-->
+<!--                        <img th:src="@{${#httpServletRequest.getContextPath()}+'/h5/images/tu/xfs2.jpg'}" class="productimg2" />-->
+<!--                        <div class="pro_detail">-->
+<!--                            <h4>【李佳琦推荐】进口毛囊洗发水除螨头皮清洁控油去屑止痒官方旗舰店</h4>-->
+<!--                            <p class="price_buy"><span class="price">￥<b>99.00</b>元</span></p>-->
+<!--                        </div>-->
+<!--                        <p class="channel"><span>京东</span>&nbsp;&nbsp;|&nbsp;&nbsp;<span>回购率99%</span></p>-->
+<!--                    </a>-->
+<!--                </div>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--                <div class="product">-->
+<!--                    <a href="#">-->
+<!--                        <img th:src="@{${#httpServletRequest.getContextPath()}+'/h5/images/tu/xfs2.jpg'}" class="productimg2" />-->
+<!--                        <div class="pro_detail">-->
+<!--                            <h4>【李佳琦推荐】进口毛囊洗发水除螨头皮清洁控油去屑止痒官方旗舰店</h4>-->
+<!--                            <p class="price_buy"><span class="price">￥<b>99.00</b>元</span></p>-->
+<!--                        </div>-->
+<!--                        <p class="channel"><span>京东</span>&nbsp;&nbsp;|&nbsp;&nbsp;<span>回购率99%</span></p>-->
+<!--                    </a>-->
+<!--                </div>-->
+<!--            </li>-->
+<!--        </ul>-->
+<!--    </div>-->
+
+<!--    <div class="fenlei">-->
+<!--        <h2>近期热销</h2>-->
+<!--        <ul>-->
+<!--            <li>-->
+<!--                <div class="product">-->
+<!--                    <a href="#">-->
+<!--                        <img th:src="@{${#httpServletRequest.getContextPath()}+'/h5/images/tu/xfs2.jpg'}" class="productimg2" />-->
+<!--                        <div class="pro_detail">-->
+<!--                            <h4>【李佳琦推荐】进口毛囊洗发水除螨头皮清洁控油去屑止痒官方旗舰店</h4>-->
+<!--                            <p class="price_buy"><span class="price">￥<b>99.00</b>元</span></p>-->
+<!--                        </div>-->
+<!--                        <p class="channel"><span>京东</span>&nbsp;&nbsp;|&nbsp;&nbsp;<span>回购率99%</span></p>-->
+<!--                    </a>-->
+<!--                </div>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--                <div class="product">-->
+<!--                    <a href="#">-->
+<!--                        <img th:src="@{${#httpServletRequest.getContextPath()}+'/h5/images/tu/xfs2.jpg'}" class="productimg2" />-->
+<!--                        <div class="pro_detail">-->
+<!--                            <h4>【李佳琦推荐】进口毛囊洗发水除螨头皮清洁控油去屑止痒官方旗舰店</h4>-->
+<!--                            <p class="price_buy"><span class="price">￥<b>99.00</b>元</span></p>-->
+<!--                        </div>-->
+<!--                        <p class="channel"><span>京东</span>&nbsp;&nbsp;|&nbsp;&nbsp;<span>回购率99%</span></p>-->
+<!--                    </a>-->
+<!--                </div>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--                <div class="product">-->
+<!--                    <a href="#">-->
+<!--                        <img th:src="@{${#httpServletRequest.getContextPath()}+'/h5/images/tu/xfs2.jpg'}" class="productimg2" />-->
+<!--                        <div class="pro_detail">-->
+<!--                            <h4>【李佳琦推荐】进口毛囊洗发水除螨头皮清洁控油去屑止痒官方旗舰店</h4>-->
+<!--                            <p class="price_buy"><span class="price">￥<b>99.00</b>元</span></p>-->
+<!--                        </div>-->
+<!--                        <p class="channel"><span>京东</span>&nbsp;&nbsp;|&nbsp;&nbsp;<span>回购率99%</span></p>-->
+<!--                    </a>-->
+<!--                </div>-->
+<!--            </li>-->
+<!--        </ul>-->
+<!--    </div>-->
+<!--    <div class="fenlei hot_article">-->
+<!--        <h2>热门文章</h2>-->
+<!--        <ul>-->
+<!--            <li>-->
+<!--                <div class="product">-->
+<!--                    <a href="#">-->
+<!--                        <img th:src="@{${#httpServletRequest.getContextPath()}+'/h5/images/tu/xfs2.jpg'}" class="productimg2" />-->
+<!--                        <div class="pro_detail">-->
+<!--                            <h4>【李佳琦推荐】进口毛囊洗发水除螨头皮清洁控油去屑止痒官方旗舰店</h4>-->
+<!--                        </div>-->
+<!--                        <p class="channel"><span>洗发水TOP5</span><span>566人看过</span></p>-->
+<!--                    </a>-->
+<!--                </div>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--                <div class="product">-->
+<!--                    <a href="#">-->
+<!--                        <img th:src="@{${#httpServletRequest.getContextPath()}+'/h5/images/tu/xfs2.jpg'}" class="productimg2" />-->
+<!--                        <div class="pro_detail">-->
+<!--                            <h4>【李佳琦推荐】进口毛囊洗发水除螨头皮清洁控油去屑止痒官方旗舰店</h4>-->
+<!--                        </div>-->
+<!--                        <p class="channel"><span>千万博主推荐</span><span>566人看过</span></p>-->
+<!--                    </a>-->
+<!--                </div>-->
+<!--            </li>-->
+<!--        </ul>-->
+<!--    </div>-->
+
+    <div class="copyright">
+        <h5 class="banquanmiaoshu">
+            <span>维思迈财经网为您提供关于"</span><span th:text="${article.title}" class="gl">财经</span><span>"的资讯</span>
+        </h5>
+        <p>Copyright©2021 www.openvsm.com All Rights Reserved. 京ICP备15008691号-17 </p>
+        <p> 版权所有： 沈阳维思迈科技有限公司</p>
+       <!-- <p> 违法和不良信息举报电话：0351-7020802</p>-->
+        <img th:src="@{${#httpServletRequest.getContextPath()}+'/h5/images/kx.png'}" />
+    </div>
+<!--    <script type="text/javascript" th:src="@{${#httpServletRequest.getContextPath()}+'/h5/js/articlejs2.js?611'}"></script>-->
+    <script type="text/javascript">
+        var width = $(".comlist  li").width();
+        $(".desbg").width(width - 50);
+    </script>
+</body>
+</html>

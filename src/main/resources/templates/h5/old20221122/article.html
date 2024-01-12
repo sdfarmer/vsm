@@ -1,0 +1,234 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title th:text="${article.title}+'—维思迈财经'"></title>
+    <meta name="description" th:attr="content=${#strings.abbreviate(article.articlecontent,200)}">
+    <meta name="keywords" th:attr="content=${article.keywords}">
+    <link th:href="@{${#httpServletRequest.getContextPath()}+'/h5/css/reset.css'}" rel="stylesheet" type="text/css">
+    <link th:href="@{${#httpServletRequest.getContextPath()}+'/h5/css/article.css?19'}" rel="stylesheet" type="text/css">
+    <script type="text/javascript"
+            th:src="@{${#httpServletRequest.getContextPath()}+'/h5/js/jquery-1.10.1.min.js'}"></script>
+            <script>
+		var _hmt = _hmt || [];
+		(function() {
+		  var hm = document.createElement("script");
+		  hm.src = "https://hm.baidu.com/hm.js?dc514ac2d86a287446d54c8b1504b4b2";
+		  var s = document.getElementsByTagName("script")[0]; 
+		  s.parentNode.insertBefore(hm, s);
+		})();
+		</script>
+</head>
+<body>
+    <div class="top">
+        <h2>
+            <a href="/">
+                <img th:src="@{${#httpServletRequest.getContextPath()}+'/h5/images/logo.png'}"
+                     class="logo" />
+            </a>
+        </h2>
+    </div>                        
+
+    <!--<div class="weizhi"><span><a href="/">维思迈财经</a>></span><span><a
+            th:href="@{${#httpServletRequest.getContextPath()}+'/'+${article.columnurlname2}+'/article/'+${article.id}+'.html'}"
+            th:text="${article.title}">资讯</a></span></div>-->
+            
+            
+
+   <!--<div class="top_ad" style="width:100%;margin:0 auto;position:relative;">
+        <a href="https://weti.me/WSMSB"> <img src="https://www.openvsm.com/h5/images/top_dxm.jpg?202223" style="display:block;width:100%;margin:0 auto;" /></a>
+        <div class="zujian"><span class="tip_360">广告</span><span class="yiwen_360">?</span><span class="close_top">x</span></div>
+        <div class="des_yiwen"><p>风险提示：广告信息均来自平台方，不代表平台安全性，不构成建议！贷款利率、年化收益率、期限、额度、生效时间等数据仅供参考，实际数据以平台方为准。红包、体验金、理财金、大礼包、加息券、满减券、优惠券等都不直接等同于现金。参考收益说明不是收益承诺，不代表最终真实收益。理财有风险，投资需谨慎！</p><span class="close_yiwen">x</span></div>
+    </div>-->
+    <div class="biaoti">
+        <h1 th:text="${article.title}"></h1>
+        <div class="biaotixinxi">
+            <div class="zuozhe">
+                <span><a href="/">来源：维思迈财经</a></span>
+                <span class="zuozhemiaoshu" th:text="${article.insertdate}">3小时前</span>
+            </div>
+        </div>
+    </div>
+    <div class="neirong">
+        <img th:src="@{${#httpServletRequest.getContextPath()}+'/h5/images/p2.jpg'}" />
+        <p th:utext="${article.articlecontent}"></p>
+        <div class="biaoqian">
+            <span class="zhuanzai">---非商用---不得转载---</span>
+            <span class="shengming">声明：本网站内所有言论及内容仅代表其个人，不代表本网站的观点和立场。</span>
+            <ul class="huati">
+                <li th:each="keysobj,keysobjstat : ${keys}" th:if="${keysobjstat.count}<=3" th:text="${keysobj}">#金融</li>
+            </ul>
+        </div>
+    </div>
+    <div class="ad360 ad360dk">
+        <h2 class="adtitle">精选官方贷款·正规持牌</h2>
+              
+
+      <a href="https://cdn.xjietiao.com/at/TLH5/xz01/">
+            <div class="ad_list">
+              <img src="https://www.openvsm.com/h5/images/logo360.png" class="ad_logo" />
+                <div class="ad_des">
+                  <h3>360借条</h3>
+                           <p class="limit">￥20万<span>最高额度(元)</span></p >
+                 <span class="item"><s>申请简单</s><s>审批快</s></span>                                 
+                </div>        
+                    <span class="ad_apply">立即申请</span>         
+            </div>
+        </a>
+      <a href="https://vayh.msxf.com/vspread/SXH5_dxz02/050083/53000471-01">
+            <div class="ad_list">
+              <img src="https://www.openvsm.com/h5/images/ayh.png" class="ad_logo" />
+                <div class="ad_des">
+                  <h3>安逸花</h3>
+                           <p class="limit">￥20万<span>最高额度(元)</span></p>
+                 <span class="item"><s>大额低息</s><s>快速审批</s></span>                                 
+                </div>        
+                    <span class="ad_apply">立即申请</span>         
+            </div>
+        </a>
+         <a href="https://weti.me/WSMSB">
+            <div class="ad_list">
+              <img src="https://www.openvsm.com/h5/images/logosb.png" class="ad_logo" />
+                <div class="ad_des">
+                  <h3>省呗</h3>
+                           <p class="limit">￥20万<span>最高额度(元)</span></p >
+                 <span class="item"><s>随时还款</s><s>秒到账</s><s>急速审核</s></span>                                 
+                </div>        
+                    <span class="ad_apply">立即申请</span>         
+            </div>
+        </a>
+        <div class="zujian"><span class="tip_360">广告</span><span class="yiwen_360">?</span><span class="close_360">x</span></div>
+        <div class="des_yiwen"><p>风险提示：广告信息均来自平台方，不代表平台安全性，不构成建议！贷款利率、年化收益率、期限、额度、生效时间等数据仅供参考，实际数据以平台方为准。红包、体验金、理财金、大礼包、加息券、满减券、优惠券等都不直接等同于现金。参考收益说明不是收益承诺，不代表最终真实收益。理财有风险，投资需谨慎！</p><span class="close_yiwen">x</span></div>
+    </div>
+    
+                                                                                              
+    <!--<div class="ad360 adxyk">
+        <h2 class="adtitle">精选信用卡</h2>
+        <a href="https://mlnk.me/ZaL6t0">
+            <div class="daikuan">
+                <div class="logo360">
+                    <h3>华夏银行京东PLUS联名信用卡</h3>
+                    
+                </div>
+                      <div class="daikuansum">
+                    <div class="daikuanedu daikuanedu2">
+                        <img src="https://www.openvsm.com/h5/images/hx.jpg" />
+                    </div>
+                    <ul class="strong">
+                        <li>周四满99减20</li>
+                        <li>生日双倍积分</li>
+                        <li>送198元PLUS卡</li>
+                    </ul>
+                    <span class="apply"><s>立即申请</s></span>
+                </div>
+                
+            </div>
+        </a>
+
+
+        <div class="zujian"><span class="tip_360">广告</span><span class="yiwen_360">?</span><span class="close_hx">x</span></div>
+        <div class="des_yiwen"><p>风险提示：广告信息均来自平台方，不代表平台安全性，不构成建议！贷款利率、年化收益率、期限、额度、生效时间等数据仅供参考，实际数据以平台方为准。红包、体验金、理财金、大礼包、加息券、满减券、优惠券等都不直接等同于现金。参考收益说明不是收益承诺，不代表最终真实收益。理财有风险，投资需谨慎！</p><span class="close_yiwen">x</span></div>
+    </div>-->
+    <div class="fenlei">
+    	
+    	 <!--    gg2-->
+         <h2><b></b>精选内容·大家都爱看</h2>
+        <div class="guanggao">
+            <div class="_4uoiq3l9xos"></div>
+    <script type="text/javascript">
+        (window.slotbydup = window.slotbydup || []).push({
+            id: "u6850064",
+            container: "_4uoiq3l9xos",
+            async: true
+        });
+    </script>
+    <!-- 多条广告如下脚本只需引入一次 -->
+    <script type="text/javascript" src="//cpro.baidustatic.com/cpro/ui/cm.js" async="async" defer="defer" >
+    </script>
+    <!--<script type="text/javascript" src="//j.vsmweilai.com/site/h_c_bez/resource/iib_y.js"></script>-->
+    
+        </div>
+        <h2><b></b>相关阅读</h2>
+        <!--        广告-->
+
+        <ul>
+
+            <li class="rightimg" th:each="recommendobj,recommendstat:${recommend}" th:if="${recommendstat.count}<=4">
+                <a th:href="@{${#httpServletRequest.getContextPath()}+'/'+${recommendobj.columnurlname2}+'/article/'+${recommendobj.id}+'.html'}">
+                    <div>
+                        <p th:text="${#strings.abbreviate(recommendobj.title,18)}">提问：财富管理行业仍是一片蓝海</p><span>
+                            <s>维思迈财经</s><s th:text="${recommendobj.insertdate}">3小时前</s>
+                        </span>
+                    </div>
+                    <!--                <img th:src="@{${#httpServletRequest.getContextPath()}+'/h5/images/p1.jpg'}"/>-->
+                    <img th:src="@{${#httpServletRequest.getContextPath()}+'/image/'+${recommendstat.count}+'.jpg'}" />
+                </a>
+            </li>
+
+
+            <li class="rightimg" th:each="recommendobj,recommendstat:${recommend}"
+                th:if="${recommendstat.count}>=5 and ${recommendstat.count}<=8">
+                <a th:href="@{${#httpServletRequest.getContextPath()}+'/'+${recommendobj.columnurlname2}+'/article/'+${recommendobj.id}+'.html'}">
+                    <div>
+                        <p th:text="${#strings.abbreviate(recommendobj.title,18)}">提问：财富管理行业仍是一片蓝海</p><span>
+                            <s>维思迈财经</s><s th:text="${recommendobj.insertdate}">3小时前</s>
+                        </span>
+                    </div>
+                    <!--                <img th:src="@{${#httpServletRequest.getContextPath()}+'/h5/images/p1.jpg'}"/>-->
+                    <img th:src="@{${#httpServletRequest.getContextPath()}+'/image/'+${recommendstat.count}+'.jpg'}" />
+                </a>
+            </li>
+
+        </ul>
+    </div>
+    <div class="copyright">
+        <h5 class="banquanmiaoshu">
+            <span>维思迈财经网为您提供关于"</span><span th:text="${article.title}" class="gl">财经</span><span>"的资讯</span>
+        </h5>
+        <p>Copyright©2021 www.openvsm.com All Rights Reserved. 京ICP备15008691号-17 </p>
+        <p> 版权所有： 沈阳维思迈科技有限公司</p>
+        <p> 违法和不良信息举报电话：0351-7020802</p>
+        <img th:src="@{${#httpServletRequest.getContextPath()}+'/h5/images/kx.png'}" />
+    </div>
+    <!--
+    <div class="back">
+        <a href="#top"><img th:src="@{${#httpServletRequest.getContextPath()}+'/h5/images/top.png'}" /></a>
+    </div>
+    <div class="swhz">
+        <span>商务合作</span>
+        <p>合作微信：vsmai010</p>
+    </div>-->
+    <script>
+        //顶部广告
+        $(".close_top").click(function () {
+            $(".top_ad").css("display", "none");
+        });
+
+        $(".close_360").click(function () {
+            $(".ad360").css("display", "none");
+        });
+        $(".yiwen_360").click(function () {
+            $(".des_yiwen").css("display", "block");
+        });
+        $(".close_yiwen").click(function () {
+            $(".des_yiwen").css("display", "none");
+        });
+        
+        var la = 0;
+        $(".swhz span").click(function () {
+            if (la == 0) {
+                $(".swhz p").stop().animate(
+                    { right: "0" }          
+                );
+                la = 1;
+            } else {
+                $(".swhz p").stop().animate(
+                    { right: "-200px" }
+                );
+                la = 0;
+            }      
+        });
+    </script>
+</body>
+</html>

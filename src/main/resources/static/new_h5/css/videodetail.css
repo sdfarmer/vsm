@@ -1,0 +1,263 @@
+body{
+    background:#f7f7f7;
+}
+
+a {
+    color: #292929;
+    text-decoration: none;
+}
+.top {
+    width: 100%;
+    position: relative;
+    height: 50px; 
+    background:#fff;
+}
+
+.logoh1 {
+    float: left;
+    width: 25%;
+    margin-right: 3%;
+}
+
+.logo {
+    width: 100%;
+    display: block;
+    padding-left: 10px;
+    padding-top: 15px;
+}
+
+.top .nav {
+    width: 72%;
+    float: left;
+    overflow: hidden;
+    overflow: hidden;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+    .swiper-slide a {
+        font-size: 16px;
+        line-height: 50px;
+    }
+
+    .swiper-slide.cur a {
+        color: #0071e3;
+    }
+
+.video{
+    width:100%;
+    margin:0 auto;
+    display:block;
+}
+video {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border: 0;
+    outline: none;
+}
+h1{
+    font-size:24px;
+    font-weight:bold;
+    line-height:50px;
+}
+.articledetail {
+    background: #fff;
+    padding: 15px;
+    margin-bottom:15px;
+}
+.articledetail .askinfo {
+    color: #757575;
+    overflow: hidden;
+    text-align: left;
+    padding-bottom:15px;
+}
+
+    .articledetail .askinfo span {
+        margin-right: 36px;
+        font-size: 16px;
+    }
+
+.articledetail p {
+    font-size: 18px;
+    color: #292929;
+    margin-bottom: 20px;
+    line-height: 38px;
+    text-indent:2rem;
+}
+.moduletitle h3 {
+    position: relative;
+    padding-left: 14px;
+    font-size: 24px;
+    margin-right: 20px;
+    margin-bottom:10px;
+}
+/*ср╡Ю*/
+.videoright {
+    width: 100%;
+    box-sizing: border-box;
+    background: #fff;
+    overflow:hidden;
+    padding-top:20px;
+    padding-bottom:20px;
+}
+.petrightpart {
+    width: 100%;
+    box-sizing: border-box;
+    background:#fff;
+    margin-top:15px;
+    padding-top:20px;
+}
+.nextlist{
+    width:94%;
+    margin:0 auto;
+    overflow:hidden;
+}
+.next {
+    width: 48%;
+    box-sizing: border-box;
+    overflow: hidden;
+    margin-right: 4%;
+    float: left;
+    margin-bottom:15px;
+}
+    .next:nth-child(2n){
+        margin-right:0;
+    }
+  .xiayitiao {
+        font-size: 20px;
+        margin-bottom: 15px;
+        margin-top: 10px;
+        width:94%;
+        margin:0 auto;
+    }
+.nextbg {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.nextbg .sy{
+width:100%;
+display:block;
+margin:0 auto;
+border-radius:3px;
+}
+    .nextbg .shichang {
+        position:absolute;
+        bottom:3px;
+        right:3px;
+        background:rgba(0,0,0,0.5);
+        color:#fff;
+        padding:0 5px;
+        border-radius:5px;
+        font-size:14px;
+    }
+.nextbg .bfbut{
+    position:absolute;
+    width:50px;
+    height:50px;
+    top:50%;
+    left:50%;
+    margin-top:-25px;
+    margin-left:-25px;
+}
+
+.next h4 {
+    font-size: 16px;
+    margin-top: 10px;
+    width:100%;
+}
+
+
+.tuijianlist{
+    overflow:hidden;
+    padding:15px;
+    /*background:#fff;*/
+    border-radius:5px;
+}
+h5 {
+    color: #ef8200;
+    padding-left:15px;
+    padding-top:20px;
+    font-size:24px;
+}
+.tuijianlist li {
+    float: left;
+    margin-bottom: 15px;
+    width: 100%;
+    padding: 5px 0;
+    box-sizing: border-box;
+    padding-left: 3px;
+    border-radius: 5px;
+    border-bottom: 1px solid #ededed;
+}
+    .tuijianlist li:last-child{
+        border-bottom:0;
+        margin-bottom:0;
+    }
+    .tuijianlist li:nth-child(3n) {
+        margin-right: 0;
+    }
+        .tuijianlist li a {
+        }
+        .tuijianlist li span {
+            display: block;
+            font-size:14px;
+            margin-top:10px;
+            color:#757575;
+            margin-bottom:10px;
+        }
+
+
+.copyright {
+    padding: 20px 0;
+}
+
+    .copyright p {
+        width: 94%;
+        margin: 0 auto;
+        font-size: 12px;
+        text-align: center;
+        color: #8e8e8e;
+        line-height: 22px;
+        margin-bottom: 5px;
+    }
+    .copyright a{
+        color:#757575;
+    }
+    .copyright img {
+        display: block;
+        margin: 0 auto;
+        width: 26%;
+        margin-top: 5px;
+    }
+
+.back {
+    position: fixed;
+    right: 2%;
+    bottom: 5%;
+    z-index: 88;
+}
+
+    .back img {
+        width: 34px;
+        display: block;
+        margin: 0 auto;
+    }

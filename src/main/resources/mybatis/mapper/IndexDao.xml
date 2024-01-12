@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="web.dao.IndexDao">
+
+    <select id="findArticleByType" resultType="web.model.Article">
+        select *
+        from article_new
+        <where>
+            <if test="type != ''">
+                columnurlname2 = #{type}
+            </if>
+        </where>
+        order by insertdate desc
+        limit #{pagenum}
+        , #{pagesize}
+
+    </select>
+
+    <select id="findArticleProductByType" resultType="web.model.Article">
+        select *
+        from article_new
+        <where>
+            <if test="type != ''">
+                columnurlname2 = #{type}
+            </if>
+        </where>
+        order by insertdate desc
+        limit #{pagenum}
+        , #{pagesize}
+
+    </select>
+
+    <select id="findArticleById" resultType="web.model.Article">
+        select *
+        from article_new
+        where id = #{id}
+    </select>
+
+    <select id="findArticleAll" resultType="web.model.Article">
+        select id, title
+        from article_new
+    </select>
+
+
+    <select id="findChannelByType" resultType="web.model.Channel">
+        select *
+        from channel
+        where type = #{type}
+    </select>
+
+    <select id="findAskByType" resultType="web.model.Ask">
+        select *
+        from ask
+        <where>
+            <if test="type != ''">
+                columnurlname2 = #{type}
+            </if>
+        </where>
+        order by insertdate desc
+        limit #{pagenum}
+        , #{pagesize}
+    </select>
+
+
+    <select id="findAskById" resultType="web.model.Ask">
+        select *
+        from ask
+        where id = #{id}
+    </select>
+
+    <select id="findAnswerByAskId" resultType="web.model.Answer">
+        select *
+        from answer
+        where askid = #{askid}
+    </select>
+
+    <select id="findbxcpByType" resultType="web.model.Bxcp">
+        select *
+        from bxcp
+        <where>
+            <if test="type != ''">
+                type = #{type}
+            </if>
+        </where>
+        order by id desc
+        limit #{pagenum}
+        , #{pagesize}
+    </select>
+
+
+    <select id="findVideoByType" resultType="web.model.VsmVideo">
+        select *
+        from vsmvideo
+        <where>
+            <if test="type != ''">
+                type = #{type}
+            </if>
+        </where>
+        order by id desc
+        limit #{pagenum}
+        , #{pagesize}
+    </select>
+
+    <select id="findVideoById" resultType="web.model.VsmVideo">
+        select *
+        from vsmvideo
+        where id = #{id}
+    </select>
+
+
+    <select id="findBxcpByTypeAndType2" resultType="web.model.Bxcp">
+        select *
+        from bxcp
+        <where>
+            <if test="p1!=null">
+                and type=#{p1}
+            </if>
+            <if test="p2!=null">
+                and type2=#{p2}
+            </if>
+        </where>
+
+    </select>
+
+</mapper>

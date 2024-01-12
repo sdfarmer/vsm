@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title th:text="${ask.ask}+'—维思迈财经'"></title>
+    <meta name="description" th:attr="content=${answers[0].answer}">
+    <meta name="keywords" th:attr="content=${ask.keywords}">
+    <link th:href="@{${#httpServletRequest.getContextPath()}+'/h5/css/reset.css'}" rel="stylesheet" type="text/css">
+    <link th:href="@{${#httpServletRequest.getContextPath()}+'/h5/css/ask.css'}" rel="stylesheet" type="text/css">
+    <script type="text/javascript"
+            th:src="@{${#httpServletRequest.getContextPath()}+'/h5/js/jquery-1.10.1.min.js'}"></script>
+             <script>
+		var _hmt = _hmt || [];
+		(function() {
+		  var hm = document.createElement("script");
+		  hm.src = "https://hm.baidu.com/hm.js?dc514ac2d86a287446d54c8b1504b4b2";
+		  var s = document.getElementsByTagName("script")[0]; 
+		  s.parentNode.insertBefore(hm, s);
+		})();
+		</script>
+</head>
+<body>
+<div class="top">
+    <h2><a href="/"><img th:src="@{${#httpServletRequest.getContextPath()}+'/h5/images/logo.png'}"
+                                  class="logo"/></a></h2>
+</div>
+<!--<div class="weizhi"><span><a href="/">维思迈财经</a>></span><span><a
+        th:href="@{${#httpServletRequest.getContextPath()}+'/'+${ask.columnurlname2}+'/ask/'+${ask.id}+'.html'}"
+        th:text="${ask.ask}">问答</a></span></div>-->
+<div class="wenti">
+    <h1 th:text="${ask.ask}">
+    </h1>
+    <div class="wentixinxi">
+        <span>共<s  th:text="${num}" class="zongshu"></s>条回答</span><span>&nbsp;&nbsp;|&nbsp;&nbsp;<s th:text="${ask.id}%${num}+10">56</s>人正在参与</span>
+    </div>
+</div>
+<div class="huida">
+    <div class="jinpai dazhuleixing" th:each="answersobj,answersstat:${answers}">
+        <div class="touxiang">
+            <div class="tximg">
+                <img th:src="@{${#httpServletRequest.getContextPath()}+'/headimg/tx'+${answersstat.count}+'.jpg'}" />
+            </div>
+            <div class="dazhu">
+                <p><span class="name" th:text="${answersobj.username}">水晶鱼</span></p>
+
+                <span class="dazhumiaoshu">活跃答主</span>
+            </div>
+            <span class="yicaina">已采纳</span>
+        </div>
+        <p class="hdneirong" th:utext="${answersobj.answer}">
+            近日，共青团中央作出表彰决定，授予293个团组织全国五四红旗团委称号，授予377个团组织全国五四红旗团支部称号，授予457人全国优秀共青团员称号，授予341人全国优秀共青团干部称号。其中，国家电网有限公司14个团组织获“全国五四红旗团委（团支部）”称号，5名个人获“全国优秀共青团员”称号。</p>
+        <span class="huidashijian" th:text="'回答于'+${answersobj.insertdate}">回答于2022-03-05</span>
+    </div>
+    <div class="huidacaozuo">
+        <p class="all">查看全部回答>></p>
+    </div>
+</div>
+<div class="fenlei">
+    <ul>
+        <li class="rightimg" th:each="recommendobj,recommendstat:${recommend}" th:if="${recommendstat.count}<=10">
+            <a th:href="@{${#httpServletRequest.getContextPath()}+'/'+${recommendobj.columnurlname2}+'/ask/'+${recommendobj.id}+'.html'}">
+                <div>
+                    <p th:text="${#strings.abbreviate(recommendobj.ask,18)}">
+                        提问：财富管理行业仍是一片蓝海</p><span><s>维思迈财经</s><s th:text="${recommendobj.insertdate}">3小时前</s></span></div>
+<!--                <img th:src="@{${#httpServletRequest.getContextPath()}+'/h5/images/p1.jpg'}"/>-->
+                <img th:src="@{${#httpServletRequest.getContextPath()}+'/image/'+${recommendstat.count}+'.jpg'}"/>
+            </a>
+        </li>
+    </ul>
+</div>
+<div class="copyright">
+    <h5 class="banquanmiaoshu">
+        <span>维思迈财经网为您提供关于"</span><span th:text="${ask.ask}" class="gl">财经</span><span>"的资讯</span>
+    </h5>
+    <p>Copyright©2021 www.openvsm.com All Rights Reserved. 京ICP备15008691号-17 </p>
+    <p> 版权所有： 沈阳维思迈科技有限公司</p>
+    <p> 违法和不良信息举报电话：0351-7020802</p>
+    <img th:src="@{${#httpServletRequest.getContextPath()}+'/h5/images/kx.png'}" />
+</div>
+<div class="back"><a href="#top"><img th:src="@{${#httpServletRequest.getContextPath()}+'/h5/images/top.png'}"/></a>
+</div>
+<script type="text/javascript">
+    var tiaoshu = $(".zongshu").html();
+    if (tiaoshu > 3) {
+        $(".huidacaozuo").css("display", "block");
+        $(".all").click(function () {
+            $(".dazhuleixing").css("display", "block");
+            $(".dazhuleixing").addClass("line");
+            $(".huidacaozuo").css("display", "none");
+        });
+    } else {
+        $(".huidacaozuo").css("display", "none");
+    }
+    $(".huida .dazhuleixing:nth-child(1) .dazhumiaoshu").html("行业影响力TOP3");
+    $(".huida .dazhuleixing:nth-child(1) .dazhu p").append("<span class='jibie jinpai'>金牌答主</span>");
+    $(".huida .dazhuleixing:nth-child(2) .dazhumiaoshu").html("近期获得1.5w赞");
+    $(".huida .dazhuleixing:nth-child(3) .dazhumiaoshu").html("官方认证：财经领域优质答主");
+    $(".huida .dazhuleixing:nth-child(3) .tximg").append("<img src='/pc/images/rz.png' class='renzheng' />");
+    $(".huida .dazhuleixing:nth-child(3) .dazhu p").append("<span class='youzhi jibie'>优质答主</span>");
+    $(".huida .dazhuleixing:nth-child(4) .dazhumiaoshu").html("超过100用户采纳过他的回答");
+    $(".huida .dazhuleixing:nth-child(5) .dazhu p").append("<span class='gaofen jibie'>高粉答主</span>");
+    $(".huida .dazhuleixing:nth-child(5) .dazhumiaoshu").html("专注金融行业15年");
+</script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title th:text="'维思迈财经—'+${content.name}">维思迈财经——提供中立的理财投资知识服务</title>
+    <meta name="description" content="维思迈财经网提供中立的理财投资知识服务，汇集信用卡、基金、贷款、股票、保险等财经领域常识，助力您的财智人生！">
+    <meta name="keywords" th:attr="content=${content.name}">
+    <link th:href="@{${#httpServletRequest.getContextPath()}+'/new_h5/css/reset.css'}" rel="stylesheet" type="text/css">
+    <link th:href="@{${#httpServletRequest.getContextPath()}+'/new_h5/css/public.css'}" rel="stylesheet" type="text/css">
+    <link th:href="@{${#httpServletRequest.getContextPath()}+'/new_h5/css/detail.css'}" rel="stylesheet" type="text/css">
+    <link th:href="@{${#httpServletRequest.getContextPath()}+'/new_h5/css/swiper-bundle.min.css'}" rel="stylesheet" type="text/css">
+    <script type="text/javascript" th:src="@{${#httpServletRequest.getContextPath()}+'/new_h5/js/jquery-1.10.1.min.js'}"></script>
+    <script th:src="@{${#httpServletRequest.getContextPath()}+'/new_h5/js/swiper-bundle.min.js'}"></script>
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?dc514ac2d86a287446d54c8b1504b4b2";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</head>
+<body id="top">
+    <p class="detail_title"><a href="/"><img th:src="@{${#httpServletRequest.getContextPath()}+'/new_h5/images/sy.png'}" class="backsy" /></a>产品详情</p>
+    <div class="list">
+        <img th:src="@{${#httpServletRequest.getContextPath()}+'/mimg/m'+${content.img2}+'.jpg'}" class="mainimg" />
+        <h1 th:text="${content.name}">铁甲小保2号少儿长期百万医疗险</h1>
+        <span class="recordname" th:text="${content.name}">备案名：铁甲小保2号少儿长期百万医疗险</span>
+        <ul class="characteristic">
+            <li th:text="${content.t1}">保证续保至16岁</li>
+            <li th:text="${content.t2}">保证续保至16岁</li>
+            <li th:text="${content.t3}">保证续保至16岁</li>
+            <li th:text="${content.t1}">保证续保至16岁</li>
+        </ul>
+    </div>
+    <div class="imglist" th:utext="${content.content}">
+<!--        <ul class="detailnav">-->
+<!--            <li class="cur"><h2><a href="javascript:void(0);">保障计划</a></h2></li>-->
+<!--            <li><h2><a href="javascript:void(0);">产品特色</a></h2></li>-->
+<!--            <li><h2><a href="javascript:void(0);">投保须知</a></h2></li>-->
+<!--            <li><h2><a href="javascript:void(0);">常见问题</a></h2></li>-->
+<!--        </ul>-->
+<!--        <img th:src="@{${#httpServletRequest.getContextPath()}+'/new_h5/images/2.jpg'}" />-->
+<!--        <img th:src="@{${#httpServletRequest.getContextPath()}+'/new_h5/images/1.jpg'}" />-->
+    </div>
+    <div class="action">
+        <a th:attr="href=${content.url2}" class="consult">在线咨询</a>
+        <a th:attr="href=${content.url}" class="insure">立即投保</a>
+    </div>
+    <div class="copyright">
+        <p>维思迈财经网提供中立的理财投资知识服务，汇集信用卡、基金、贷款、股票、保险等财经领域常识，用浅显的生活语言把专业金融知识变成您生活的一部分，助力您的财智人生！</p>
+        <p> 版权所有： 维思迈财经</p>
+        <p> 违法和不良信息举报电话：0351-7020802</p>
+        <img th:src="@{${#httpServletRequest.getContextPath()}+'/new_h5/images/kx.png'}" />
+    </div>
+    <div class="back"><a href="#top"><img th:src="@{${#httpServletRequest.getContextPath()}+'/new_h5/images/top.png'}" /></a></div>
+    <script type="text/javascript">
+        //锚点缓动
+        $('a[href*=#]').click(function () {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                var $target = $(this.hash);
+                $target = $target.length && $target || $('[name=' + this.hash.slice(1) + ']');
+                if ($target.length) {
+                    var targetOffset = $target.offset().top;
+                    $('html,body').animate({
+                        scrollTop: targetOffset
+                    },
+                        800);
+                    return false;
+                }
+            }
+        });
+    </script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 4.5,
+            spaceBetween: 0,
+            freeMode: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+        var swiper2 = new Swiper(".mySwiper2", {
+            loop: true, // 循环模式选项
+            autoplay: {
+                delay: 3000, //自动切换的时间间隔，单位ms
+                disableOnInteraction: false //用户操作swiper之后，是否禁止autoplay
+            },
+            pagination: {
+                el: ".swiper-pagination",
+            },
+        });
+
+        var swiperd3 = new Swiper(".mySwiper_d3", {
+            slidesPerView: 1.1,
+            spaceBetween: 0,
+            freeMode: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+    </script>
+</body>
+</html>

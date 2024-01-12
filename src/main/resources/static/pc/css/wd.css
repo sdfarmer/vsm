@@ -1,0 +1,135 @@
+.jrbanner{
+    width:100%;
+    margin:0 auto;
+    margin-top:10px;
+}
+.jrzixun ul{
+    display:block;
+    margin-top:26px;
+}
+
+.remen h4 {
+    margin-bottom: 15px;
+    margin-top: 20px;
+}
+
+.remen ul {
+    clear: both;
+}
+
+    .remen ul li {
+        padding-left: 25px;
+        position: relative;
+        background: #f2f7ff;
+        line-height: 40px;
+        margin-bottom:13px;
+   
+    }
+        .remen ul li p {
+            color: #8a9099;
+            font-size:15px;
+            margin-bottom:0;
+        }
+        .remen ul li:nth-child(2n) {
+            background: #f8fafe;
+        }
+        .remen ul li:before {
+            content: "";
+            display: inline-block;
+            background: #fff;
+            width: 4px;
+            height: 4px;
+            border: 2px solid #b3ccf4;
+            border-radius: 100%;
+            position: absolute;
+            top: 16px;
+            left: 9px;
+            z-index: 1;
+        }
+
+.top5 ul li:last-child {
+    border-bottom: 0;
+    margin-bottom:0;
+    padding-bottom:0;
+}
+
+.jingxuan img {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 15px;
+}
+
+
+
+.jingxuan ul li p {
+    font-size: 14px;
+    margin-bottom: 0px;
+    line-height:18px;
+}
+
+.jingxuan ul {
+    margin-bottom: 20px;
+}
+    .jingxuan ul li{
+        margin-bottom:12px;
+    }
+    .jingxuan ul li span {
+        float: left;
+        width: 18px;
+        height: 18px;
+        border-radius: 5px;
+        background: #0071e3;
+        color: #fff;
+        font-size: 12px;
+        line-height: 24px;
+        text-align: center;
+        line-height: 18px;
+        margin-right: 5px;
+        margin-bottom: 0;
+    }
+.mokuai ul li  a{
+    overflow:hidden;
+    display:block;
+}
+
+.renqiwenda{
+    background:url(../images/qa.png) left center no-repeat;
+    padding-left:33px;
+    background-size:26px;
+}
+.wendazixun li a .zixunxiangqing{
+    margin-right:20px;
+}
+.typezixun li a img.wendatouxiang {
+    width: 22px;
+    height: 22px;
+    border-radius: 100px;
+    vertical-align: top;
+    float: left;
+    margin-right:5px;
+}
+.typezixun li a span.wendazhu {
+    margin-top: 0;
+    float: left;
+    font-weight: bold;
+    color: #0e0e0e;
+    font-size:14px;
+}
+.typezixun li .zixunxiangqing{
+    width:645px;
+}
+.zixunxiangqing p{
+
+}
+.typezixun li a p {
+    line-height: 24px;
+    position:relative;
+    top:-2px;
+}
+.typezixun li{
+    margin-bottom:30px;
+}
+    .typezixun li a h3{
+        font-weight:bold;
+    }

@@ -1,0 +1,614 @@
+
+body {
+}
+
+.remen h4 {
+    margin-bottom: 25px;
+    margin-top: 20px;
+}
+
+.cl {
+    clear: both;
+    overflow: hidden;
+}
+
+.remen ul {
+    clear: both;
+}
+
+    .remen ul li {
+        padding-left: 25px;
+        position: relative;
+        background: #f2f7ff;
+        line-height: 40px;
+        margin-bottom: 13px;
+    }
+
+        .remen ul li p {
+            color: #8a9099;
+            font-size: 15px;
+            margin-bottom: 0;
+        }
+
+        .remen ul li:nth-child(2n) {
+            background: #f8fafe;
+        }
+
+        .remen ul li:before {
+            content: "";
+            display: inline-block;
+            background: #fff;
+            width: 4px;
+            height: 4px;
+            border: 2px solid #b3ccf4;
+            border-radius: 100%;
+            position: absolute;
+            top: 16px;
+            left: 9px;
+            z-index: 1;
+        }
+
+.top5 ul li:last-child {
+    border-bottom: 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.jingxuan {
+    margin-top: 30px;
+}
+
+    .jingxuan img {
+        display: block;
+        width: 100%;
+        margin: 0 auto;
+        margin-bottom: 15px;
+    }
+
+    .jingxuan ul{
+        clear:both;
+    }
+
+    .jingxuan ul li p {
+        font-size: 14px;
+        margin-bottom: 0px;
+        line-height: 18px;
+    }
+
+    .jingxuan ul {
+        margin-bottom: 20px;
+    }
+
+        .jingxuan ul li {
+            margin-bottom: 12px;
+        }
+
+            .jingxuan ul li span {
+                float: left;
+                width: 7px;
+                height: 7px;
+                border-radius: 30px;
+                background: #a1a8b3;
+                margin-right: 5px;
+                margin-bottom: 0;
+                display: none;
+            }
+
+            .jingxuan ul li p {
+                position: relative;
+                padding-left: 16px;
+            }
+
+                .jingxuan ul li p:before {
+                    content: "";
+                    display: inline-block;
+                    width: 5px;
+                    height: 5px;
+                    border-radius: 30px;
+                    background: #a1a8b3;
+                    position: absolute;
+                    top: 7px;
+                    left: 3px;
+                    z-index: 1;
+                    clear: both;
+                }
+
+.mokuai ul li a {
+    overflow: hidden;
+    display: block;
+}
+
+.tiwen {
+    width: 100%;
+    margin-top: 15px;
+    overflow: hidden;
+}
+
+    .tiwen h4:after {
+        content: "";
+        clear: both;
+    }
+
+.tiwenleft {
+    float: left;
+    width: 330px;
+    margin-right: 40px;
+}
+
+.tiwenright {
+    float: left;
+    width: 430px;
+}
+
+.tiwen img {
+    display: block;
+    width: 305px;
+    margin-bottom: 15px;
+}
+
+
+.tiwen ul li p {
+    font-size: 14px;
+    margin-bottom: 0px;
+    line-height: 22px;
+}
+
+.tiwen ul {
+    margin-bottom: 20px;
+}
+
+    .tiwen ul li {
+        margin-bottom: 12px;
+    }
+
+        .tiwen ul li span {
+            float: right;
+            color: #a1a8b3;
+            margin-right: 5px;
+            margin-bottom: 0;
+        }
+
+        .tiwen ul li p {
+            position: relative;
+            float: left;
+        }
+
+
+
+
+.weizhi {
+    color: #a1a8b3;
+    font-size: 14px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+    .weizhi a {
+        color: #a1a8b3;
+    }
+
+.wenti {
+    border-bottom: 1px solid #e6ebf2;
+    margin-right: 40px;
+    padding-bottom: 10px;
+}
+
+    .wenti h4 {
+        font-size: 30px;
+        line-height: 46px;
+        color: #0e0e0e;
+        margin-bottom: 15px;
+    }
+
+    .wenti .wentixinxi {
+        color: #a1a8b3;
+        font-size: 14px;
+    }
+
+        .wenti .wentixinxi .wentishijian {
+            float: right;
+        }
+
+        .wenti .wentixinxi .laiyuan {
+            margin-left: 20px;
+        }
+
+        .wenti .wentixinxi s {
+            font-size: 15px;
+            text-decoration: none;
+            color: #0071e3;
+            font-weight: bold;
+            padding: 0 2px;
+        }
+
+.huida {
+    background: #fff;
+    margin: 0 auto;
+    overflow: hidden;
+    padding-top: 20px;
+    padding-bottom: 0;
+    padding-right: 40px;
+}
+
+.dazhuleixing {
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #e6ebf2;
+}
+
+    .dazhuleixing.line {
+        border-bottom: 1px solid #f6f6fa;
+        padding-bottom: 10px;
+    }
+    .dazhuleixing:nth-last-child(2) {
+        border-bottom: 0;
+        margin-bottom:0px;
+        padding-bottom:0;
+    }
+
+    .touxiang {
+        overflow: hidden;
+    }
+
+    .touxiang img {
+        float: left;
+        width: 34px;
+        border-radius: 200px;
+        margin-right: 6px;
+        margin-top: 2px;
+    }
+
+.tximg {
+    overflow: hidden;
+    position: relative;
+    float: left;
+}
+
+.touxiang .renzheng {
+    width: 16px;
+    position: absolute;
+    right: -3px;
+    bottom: 0px;
+}
+
+.touxiang .dazhu {
+    float: left;
+}
+
+.dazhu .name {
+    font-size: 14px;
+    color: #080808;
+    margin-right: 5px;
+}
+
+.dazhu .jibie {
+    font-size: 12px;
+    color: #e68302;
+    border-radius: 5px;
+    padding-right: 5px;
+    background: #fdf6ec;
+    background-size: 20px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+
+.jinpai.jibie {
+    font-size: 12px;
+    color: #e68302;
+    border-radius: 5px;
+    padding-left: 23px;
+    padding-right: 5px;
+    background: #fdf6ec url(../images/jp.png) 3px center no-repeat;
+    background-size: 20px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+
+.dazhu .dazhumiaoshu {
+    font-size: 12px;
+    color: #a1a8b3;
+    position: relative;
+    top: -3px;
+}
+
+    .dazhu .dazhumiaoshu span {
+        margin-right: 6px;
+    }
+
+.huida .hdneirong {
+    color: #080808;
+    font-size: 15px;
+    line-height: 30px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.huida .huidashijian {
+    display: block;
+    color: #8e8e8e;
+    font-size: 14px;
+    line-height: 26px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.dazhuleixing .yicaina {
+    float: right;
+    height: 20px;
+    padding-left: 18px;
+    background: url(../images/caina.png) left center no-repeat;
+    background-size: 20px;
+    color: #a1a8b3;
+    font-size: 12px;
+    line-height: 20px;
+    margin-top: 2px;
+    display: none;
+}
+
+.gaofen.jibie {
+    font-size: 12px;
+    color: #587ef8;
+    border-radius: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    background: #d2ddff;
+    background-size: 20px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+
+.youzhi.jibie {
+    font-size: 12px;
+    color: #2dbf6a;
+    border-radius: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    background: #c7ffde;
+    background-size: 20px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+
+.huida .dazhuleixing:nth-child(2) .dazhu .jibie {
+    display: none;
+}
+
+.huida .dazhuleixing:nth-child(1) .yicaina {
+    display: block;
+}
+
+.huida .dazhuleixing:nth-child(3) .yicaina {
+    display: block;
+}
+
+.huida .dazhuleixing:nth-child(5) .yicaina {
+    display: block;
+}
+.yqh_ad {
+    position:relative;
+    margin:0 auto;
+    padding-bottom:19px;
+}
+.yqh_ad img{
+    display:block;
+    margin:0 auto;
+}
+
+
+ .zujian {
+    position: absolute;
+    right: 0;
+    bottom: 3px;
+    color: #fff;
+}
+
+ .zujian span {
+        background: #e2e2e2;
+        margin-right: 3px;
+        height: 14px;
+        line-height: 14px;
+        float: left;
+        font-size: 10px;
+    }
+
+.zujian .yiwen_360 {
+        width: 12px;
+        border-radius: 10px;
+        text-align: center;
+        cursor:pointer;
+    }
+
+    .zujian .close_yqh {
+        width: 12px;
+        border-radius: 10px;
+        text-align: center;
+        margin-right: 0;
+        line-height: 11px;
+        cursor: pointer;
+    }
+    .zujian .close_360 {
+        width: 12px;
+        border-radius: 10px;
+        text-align: center;
+        margin-right: 0;
+        line-height: 11px;
+        cursor: pointer;
+    }
+    .zujian .close_ad360 {
+        width: 12px;
+        border-radius: 10px;
+        text-align: center;
+        margin-right: 0;
+        line-height: 11px;
+        cursor: pointer;
+    }
+.des_yiwen {
+    width: 400px;
+    height:160px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    margin-top: -80px;
+    margin-left:-200px;
+    z-index: 88;
+    background: #fff;
+    border: 2px solid #ff8d5b;
+    box-shadow: 0px 0px 10px #FF5003;
+    box-sizing: border-box;
+    padding: 15px;
+    font-size: 12px;
+    color: #757575;
+    line-height: 24px;
+    display: none;
+}
+
+.close_yiwen {
+    position: absolute;
+    top: -3px;
+    right: 5px;
+    cursor:pointer;
+}
+.ad_360 {
+    position: relative;
+}
+
+
+.ad360 {
+    width: 100%;
+    position: relative;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.adtitle {
+    width: 92%;
+    margin: 0 auto;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    position: relative;
+    line-height: 22px;
+    padding-left: 10px;
+    margin-bottom: 5px;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+    .adtitle:before {
+        content: "";
+        display: inline-block;
+        background: #577df8;
+        width: 3px;
+        height: 18px;
+        position: absolute;
+        top: 5px;
+        left: 0px;
+        z-index: 1;
+    }
+
+.ad360 a {
+    width: 92%;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    padding: 0 2%;
+    padding-bottom: 10px;
+    border:1px dashed #ccc;
+    border-radius:5px;
+}
+
+.ad360 h3 {
+    font-size: 20px;
+    color: #333;
+    float: left;
+    margin-right: 5px;
+}
+
+.daikuan {
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.logo360 {
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    margin-top: 15px;
+}
+
+    .logo360 img {
+        width: 36px;
+        margin-right: 10px;
+        float: left;
+        border-radius: 5px;
+    }
+
+    .logo360 span {
+        line-height: 24px;
+        float: left;
+        height: 24px;
+        padding: 0 5px;
+        font-size: 14px;
+    }
+
+        .logo360 span:nth-child(3) {
+            border: 1px solid red;
+            color: red;
+            margin-right: 5px;
+        }
+
+        .logo360 span:nth-child(4) {
+            background: red;
+            border: 1px solid red;
+            color: #fff;
+        }
+
+.daikuansum {
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.daikuanedu {
+    float: left;
+    width: 75%;
+}
+
+    .daikuanedu p {
+        color: #3C7EE8;
+        font-size: 25px;
+        text-align: left;
+        float:left;
+        line-height:30px;
+    }
+
+    .daikuanedu span {
+        color: #333;
+        font-size: 14px;
+        text-align: left;
+       float:left;
+       line-height:30px;
+       margin-right:6px;
+    }
+
+.daikuansum .strong {
+    float: left;
+    color: #5D667A;
+    font-size: 14px;
+    width: 35%;
+}
+
+.daikuansum .apply {
+    float: right;
+    width: 25%;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    color: #fff;
+    background: #FF5003;
+    border-radius: 50px;
+    font-size: 14px;
+    text-decoration: none;
+}
+

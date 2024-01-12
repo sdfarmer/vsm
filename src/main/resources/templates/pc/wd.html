@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>以官方回答为主的专业信用卡、贷款、理财、保险、股票知识问答平台——维思迈财经</title>
+    <meta name="description" content='提供专业审核为主的专业信用卡、贷款、理财、保险、股票等知识问答服务，每一条回答精心为您准备！'/>
+    <meta name="keywords" content='信用卡问答，贷款问答，理财问答，报下你问答，股票问答 '/>
+    <link href="pc/css/reset.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="pc/js/jquery-1.10.1.min.js"></script>
+    <link href="pc/css/index.css" rel="stylesheet" type="text/css"/>
+    <link href="pc/css/wd.css" rel="stylesheet" type="text/css"/>
+     <script>
+		var _hmt = _hmt || [];
+		(function() {
+		  var hm = document.createElement("script");
+		  hm.src = "https://hm.baidu.com/hm.js?dc514ac2d86a287446d54c8b1504b4b2";
+		  var s = document.getElementsByTagName("script")[0]; 
+		  s.parentNode.insertBefore(hm, s);
+		})();
+		</script>
+</head>
+<body>
+<div class="nav">
+    <div class="center">
+        <ul>
+            <li><a href="index.html"><h1><img src="pc/images2/logo.png?2023" class="logo"/></h1></a></li>
+            <li><a href="/index.html">首页</a></li>
+            <li><a href="/ot/ot_xyk.html">信用卡</a></li>
+            <li><a href="/ot/ot_bx.html">保险</a></li>
+            <li><a href="/ot/ot_lc.html">理财</a></li>
+            <li><a href="/ot/ot_gp.html">股票</a></li>
+            <li><a href="/ot/ot_dk.html">贷款</a></li>
+            <li class="cur"><a href="/wd.html">问答</a></li>
+            <li><a href="/aboutus.html">关于我们</a></li>
+        </ul>
+    </div>
+</div>
+<div class="jrbanner">
+    <div class="center">
+        <img src="pc/images/wdbanner.jpg"/>
+    </div>
+</div>
+<div class="zixun">
+<!--    <div class="fixed-banner l">-->
+<!--        <a href="https://www.xiaolu.io/"><img th:src="@{${#httpServletRequest.getContextPath()} + '/pc/images/两侧悬浮-左450_900.jpg'}" /></a>-->
+<!--    </div>-->
+<!--    <div class="fixed-banner r">-->
+<!--        <a href="https://www.xiaolu.io/"><img th:src="@{${#httpServletRequest.getContextPath()} + '/pc/images/两侧悬浮-右450_900.jpg'}" /></a>-->
+<!--    </div>-->
+    <div class="center">
+        <div class="leftpart">
+            <ul class="typenav" style="margin-top:20px;">
+                <li><a href="javascript:void(0);" class="renqiwenda">人气问答</a></li>
+            </ul>
+            <div class="typezixun jrzixun wendazixun">
+                <ul>
+                    <li th:each="askobj,askstat:${ask}"
+                        th:if="${askstat.count}<10 ">
+                        <a th:href="@{${#httpServletRequest.getContextPath()}+'/'+${askobj.columnurlname2}+'/ask/'+${askobj.id}+'.html'}">
+                            <h3 th:text="${#strings.abbreviate(askobj.ask,18)}"></h3>
+                            <div class="zixunxiangqing">
+                                <img src="pc/images/tx1.jpg" class="wendatouxiang"/><span
+                                        class="wendazhu">维思迈财经：</span>
+                                <p th:utext="${#strings.abbreviate(askobj.bestanswer,110)}"></p>                     
+                            </div>
+                            <img th:src="@{${#httpServletRequest.getContextPath()}+'/image/'+${askstat.count}+'.jpg'}" class="peitu"/>
+                        </a>
+                    </li>
+              </ul>
+            </div>
+        </div>
+        <div class="rightpart">
+            <div class="mokuai remen">
+                <h4><a href="javascript:void(0);">热门知识</a></h4>
+                <ul>
+                    <li th:each="askobj,askstat:${ask}"
+                        th:if="${askstat.count}>10 and ${askstat.count}<17"><a
+                            th:href="@{${#httpServletRequest.getContextPath()}+'/'+${askobj.columnurlname2}+'/ask/'+${askobj.id}+'.html'}">
+                        <p th:text="${#strings.abbreviate(askobj.ask,20)}">问答标题</p></a></li>
+                </ul>
+            </div>
+            <div class="mokuai top5">
+                <h4><a href="javascript:void(0);">专业资讯</a></h4>
+                <ul>
+                    <li th:each="recommendobj,recommendstat:${recommend}"
+                        th:if="${recommendstat.count}<=5"><a
+                            th:href="@{${#httpServletRequest.getContextPath()}+'/'+${recommendobj.columnurlname2}+'/article/'+${recommendobj.id}+'.html'}">
+                        <div class="topimg"> <img th:src="@{${#httpServletRequest.getContextPath()}+'/image/'+${recommendstat.count}+'.jpg'}"/></div>
+                        <div class="topzixun"><p th:text="${#strings.abbreviate(recommendobj.title,18)}">问答标题</p>
+                            <span>5分钟前</span></div>
+                    </a></li>
+                </ul>
+            </div>
+            <div class="mokuai jingxuan">
+                <h4><a href="javascript:void(0);">精选问答</a></h4>
+                <img src="pc/images/bx.jpg"/>
+                <ul>
+                    <li th:each="askobj,askstat:${ask}"
+                        th:if="${askstat.count}>=17 and ${askstat.count}<22"><a
+                            th:href="@{${#httpServletRequest.getContextPath()}+'/'+${askobj.columnurlname2}+'/ask/'+${askobj.id}+'.html'}"><span th:text="${askstat.count-16}">1</span>
+                        <p th:text="${#strings.abbreviate(askobj.ask,20)}">问答标题</p></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="copyright">
+    <div class="center">
+        <p class="bqlianxi">维思迈财经网提供中立的理财投资知识服务，汇集信用卡、基金、贷款、股票、保险等财经领域常识，用浅显的生活语言把专业金融知识变成您生活的一部分，助力您的财智人生！</p>
+        <!--<p class="bqlianxi">
+            <a href="/aboutus.html">关于我们</a> | <a href="/aboutus.html#shangwuqiatan">商务洽谈</a> | <a href="/aboutus.html#neironghezuo">内容合作</a> | 电话0351-7020802 | 邮箱66212664@qq.com
+        </p>-->
+        <p class="information">
+            <a href="http://beian.miit.gov.cn/state/outPortal/loginPortal.action;jsessionid=b4ojmap5WXcjMNUhGdqvr97kMZymlITl_4rhbxCDVnUgF6Mv2nn5!1935156451">
+                版权所有： 维思迈财经
+                <img src="pc/images/kx.png" />
+            </a>
+            <!--<a href="javascript:void(0);"> 违法和不良信息举报电话：0351-7020802</a>-->
+        </p>
+    </div>
+</div>
+<script type="text/javascript" src="pc/js/index.js"></script>
+</body>
+</html>

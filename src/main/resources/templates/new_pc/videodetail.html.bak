@@ -1,0 +1,115 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title th:text="${video.title}+'—维思迈财经'">金融综合视频</title>
+    <meta name="description" th:attr="content=${video.content}">
+    <meta name="keywords" th:attr="content=${video.keywords}">
+    <link  th:href="@{${#httpServletRequest.getContextPath()}+'/new_pc/css/reset.css'}" rel="stylesheet" type="text/css" />
+    <script type="text/javascript"  th:src="@{${#httpServletRequest.getContextPath()}+'/new_pc/js/jquery-1.10.1.min.js'}"></script>
+    <link  th:href="@{${#httpServletRequest.getContextPath()}+'/new_pc/css/public.css'}" rel="stylesheet" type="text/css" />
+    <link  th:href="@{${#httpServletRequest.getContextPath()}+'/new_pc/css/videodetail.css'}" rel="stylesheet" type="text/css" />
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?dc514ac2d86a287446d54c8b1504b4b2";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</head>
+<body>
+    <div class="nav">
+        <div class="center">
+            <ul>
+                <li><a href="/index.html"><h1><img  th:src="@{${#httpServletRequest.getContextPath()}+'/new_pc/images/logo.png'}" class="logo" /></h1></a></li>
+                <li><a href="/index.html">首页</a></li>
+                <li><a href="/ot/ot_xyk.html">信用卡</a></li>
+                <li><a href="/ot/ot_bx.html">保险</a></li>
+                <li><a href="/ot/ot_lc.html">理财</a></li>
+                <li><a href="/ot/ot_gp.html">股票</a></li>
+                <li><a href="/ot/ot_dk.html">贷款</a></li>
+                <li><a href="/wd.html">问答</a></li>
+                <li><a href="/aboutus.html">关于我们</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="video">
+        <div class="center">
+            <p class="position"><span>当前位置：</span><span>首页</span> > <span>视频</span> > <span class="thisp" th:text="${video.title}">金盈年年养老年金保险</span></p>
+            <div class="videobg">
+                <div class="videoleft">
+                    <video controls="controls" id="video1" autoplay>
+                        <source  th:src="@{${#httpServletRequest.getContextPath()}+'/videos/'+${video.videoname}+'.mp4'}" type="video/mp4" />
+                    </video>
+                    <h1 th:text="${video.title}">金盈年年养老年金保险？</h1>
+
+                </div>
+
+                <div class="videoright">
+                    <p class="xiayitiao">相关推荐</p>
+
+                    <div class="next"  th:each="hotvideoobj,hotvideostat:${hotvideo}" th:if="${hotvideostat.count}>=0">
+                        <a th:href="@{${#httpServletRequest.getContextPath()}+'/video/'+${hotvideoobj.id}+'.html'}" >
+                            <div class="nextbg">
+                                <span class="shichang">00:50</span>
+                                <img  th:src="@{${#httpServletRequest.getContextPath()}+'/new_pc/images/bf2.png'}" class="bfbut" />
+                            </div>
+                            <h4 th:text="${hotvideoobj.title}">博美总是美总是掉毛掉毛怎么办？</h4>
+                        </a>
+
+
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="petall">
+        <div class="center">
+            <div class="petleftpart">
+                <div class="articledetail">
+                    <h2 th:text="${video.title}">金盈年年养老年金保险？</h2>
+                    <div class="askinfo"><span>来源：维思迈财经原创</span><span th:text="'发布时间：'+${video.insertdate}">发布时间：2022-01-09</span></div>
+                    <p th:utext="${video.content}">我们很多人养宠物狗，都希望得到聪训练上智商并不低，明乖巧的狗狗在，所以在训练上智商并不低，反而比，所以在训练上不</p>
+                </div>
+
+            </div>
+            <div class="petrightpart">
+
+                <h5>热门视频</h5>
+                <ul class="tuijianlist">
+                    <li  th:each="hotvideoobj,hotvideostat:${hotvideo}" th:if="${hotvideostat.count}>0 and ${hotvideostat.count}<4"><a th:href="@{${#httpServletRequest.getContextPath()}+'/video/'+${hotvideoobj.id}+'.html'}" th:text="${hotvideoobj.title}">金毛犬怎么训练比较好呢？</a><span th:text="${hotvideoobj.id*100%33+'播放'}">2.3万播放</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="copyright">
+        <div class="center">
+            <p class="bqlianxi">维思迈财经网为您提供关于"</span><span th:text="${video.title}" class="gl">财经</span><span>"的视频</p>
+            <p class="bqlianxi"><a href="javascript:void(0);">关于我们</a> | <a href="javascript:void(0);">商务洽谈</a> | <a href="javascript:void(0);">内容合作</a> | 电话0351-7020802 | 邮箱contact@openvsm.com </p>
+            <p class="information">
+                <a href="http://beian.miit.gov.cn/state/outPortal/loginPortal.action;jsessionid=b4ojmap5WXcjMNUhGdqvr97kMZymlITl_4rhbxCDVnUgF6Mv2nn5!1935156451">
+                    版权所有： 维思迈财经
+                    <img  th:src="@{${#httpServletRequest.getContextPath()}+'/new_pc/images/kx.png'}" />
+                </a>
+                <a href="javascript:void(0);"> 违法和不良信息举报电话：0351-7020802</a>
+            </p>
+        </div>
+    </div>
+
+    <script type="text/javascript"  th:src="@{${#httpServletRequest.getContextPath()}+'/new_pc/js/index.js'}"></script>
+    <script type="text/javascript">
+        $(".nextbg").hover(function () {
+            $(this).children(".bfbut").fadeIn();
+        }, function () {
+            $(this).children(".bfbut").fadeOut();
+        });
+    </script>
+</body>
+</html>

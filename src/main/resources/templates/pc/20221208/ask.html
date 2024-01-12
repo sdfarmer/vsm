@@ -1,0 +1,273 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title th:text="${ask.ask}+'—维思迈财经'">金融综合问答</title>
+    <meta name="description" th:attr="content=${answers[0].answer}" th:if="${answers.size}>0">
+    <meta name="keywords" th:attr="content=${ask.keywords}">
+    <link th:href="@{${#httpServletRequest.getContextPath()}+'/pc/css/reset.css'}" rel="stylesheet" type="text/css" />
+    <script type="text/javascript"
+            th:src="@{${#httpServletRequest.getContextPath()}+'/pc/js/jquery-1.10.1.min.js'}"></script>
+    <link th:href="@{${#httpServletRequest.getContextPath()}+'/pc/css/index.css?22'}" rel="stylesheet" type="text/css" />
+    <link th:href="@{${#httpServletRequest.getContextPath()}+'/pc/css/ask.css?202210222'}" rel="stylesheet" type="text/css" />
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?dc514ac2d86a287446d54c8b1504b4b2";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</head>
+<body>
+    <div class="nav">
+        <div class="center">
+            <ul>
+                <li>
+                    <a href="/">
+                        <h1>
+                            <img th:src="@{${#httpServletRequest.getContextPath()}+'/pc/images2/logo.png?2023'}"
+                                 class="logo" />
+                        </h1>
+                    </a>
+                </li>
+                <li><a href="/">首页</a></li>
+                <li><a href="/ot/ot_xyk.html">信用卡</a></li>
+                <li><a href="/ot/ot_bx.html">保险</a></li>
+                <li><a href="/ot/ot_lc.html">理财</a></li>
+                <li><a href="/ot/ot_gp.html">股票</a></li>
+                <li><a href="/ot/ot_dk.html">贷款</a></li>
+                <li class="cur"><a href="/wd.html">问答</a></li>
+                <li><a href="/aboutus.html">关于我们</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="zixun">
+        <div class="center">
+            <div class="leftpart">
+                <div class="weizhi">
+                    <span><a href="/">维思迈财经</a>></span><span>
+                        <a th:href="@{${#httpServletRequest.getContextPath()}+'/wd.html'}">问答</a>
+                    </span>><span>
+                        <a th:href="@{${#httpServletRequest.getContextPath()}+'/'+${ask.columnurlname2}+'/ask/'+${ask.id}+'.html'}"
+                           th:text="${ask.ask}">资讯</a>
+                    </span>
+                </div>
+                <div class="wenti">
+                    <h4 th:text="${ask.ask}">标题</h4>
+                    <p class="wentixinxi">
+                        <span>共<s th:text="${num}">5</s>条回答</span><span class="laiyuan">来源：维思迈财经</span><span class="wentishijian" th:text="${ask.insertdate}">2022-05-11    01:02:03</span>
+                    </p>
+                </div>
+                <div class="huida">
+                    <div class="dazhuleixing" th:each="answersobj,answersstat:${answers}" th:if="${answersstat.count}>0 and ${answersstat.count}<2">
+                        <div class="touxiang">
+                            <div class="tximg">
+                                <img th:src="@{${#httpServletRequest.getContextPath()}+'/headimg/tx'+${answersstat.count}+'.jpg'}" />
+                            </div>
+                            <div class="dazhu">
+                                <p>
+                                    <span class="name" th:text="${answersobj.username}">水晶鱼</span>
+                                </p>
+
+                                <span class="dazhumiaoshu"><span th:text="${answersobj.insertdate}"> </span><span class="dingyi">活跃答主</span></span>
+                            </div>
+                            <span class="yicaina">本回答被提问者采纳</span>
+                        </div>
+                        <p class="hdneirong" th:utext="${answersobj.answer}"></p>
+                    </div>
+
+                    <!--<div class="_nm4kce3r57h"></div>
+        <script type="text/javascript">
+            (window.slotbydup = window.slotbydup || []).push({
+                id: "u6821178",
+                container: "_nm4kce3r57h",
+                async: true
+            });
+        </script>-->
+                    <!-- 多条广告如下脚本只需引入一次 -->
+                    <!--<script type="text/javascript" src="//cpro.baidustatic.com/cpro/ui/cm.js" async="async" defer="defer" >
+        </script>-->
+
+
+                    <div class="dazhuleixing" th:each="answersobj,answersstat:${answers}" th:if="${answersstat.count}>=2">
+                        <div class="touxiang">
+                            <div class="tximg">
+                                <img th:src="@{${#httpServletRequest.getContextPath()}+'/headimg/tx'+${answersstat.count}+'.jpg'}" />
+                            </div>
+                            <div class="dazhu">
+                                <p>
+                                    <span class="name" th:text="${answersobj.username}">水晶鱼</span>
+                                </p>
+
+                                <span class="dazhumiaoshu"><span th:text="${answersobj.insertdate}"> </span><span class="dingyi">活跃答主</span></span>
+                            </div>
+                            <span class="yicaina">本回答被提问者采纳</span>
+                        </div>
+                        <p class="hdneirong" th:utext="${answersobj.answer}"></p>
+                    </div>
+                </div>
+                <!--长条信用卡20221123-->
+                <!--
+                <div class="yqh_ad adhx">
+                    <img src="https://www.openvsm.com/image/360pc.jpg?22" />
+                    <div class="zujian"><span class="tip_360">广告</span><span class="yiwen_360">?</span><span class="close_hx">x</span></div>
+                    <div class="des_yiwen"><p>风险提示：广告信息均来自平台方，不代表平台安全性，不构成建议！贷款利率、年化收益率、期限、额度、生效时间等数据仅供参考，实际数据以平台方为准。红包、体验金、理财金、大礼包、加息券、满减券、优惠券等都不直接等同于现金。参考收益说明不是收益承诺，不代表最终真实收益。理财有风险，投资需谨慎！</p><span class="close_yiwen">x</span></div>
+                </div>-->
+                <!--长条信用卡-->
+                <div class="mokuai tiwen">
+                    <h4><a href="javascript:void(0);">相关问答</a></h4>
+
+                    <div class="cl">
+                        <div class="tiwenleft">
+                            <img th:src="@{${#httpServletRequest.getContextPath()}+'/pc/images/w2.jpg'}" />
+                            <ul>
+                                <li th:each="recommendobj,recommendstat:${recommend}"
+                                    th:if="${recommendstat.count}<=4">
+                                    <a th:href="@{${#httpServletRequest.getContextPath()}+'/'+${recommendobj.columnurlname2}+'/ask/'+${recommendobj.id}+'.html'}">
+                                        <span></span>
+                                        <p th:text="${#strings.abbreviate(recommendobj.ask,18)}"> 新农保交500和2000哪种划算？...</p>
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </div>
+                        <div class="tiwenright">
+                            <ul>
+                                <li th:each="recommendobj,recommendstat:${recommend}"
+                                    th:if="${recommendstat.count}>5 and ${recommendstat.count}<=14">
+                                    <a th:href="@{${#httpServletRequest.getContextPath()}+'/'+${recommendobj.columnurlname2}+'/ask/'+${recommendobj.id}+'.html'}">
+                                        <span></span>
+                                        <p th:text="${#strings.abbreviate(recommendobj.ask,18)}">平安银行保单贷款利息是多少钱？</p><span th:text="${recommendobj.insertdate}">2022-05-13</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+            <div class="rightpart">
+                <div class="mokuai jingxuan">
+                	 
+                     
+                    <h4><a href="javascript:void(0);">网友都在问</a></h4>
+                     <!--单独36020221123-->
+                     
+                    <div class="ad_360">
+                       <img src="https://www.openvsm.com/image/360.jpg?202211" /></a>
+                        <div class="zujian"><span class="tip_360">广告</span><span class="yiwen_360">?</span><span class="close_360">x</span></div>
+                        <div class="des_yiwen"><p>风险提示：广告信息均来自平台方，不代表平台安全性，不构成建议！贷款利率、年化收益率、期限、额度、生效时间等数据仅供参考，实际数据以平台方为准。红包、体验金、理财金、大礼包、加息券、满减券、优惠券等都不直接等同于现金。参考收益说明不是收益承诺，不代表最终真实收益。理财有风险，投资需谨慎！</p><span class="close_yiwen">x</span></div>
+                    </div>
+                    
+                    <!--单独360-->
+                    <!--<img th:src="@{${#httpServletRequest.getContextPath()}+'/pc/images/wen.jpg'}" />-->
+                    <ul>
+                        <li th:each="recommendobj,recommendstat:${recommend}"
+                            th:if="${recommendstat.count}>15 and ${recommendstat.count}<=22">
+                            <a th:href="@{${#httpServletRequest.getContextPath()}+'/'+${recommendobj.columnurlname2}+'/ask/'+${recommendobj.id}+'.html'}">
+                                <span></span>
+                                <p th:text="${#strings.abbreviate(recommendobj.ask,18)}">平安银行保单贷款利息是多少钱...</p>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="mokuai top5">
+                    <h4><a href="javascript:void(0);">为你推荐</a></h4>
+                    <ul>
+                        <li th:each="recommendobj,recommendstat:${recommend}"
+                            th:if="${recommendstat.count}>23 and ${recommendstat.count}<=28">
+                            <a th:href="@{${#httpServletRequest.getContextPath()}+'/'+${recommendobj.columnurlname2}+'/ask/'+${recommendobj.id}+'.html'}">
+                                <div class="topimg"> <img th:src="@{${#httpServletRequest.getContextPath()}+'/image/'+${recommendstat.count}+'.jpg'}" /></div>
+                                <div class="topzixun">
+                                    <p th:text="${#strings.abbreviate(recommendobj.ask,18)}">
+                                        要保持货币信贷和社会融资规模稳...
+                                    </p><span th:text="${recommendobj.insertdate}">5分钟前</span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!--20221123-->
+                
+                  <div class="ad_ayh">
+                        <img src="https://www.openvsm.com/image/ayh.jpg?22" style="display:block;margin:0 auto;width:100%;" />
+                        <div class="zujian"><span class="tip_360">广告</span><span class="yiwen_360">?</span><span class="close_ayh">x</span></div>
+                        <div class="des_yiwen"><p>风险提示：广告信息均来自平台方，不代表平台安全性，不构成建议！贷款利率、年化收益率、期限、额度、生效时间等数据仅供参考，实际数据以平台方为准。红包、体验金、理财金、大礼包、加息券、满减券、优惠券等都不直接等同于现金。参考收益说明不是收益承诺，不代表最终真实收益。理财有风险，投资需谨慎！</p ><span class="close_yiwen">x</span></div>
+                    </div>
+                <div class="_ees3fy8wmp4"></div>
+                
+                <script type="text/javascript">                           
+                        (window.slotbydup = window.slotbydup || []).push({
+                            id: "u6850797",                               
+                            container: "_ees3fy8wmp4",                    
+                            async: true                                   
+                        });                                               
+                    </script>             
+                    
+                    
+                         <script type="text/javascript" src="//cpro.baidustatic.com/cpro/ui/cm.js" async="async" defer="defer" >
+                             </script>                                                                                          
+                    
+                    
+                                                           
+            </div>
+            
+        </div>
+    </div>
+  
+    <div class="copyright">
+        <div class="center">
+            <h5 class="bqlianxi">
+                <span>维思迈财经网为您提供关于"</span><span th:text="${ask.ask}" class="gl">财经</span><span>"的资讯</span>
+            </h5>
+            <p class="bqlianxi">
+                <a href="/aboutus.html">关于我们</a> | <a href="/aboutus.html#shangwuqiatan">商务洽谈</a> | <a href="/aboutus.html#neironghezuo">内容合作</a> | 电话0351-7020802 | 邮箱66212664@qq.com
+            </p>
+            <p class="information">
+                <a href="https://beian.miit.gov.cn/#/Integrated/index">
+                    版权所有： 维思迈财经
+                    <img th:src="@{${#httpServletRequest.getContextPath()}+'/pc/images/kx.png'}" />
+                </a>
+                <a href="javascript:void(0);"> 违法和不良信息举报电话：0351-7020802</a>
+            </p>
+        </div>
+    </div>
+    <script type="text/javascript" th:src="@{${#httpServletRequest.getContextPath()}+'/pc/js/index.js'}"></script>
+    <script type="text/javascript">
+    	     $(".close_ayh").click(function () {
+            $(".ad_ayh").css("display", "none");
+        });
+        $(".close_yqh").click(function () {
+            $(".ad360dk").css("display", "none");
+        });
+        $(".close_hx").click(function () {
+            $(".adhx").css("display", "none");
+        });
+        $(".close_360").click(function () {
+            $(".ad_360").css("display", "none");
+        });
+        $(".close_ad360").click(function () {
+            $(".ad360").css("display", "none");
+        });
+        $(".yiwen_360").click(function () {
+            $(".des_yiwen").css("display", "block");
+        });
+        $(".close_yiwen").click(function () {
+            $(".des_yiwen").css("display", "none");
+        });
+        $(".huida .dazhuleixing:nth-child(1) .dazhumiaoshu .dingyi").html("行业影响力TOP3");
+        $(".huida .dazhuleixing:nth-child(1) .dazhu p").append("<span class='jibie jinpai'>金牌答主</span>");
+        $(".huida .dazhuleixing:nth-child(2) .dazhumiaoshu .dingyi").html("近期获得1.5w赞");
+        $(".huida .dazhuleixing:nth-child(3) .dazhumiaoshu .dingyi").html("官方认证：财经领域优质答主");
+        $(".huida .dazhuleixing:nth-child(3) .tximg").append("<img src='/pc/images/rz.png' class='renzheng' />");
+        $(".huida .dazhuleixing:nth-child(3) .dazhu p").append("<span class='youzhi jibie'>优质答主</span>");
+        $(".huida .dazhuleixing:nth-child(4) .dazhumiaoshu .dingyi").html("超过100用户采纳过他的回答");
+        $(".huida .dazhuleixing:nth-child(5) .dazhu p").append("<span class='gaofen jibie'>高粉答主</span>");
+        $(".huida .dazhuleixing:nth-child(5) .dazhumiaoshu .dingyi").html("专注金融行业15年");
+    </script>
+</body>
+</html>

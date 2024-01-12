@@ -1,0 +1,132 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title th:text="${article.title}+'—维思迈财经'"></title>
+    <meta name="description" th:attr="content=${#strings.abbreviate(article.articlecontent,200)}">
+    <meta name="keywords" th:attr="content=${article.keywords}">
+    <link th:href="@{${#httpServletRequest.getContextPath()}+'/h5/css/reset.css'}" rel="stylesheet" type="text/css">
+    <link th:href="@{${#httpServletRequest.getContextPath()}+'/h5/css/article.css?20212'}" rel="stylesheet" type="text/css">
+    <script type="text/javascript"
+            th:src="@{${#httpServletRequest.getContextPath()}+'/h5/js/jquery-1.10.1.min.js'}"></script>
+
+   
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?dc514ac2d86a287446d54c8b1504b4b2";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</head>
+<body>
+    <div class="top">
+        <h2>
+            <a href="/">
+                <img th:src="@{${#httpServletRequest.getContextPath()}+'/h5/images/logo.png'}"
+                     class="logo" />
+            </a>
+        </h2>
+    </div>
+    <div class="biaoti">
+        <h1 th:text="${article.title}">345435454</h1>
+        <div class="biaotixinxi">
+            <div class="zuozhe">
+                <span><a href="/">来源：维思迈财经</a></span>
+                <span class="zuozhemiaoshu" th:text="${article.insertdate}">3小时前</span>
+            </div>
+        </div>
+    </div>
+    <div class="neirong">
+        <img th:src="@{${#httpServletRequest.getContextPath()}+'/h5/images/p2.jpg'}" />
+        <p th:utext="${article.articlecontent}"></p>
+        <div class="biaoqian">
+            <span class="zhuanzai">---非商用---不得转载---</span>
+            <span class="shengming">声明：本网站内所有言论及内容仅代表其个人，不代表本网站的观点和立场。</span>
+            <ul class="huati">
+                <li th:each="keysobj,keysobjstat : ${keys}" th:if="${keysobjstat.count}<=3" th:text="${keysobj}">#金融</li>
+            </ul>
+        </div>
+    </div>
+    <div class="fenlei">
+        <h2><b></b>相关阅读</h2>
+        <ul>
+
+            <li class="rightimg" th:each="recommendobj,recommendstat:${recommend}" th:if="${recommendstat.count}<=4">
+                <a th:href="@{${#httpServletRequest.getContextPath()}+'/'+${recommendobj.columnurlname2}+'/article/'+${recommendobj.id}+'.html'}">
+                    <div>
+                        <p th:text="${#strings.abbreviate(recommendobj.title,18)}">提问：财富管理行业仍是一片蓝海</p><span>
+                            <s>维思迈财经</s><s th:text="${recommendobj.insertdate}">3小时前</s>
+                        </span>
+                    </div>
+                    <!--                <img th:src="@{${#httpServletRequest.getContextPath()}+'/h5/images/p1.jpg'}"/>-->
+                    <img th:src="@{${#httpServletRequest.getContextPath()}+'/image/'+${recommendstat.count}+'.jpg'}" />
+                </a>
+            </li>
+
+            <li class="rightimg" th:each="recommendobj,recommendstat:${recommend}"
+                th:if="${recommendstat.count}>=5 and ${recommendstat.count}<=12">
+                <a th:href="@{${#httpServletRequest.getContextPath()}+'/'+${recommendobj.columnurlname2}+'/article/'+${recommendobj.id}+'.html'}">
+                    <div>
+                        <p th:text="${#strings.abbreviate(recommendobj.title,18)}">提问：财富管理行业仍是一片蓝海</p><span>
+                            <s>维思迈财经</s><s th:text="${recommendobj.insertdate}">3小时前</s>
+                        </span>
+                    </div>
+                    <!--                <img th:src="@{${#httpServletRequest.getContextPath()}+'/h5/images/p1.jpg'}"/>-->
+                    <img th:src="@{${#httpServletRequest.getContextPath()}+'/image/'+${recommendstat.count}+'.jpg'}" />
+                </a>
+            </li>
+
+        </ul>
+    </div>
+
+    <div class="copyright">
+        <h5 class="banquanmiaoshu">
+            <span>维思迈财经网为您提供关于"</span><span th:text="${article.title}" class="gl">财经</span><span>"的资讯</span>
+        </h5>
+        <p> 版权所有： 维思迈财经</p>
+        <img th:src="@{${#httpServletRequest.getContextPath()}+'/h5/images/kx.png'}" />
+    </div>
+    <script type="text/javascript" th:src="@{${#httpServletRequest.getContextPath()}+'/h5/js/articlejs2.js?611'}"></script>
+    <script>
+        //关闭贷款
+        $(".close_360").click(function () {
+            $(".ad360dk").css("display", "none");
+        });
+        //疑问打开和关闭
+        $(".yiwen_360").click(function () {
+            $(".des_yiwen").css("display", "block");
+        });
+        $(".close_yiwen").click(function () {
+            $(".des_yiwen").css("display", "none");
+        });
+        //顶部广告
+        $(".close_top").click(function () {
+            $(".top_ad").css("display", "none");
+        });
+
+        //信用卡
+        $(".close_hx").click(function () {
+            $(".adxyk").css("display", "none");
+        });
+
+        var la = 0;
+        $(".swhz span").click(function () {
+            if (la == 0) {
+                $(".swhz p").stop().animate(
+                    { right: "0" }
+                );
+                la = 1;
+            } else {
+                $(".swhz p").stop().animate(
+                    { right: "-200px" }
+                );
+                la = 0;
+            }
+        });
+    </script>
+</body>
+</html>

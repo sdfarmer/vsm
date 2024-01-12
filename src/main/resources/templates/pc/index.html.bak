@@ -1,0 +1,316 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>维思迈财经—提供中立的理财投资知识服务</title>
+    <meta name="description" content='维思迈财经网提供中立的理财投资知识服务，汇集信用卡、基金、贷款、股票、保险等财经领域常识，助力您的财智人生！'/>
+    <meta name="keywords" content='维思迈财经，财经知识类网站，理财投资，如何投资'/>
+    <link href="pc/css/reset.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="pc/js/jquery-1.10.1.min.js"></script>
+    <link href="pc/css/index2.css?22" rel="stylesheet" type="text/css"/>
+    <link href="pc/css/swiper-bundle.min.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="pc/js/swiper-bundle.min.js"></script>
+    <script>
+		var _hmt = _hmt || [];
+		(function() {
+		  var hm = document.createElement("script");
+		  hm.src = "https://hm.baidu.com/hm.js?dc514ac2d86a287446d54c8b1504b4b2";
+		  var s = document.getElementsByTagName("script")[0]; 
+		  s.parentNode.insertBefore(hm, s);
+		})();
+		</script>
+
+</head>
+<body>
+<div class="nav">
+    <div class="center2">
+        <ul class="navList">
+            <li><a href="index.html"><h1><img src="pc/images2/logo.png?2023" class="logo" /></h1></a></li>
+            <li class="cur"><a href="index.html">首页</a></li>
+            <li><a href="/ot/ot_xyk.html">信用卡</a></li>
+            <li><a href="/ot/ot_bx.html">保险</a></li>
+            <li><a href="/ot/ot_lc.html">理财</a></li>
+            <li><a href="/ot/ot_gp.html">股票</a></li>
+            <li><a href="/ot/ot_dk.html">贷款</a></li>
+            <li><a href="wd.html">问答</a></li>
+            <li><a href="aboutus.html">关于我们</a></li>
+        </ul>
+        <div class="nav_add">
+            <span class="entrance">更多></span>
+            <ul class="nav_addList">
+                <li><a href="/ot/ot_fl">法律</a></li>
+
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="banner">
+    <div class="center">
+        <div class="bleft bleft2">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                	<div class="swiper-slide ad_dk"><a><img
+                             src="image/bgpc.jpg?23"/></a>
+                    </div>
+                	<!--<div class="swiper-slide ad_dk"><a><img
+                             src="image/zhaoshan.jpg?23"/><span>招商银行信用卡 · 购物美食5折享</span></a>
+                    </div>-->
+                    <!--<div class="swiper-slide ad_dk"><a><img
+                            src="pc/images/dks.jpg?2"/><span>正规持牌 · 精选官方贷款 额度高 放款快</span></a>
+                    </div>-->
+                    <!--<div class="swiper-slide ad_dk"><a><img
+                             src="pc/images/yqgpc.jpg?23"/><span>正规持牌·精选官方贷款 洋钱罐 大额低息 最快5分钟到账</span></a>
+                    </div>-->
+                    <!--<div class="swiper-slide ad_dk"><a><img
+                             src="pc/images/zapc.jpg?23"/><span>正规持牌·精选官方贷款 众安金融 大额低息 最快5分钟到账</span></a>
+                    </div>-->
+                    <!--<div class="swiper-slide ad_dk"><a><img
+                             src="pc/images/ppdpc.jpg?23"/><span>正规持牌·精选官方贷款 拍拍贷 大额低息 最快5分钟到账</span></a>
+                    </div>-->
+                    <!--<div class="swiper-slide ad_dk"><a><img
+                             src="pc/images/dk2.jpg?123"/><span>正规持牌·精选官方贷款 360借条 大额低息 最快5分钟到账</span></a>
+                    </div>-->
+                    
+                </div>
+                <div class="swiper-pagination" id="swiper-pagination"></div>
+            </div>
+                   
+      
+        </div>
+              <div class="bleft bleft3">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><a
+                            th:href="@{${#httpServletRequest.getContextPath()}+'/'+${recommend[40].columnurlname2}+'/article/'+${recommend[40].id}+'.html'}"><img
+                            src="pc/images/nature-1.jpg"/><span th:text="${recommend[40].title}">一条新闻</span></a>
+                    </div>
+                    <div class="swiper-slide"><a
+                            th:href="@{${#httpServletRequest.getContextPath()}+'/'+${recommend[40].columnurlname2}+'/article/'+${recommend[40].id}+'.html'}"><img
+                            src="pc/images/nature-2.jpg"/><span th:text="${recommend[40].title}">一条新闻</span></a>
+                    </div>
+                    <div class="swiper-slide"><a
+                            th:href="@{${#httpServletRequest.getContextPath()}+'/'+${recommend[40].columnurlname2}+'/article/'+${recommend[40].id}+'.html'}"><img
+                            src="pc/images/nature-3.jpg"/><span th:text="${recommend[40].title}">一条新闻</span></a>
+                    </div>
+                </div>
+                <div class="swiper-pagination" id="swiper-pagination"></div>
+            </div>
+        </div>
+        <div class="bright">
+            <ul>
+                <li>
+                    <a th:href="@{${#httpServletRequest.getContextPath()}+'/'+${recommend[41].columnurlname2}+'/article/'+${recommend[41].id}+'.html'}">
+                        <p th:text="${recommend[41].title}">最多20个字</p></a></li>
+                <li>
+                    <a th:href="@{${#httpServletRequest.getContextPath()}+'/'+${recommend[42].columnurlname2}+'/article/'+${recommend[42].id}+'.html'}">
+                        <p th:text="${recommend[42].title}">一条新闻一条新闻一条新闻一</p></a></li>
+                <li>
+                    <a th:href="@{${#httpServletRequest.getContextPath()}+'/'+${recommend[43].columnurlname2}+'/article/'+${recommend[43].id}+'.html'}">
+                        <p th:text="${recommend[43].title}">一条新闻一条新闻一条新闻一条新</p></a></li>
+                <li>
+                    <a th:href="@{${#httpServletRequest.getContextPath()}+'/'+${recommend[44].columnurlname2}+'/article/'+${recommend[44].id}+'.html'}">
+                        <p th:text="${recommend[44].title}">一条新闻一条新闻一条新闻一条新</p></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="zixun">
+    <div class="center">
+        <div class="leftpart">
+            <ul class="typenav">
+                <li class="cur"><h2><a href="javascript:void(0);">推荐</a></h2></li>
+                <li><h2><a href="javascript:void(0);">资讯</a></h2></li>
+                <li><h2><a href="javascript:void(0);">问答</a></h2></li>
+                <li><h2><a href="javascript:void(0);">专题</a></h2></li>
+            </ul>
+            <div class="type_add">
+                <span class="type_entrance">更多></span>
+                <ul class="type_addList">
+                    <li><a href="ot/ot_fl">法律</a></li>
+                </ul>
+            </div>
+            <div class="typezixun">
+                <!--                推荐-->
+                <ul class="cur">
+                    <li th:each="recommendobj,recommendstat:${recommend}" th:if="${recommendstat.count}<=15">
+                        <a th:href="@{${#httpServletRequest.getContextPath()}+'/'+${recommendobj.columnurlname2}+'/article/'+${recommendobj.id}+'.html'}">
+                            <img th:src="@{${#httpServletRequest.getContextPath()}+'/image/zx'+${recommendstat.count}+'.jpg'}" />
+                            <div class="zixunxiangqing">
+                                <h3 th:text="${#strings.abbreviate(recommendobj.title,25)}"></h3>
+                                <p th:utext="${#strings.abbreviate(recommendobj.articlecontent,50).replace('<br>','')}"></p>
+                                <!--                                <span><s>关键词1</s><s>关键词</s><s>关键词</s></span><b>刚刚</b>-->
+                                <span><s th:text="${recommendobj.keywords}"></s></span>
+                                <b th:text="${recommendobj.insertdate}">刚刚</b>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <!--资讯-->
+                <ul>
+                    <li th:each="recommendobj,recommendstat:${recommend}"
+                        th:if="${recommendstat.count}>10 and ${recommendstat.count}<=20">
+                        <a th:href="@{${#httpServletRequest.getContextPath()}+'/'+${recommendobj.columnurlname2}+'/article/'+${recommendobj.id}+'.html'}">
+                            <img th:src="@{${#httpServletRequest.getContextPath()}+'/image/zx'+${recommendstat.count}+'.jpg'}" />
+                            <div class="zixunxiangqing">
+                                <h3 th:text="${#strings.abbreviate(recommendobj.title,25)}"></h3>
+                                <p th:utext="${#strings.abbreviate(recommendobj.articlecontent,70)}"></p>
+                                <!--                                <span><s>关键词1</s><s>关键词</s><s>关键词</s></span><b>刚刚</b>-->
+                                <span><s th:text="${recommendobj.keywords}"></s></span>
+                                <b th:text="${recommendobj.insertdate}">刚刚</b>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <!--                问答-->
+                <ul>
+                    <li th:each="askobj,askstat:${ask}"
+                        th:if="${askstat.count}<10 ">
+                        <a th:href="@{${#httpServletRequest.getContextPath()}+'/'+${askobj.columnurlname2}+'/ask/'+${askobj.id}+'.html'}">
+                            <!--                            <img src="pc/images/tj1.jpg"/>-->
+                            <img th:src="@{${#httpServletRequest.getContextPath()}+'/image/zx'+${askstat.count}+'.jpg'}" />
+                            <div class="zixunxiangqing">
+                                <h3 th:text="${#strings.abbreviate(askobj.ask,25)}"></h3>
+                                <p th:utext="${#strings.abbreviate(askobj.bestanswer,65)}"></p>
+                                <!--                                <span><s>关键词1</s><s>关键词</s><s>关键词</s></span><b>刚刚</b>-->
+                                <span><s th:text="${askobj.keywords}"></s></span>
+                                <b th:text="${askobj.insertdate}">刚刚</b>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <!--                专题-->
+                <ul>
+                    <li th:each="recommendobj,recommendstat:${recommend}"
+                        th:if="${recommendstat.count}>10 and ${recommendstat.count}>20 and ${recommendstat.count}<28">
+                        <a th:href="@{${#httpServletRequest.getContextPath()}+'/'+${recommendobj.columnurlname2}+'/article/'+${recommendobj.id}+'.html'}">
+                            <img th:src="@{${#httpServletRequest.getContextPath()}+'/image/zx'+${recommendstat.count}+'.jpg'}" />
+                            <div class="zixunxiangqing">
+                                <h3 th:text="${#strings.abbreviate(recommendobj.title,25)}"></h3>
+                                <p th:utext="${#strings.abbreviate(recommendobj.articlecontent,70)}"></p>
+                                <!--                                <span><s>关键词1</s><s>关键词</s><s>关键词</s></span><b>刚刚</b>-->
+                                <span><s th:text="${recommendobj.keywords}"></s></span>
+                                <b th:text="${recommendobj.insertdate}">刚刚</b>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="rightpart">
+            <div class="mokuai reyi">
+                <h4><a href="javascript:void(0);">今日热议</a></h4>
+                <ul>
+
+                    <li th:each="recommendobj,recommendstat:${recommend}"
+                        th:if="${recommendstat.count}>=28 and ${recommendstat.count}<33"><a
+                            th:href="@{${#httpServletRequest.getContextPath()}+'/'+${recommendobj.columnurlname2}+'/article/'+${recommendobj.id}+'.html'}">
+                        <p th:text="${#strings.abbreviate(recommendobj.title,18)}"></p><span th:text="${recommendobj.insertdate}">5分钟前</span></a></li>
+
+                </ul>
+            </div>
+            <div class="mokuai yuanchuang">
+                <h4><a href="javascript:void(0);">精品原创</a></h4>
+                <div th:each="recommendobj,recommendstat:${recommend}"
+                     th:if="${recommendstat.count}>=33 and ${recommendstat.count}<35">
+                    <a th:href="@{${#httpServletRequest.getContextPath()}+'/'+${recommendobj.columnurlname2}+'/article/'+${recommendobj.id}+'.html'}">
+                        <img th:src="@{${#httpServletRequest.getContextPath()}+'/right/jx'+${recommendstat.count-28}+'.jpg'}"/>
+                        <p th:text="${#strings.abbreviate(recommendobj.title,18)}"></p>
+                        <span th:utext="${#strings.abbreviate(recommendobj.articlecontent,50)}"></span>
+                    </a>
+
+                </div>
+            </div>
+            <div class="mokuai top5">
+                <h4><a href="javascript:void(0);">TOP5</a></h4>
+                <ul>
+                    <li th:each="recommendobj,recommendstat:${recommend}"
+                        th:if="${recommendstat.count}>=35 and ${recommendstat.count}<40"><a
+                            th:href="@{${#httpServletRequest.getContextPath()}+'/'+${recommendobj.columnurlname2}+'/article/'+${recommendobj.id}+'.html'}">
+                        <div class="topimg"><img
+                                th:src="@{${#httpServletRequest.getContextPath()}+'/image/'+${recommendstat.count-30}+'.jpg'}"/><s
+                                th:text="${recommendstat.count-34}">1</s></div>
+                        <div class="topzixun"><p th:text="${#strings.abbreviate(recommendobj.title,18)}"></p>
+                            <span th:text="${recommendobj.insertdate}">5分钟前</span></div>
+                    </a></li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="copyright">
+    <div class="center">
+        <p class="bqlianxi">维思迈财经网提供中立的理财投资知识服务，汇集信用卡、基金、贷款、股票、保险等财经领域常识，用浅显的生活语言把专业金融知识变成您生活的一部分，助力您的财智人生！</p>
+       <!-- <p class="bqlianxi">
+            <a href="/aboutus.html">关于我们</a> | <a href="/aboutus.html#shangwuqiatan">商务洽谈</a> | <a href="/aboutus.html#neironghezuo">内容合作</a> | 电话0351-7020802 | 邮箱66212664@qq.com
+        </p>-->
+        <p class="information">
+            <a href="https://beian.miit.gov.cn/#/Integrated/index">
+                版权所有： 沈阳维思迈科技有限公司 Copyright©2022 www.openvsm.com All Rights
+                Reserved. 京ICP备15008691号-17
+                <img src="pc/images/kx.png" />
+            </a>
+          <!--  <a href="javascript:void(0);"> 违法和不良信息举报电话：0351-7020802</a>-->
+        </p>
+    </div>
+</div>
+<div class="shangwuhezuo">
+        <div class="contact">
+            <p class="swtip cooperation"><s class="sw_icon"></s>商务合作</p>
+        </div>
+        <div class="kefu2" style="display: none;">
+            <img src="https://www.openvsm.com/pc/images/erweima.jpg" class="ewm">
+            <a href="javascript:void(0);">合作微信：vsmai010</a>
+        </div>
+    </div>
+<script type="text/javascript" src="pc/js/index.js"></script>
+<script type="text/javascript">
+</script>
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        loop: true, // 循环模式选项
+        autoplay: {
+            delay: 3000, //自动切换的时间间隔，单位ms
+            disableOnInteraction: true //用户操作swiper之后，是否禁止autoplay
+        },
+        pagination: {
+            el: ".swiper-pagination",
+        },
+    });
+    
+    
+    //客服
+        $(".swtip").hover(function () {
+            $(".kefu2").stop().fadeIn();
+        }, function () {
+            $(".kefu2").fadeOut();
+        });
+         //疑问打开和关闭
+        $(".zj_yiwen").click(function () {
+            $(".des_yiwen").css("display", "block");
+        });
+        $(".close_yiwen").click(function () {
+            $(".des_yiwen").css("display", "none");
+        });
+          //贷款广告
+        $(".close_all").click(function () {
+        $(".bleft2").css("display", "none");
+        $(".bleft3").css("display", "block");
+        });
+    $(".nav_add").hover(function () {
+        $(".nav_addList").stop().slideDown();
+    }, function () {
+        $(".nav_addList").stop().slideUp();
+    });
+    $(".type_add").hover(function () {
+        $(".type_addList").stop().slideDown();
+    }, function () {
+        $(".type_addList").stop().slideUp();
+    });
+    $(".type_addList").click(function () {
+        $(".type_add5").addClass("cur").siblings().removeClass("cur");
+    });
+</script>
+
+</body>
+</html>

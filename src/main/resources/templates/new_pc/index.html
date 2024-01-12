@@ -1,0 +1,503 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>维思迈财经—提供中立的理财投资知识服务</title>
+    <meta name="description" content='维思迈财经网提供中立的理财投资知识服务，汇集信用卡、基金、贷款、股票、保险等财经领域常识，助力您的财智人生！'/>
+    <meta name="keywords" content='维思迈财经，财经知识类网站，理财投资，如何投资'/>
+    <!--<link href="new_pc/css/reset.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="new_pc/js/jquery-1.10.1.min.js"></script>
+    <link href="new_pc/css/index.css" rel="stylesheet" type="text/css" />
+    <link href="new_pc/css/swiper.min.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="new_pc/js/swiper.min.js"></script>-->
+
+    <link href="new_pc/css/reset.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="new_pc/js/jquery-1.10.1.min.js"></script>
+    <link href="new_pc/css/index.css" rel="stylesheet" type="text/css"/>
+    <link href="new_pc/css/swiper.min.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="new_pc/js/swiper.min.js"></script>
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?dc514ac2d86a287446d54c8b1504b4b2";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</head>
+<body>
+<div class="nav">
+    <div class="center">
+        <ul>
+            <li><a href="/index.html"><h1><img src="new_pc/images/logo.png" class="logo"/></h1></a></li>
+            <li class="cur"><a href="index.html">首页</a></li>
+            <li><a href="/ot/ot_xyk.html">信用卡</a></li>
+            <li><a href="/ot/ot_bx.html">保险</a></li>
+            <li><a href="/ot/ot_lc.html">理财</a></li>
+            <li><a href="/ot/ot_gp.html">股票</a></li>
+            <li><a href="/ot/ot_dk.html">贷款</a></li>
+            <li><a href="/wd.html">问答</a></li>
+            <li><a href="/aboutus.html">关于我们</a></li>
+
+        </ul>
+    </div>
+</div>
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide swiper-slide1"><img src="new_pc/images/banner1.jpg"></div>
+        <div class="swiper-slide swiper-slide2"><a href="https://cps.qixin18.com/apps/cps/bjy1093998/product/detail?prodId=104446&planId=129312&tenantId=0
+"><img src="new_pc/images/banner2.jpg"></a></div>
+        <!--<div class="swiper-slide swiper-slide3"><img src="new_pc/images/banner3.jpg"></div>-->
+    </div>
+    <div class="swiper-button-next" id="nextbut"></div>
+    <div class="swiper-button-prev" id="prevbut"></div>
+</div>
+<div class="baoxian">
+    <div class="center">
+        <div class="productnav">
+            <h2>保险产品</h2>
+            <ul class="navlist">
+                <li class="cur">人寿保险</li>
+                <li>健康保险</li>
+                <li>家财保险</li>
+                <li>旅游保险</li>
+                <li>意外保险</li>
+            </ul>
+        </div>
+        <div class="baoxianpro">
+            <ul class="baoxianlist cur">
+                <li class="cur" th:each="rsbxpobj,rsbxpstat:${rsbxp}"><a
+                        th:href="@{${#httpServletRequest.getContextPath()}+'/bx_product/'+${rsbxpobj.id}+'.html'}">
+                    <img th:src="@{${#httpServletRequest.getContextPath()}+'/bxcpimg/'+${rsbxpobj.img}+'.jpg'}">
+                    <h3 th:text="${#strings.abbreviate(rsbxpobj.name,13)}">金盈年年养老年金保险</h3>
+                    <p th:text="${#strings.abbreviate(rsbxpobj.t1,8)}">满期一次性领取10倍基本保额</p>
+                    <div><span th:text="${#strings.abbreviate(rsbxpobj.t2,8)}">资金灵活支配</span><span
+                            th:text="${#strings.abbreviate(rsbxpobj.t3,8)}">可对接光大养老社区</span></div>
+                </a></li>
+            </ul>
+            <!--            -->
+            <ul class="baoxianlist">
+                <li class="cur" th:each="jkbxpobj,jkbxpstat:${jkbxp}"><a
+                        th:href="@{${#httpServletRequest.getContextPath()}+'/bx_product/'+${jkbxpobj.id}+'.html'}">
+                    <img th:src="@{${#httpServletRequest.getContextPath()}+'/bxcpimg/'+${jkbxpobj.img}+'.jpg'}">
+                    <h3 th:text="${#strings.abbreviate(jkbxpobj.name,13)}">金盈年年养老年金保险</h3>
+                    <p th:text="${#strings.abbreviate(jkbxpobj.t1,8)}">满期一次性领取10倍基本保额</p>
+                    <div><span th:text="${#strings.abbreviate(jkbxpobj.t2,8)}">资金灵活支配</span><span
+                            th:text="${#strings.abbreviate(jkbxpobj.t3,8)}">可对接光大养老社区</span></div>
+                </a></li>
+            </ul>
+
+            <!--            -->
+            <ul class="baoxianlist">
+                <li class="cur" th:each="jcbxpobj,jcbxpstat:${jcbxp}"><a
+                        th:href="@{${#httpServletRequest.getContextPath()}+'/bx_product/'+${jcbxpobj.id}+'.html'}">
+                    <img th:src="@{${#httpServletRequest.getContextPath()}+'/bxcpimg/'+${jcbxpobj.img}+'.jpg'}">
+                    <h3 th:text="${#strings.abbreviate(jcbxpobj.name,13)}">金盈年年养老年金保险</h3>
+                    <p th:text="${#strings.abbreviate(jcbxpobj.t1,8)}">满期一次性领取10倍基本保额</p>
+                    <div><span th:text="${#strings.abbreviate(jcbxpobj.t2,8)}">资金灵活支配</span><span
+                            th:text="${#strings.abbreviate(jcbxpobj.t3,8)}">可对接光大养老社区</span></div>
+                </a></li>
+            </ul>
+
+            <!--            -->
+            <ul class="baoxianlist">
+                <li class="cur" th:each="lybxpobj,lybxpstat:${lybxp}"><a
+                        th:href="@{${#httpServletRequest.getContextPath()}+'/bx_product/'+${lybxpobj.id}+'.html'}">
+                    <img th:src="@{${#httpServletRequest.getContextPath()}+'/bxcpimg/'+${lybxpobj.img}+'.jpg'}">
+                    <h3 th:text="${#strings.abbreviate(lybxpobj.name,13)}">金盈年年养老年金保险</h3>
+                    <p th:text="${#strings.abbreviate(lybxpobj.t1,8)}">满期一次性领取10倍基本保额</p>
+                    <div><span th:text="${#strings.abbreviate(lybxpobj.t2,8)}">资金灵活支配</span><span
+                            th:text="${#strings.abbreviate(lybxpobj.t3,8)}">可对接光大养老社区</span></div>
+                </a></li>
+            </ul>
+
+            <!--            -->
+            <ul class="baoxianlist">
+                <li class="cur" th:each="ywbxpobj,ywbxpstat:${ywbxp}"><a
+                        th:href="@{${#httpServletRequest.getContextPath()}+'/bx_product/'+${ywbxpobj.id}+'.html'}">
+                    <img th:src="@{${#httpServletRequest.getContextPath()}+'/bxcpimg/'+${ywbxpobj.img}+'.jpg'}">
+                    <h3 th:text="${#strings.abbreviate(ywbxpobj.name,13)}">金盈年年养老年金保险</h3>
+                    <p th:text="${#strings.abbreviate(ywbxpobj.t1,8)}">满期一次性领取10倍基本保额</p>
+                    <div><span th:text="${#strings.abbreviate(ywbxpobj.t2,8)}">资金灵活支配</span><span
+                            th:text="${#strings.abbreviate(ywbxpobj.t3,8)}">可对接光大养老社区</span></div>
+                </a></li>
+            </ul>
+
+        </div>
+    </div>
+</div>
+<div class="daikuan">
+    <div class="center">
+        <div class="daikuanleft">
+            <div class="productnav">
+                <h2>贷款产品</h2>
+                <ul class="navlist">
+                    <li class="cur">信用贷款</li>
+                    <li>无抵押贷款</li>
+                    <li>小额贷款</li>
+                </ul>
+            </div>
+            <div class="daikuanpro">
+                <ul class="daikuanlist cur">
+                    <li><h3>信用贷款</h3>
+                        <p>20，000-50，000</p>
+                        <div class="daikuaninfo"><span>最快1天内到账</span><span>贷款期限自由选择</span></div>
+                        <div class="more"><s>查看详情</s></div>
+                    </li>
+                    <li><h3>信用贷款</h3>
+                        <p>60，000-100，000</p>
+                        <div class="daikuaninfo"><span>月入4000即刻贷</span><span>贷款期限自由选择</span></div>
+                        <div class="more"><s>查看详情</s></div>
+                    </li>
+                    <li><h3>信用贷款</h3>
+                        <p>200，000-300，000</p>
+                        <div class="daikuaninfo"><span>无抵押无担保</span><span>贷款期限自由选择</span></div>
+                        <div class="more"><s>查看详情</s></div>
+                    </li>
+                    <li><h3>信用贷款</h3>
+                        <p>300，000-500，000</p>
+                        <div class="daikuaninfo"><span>最高可贷50万</span><span>贷款期限自由选择</span></div>
+                        <div class="more"><s>查看详情</s></div>
+                    </li>
+                </ul>
+                <ul class="daikuanlist">
+                    <li><h3>无抵押贷款</h3>
+                        <p>10，000-30，000</p>
+                        <div class="daikuaninfo"><span>最快1天内到账</span><span>贷款期限自由选择</span></div>
+                        <div class="more"><s>查看详情</s></div>
+                    </li>
+                    <li><h3>无抵押贷款</h3>
+                        <p>40，000-60，000</p>
+                        <div class="daikuaninfo"><span>月入4000即刻贷</span><span>贷款期限自由选择</span></div>
+                        <div class="more"><s>查看详情</s></div>
+                    </li>
+                    <li><h3>无抵押贷款</h3>
+                        <p>70，000-100，000</p>
+                        <div class="daikuaninfo"><span>无抵押无担保</span><span>贷款期限自由选择</span></div>
+                        <div class="more"><s>查看详情</s></div>
+                    </li>
+                    <li><h3>无抵押贷款</h3>
+                        <p>100，000-200，000</p>
+                        <div class="daikuaninfo"><span>最高可贷50万</span><span>贷款期限自由选择</span></div>
+                        <div class="more"><s>查看详情</s></div>
+                    </li>
+                </ul>
+                <ul class="daikuanlist">
+                    <li><h3>小额贷款</h3>
+                        <p>5，000-10，000</p>
+                        <div class="daikuaninfo"><span>最快1天内到账</span><span>贷款期限自由选择</span></div>
+                        <div class="more"><s>查看详情</s></div>
+                    </li>
+                    <li><h3>小额贷款</h3>
+                        <p>10，000-30，000</p>
+                        <div class="daikuaninfo"><span>月入4000即刻贷</span><span>贷款期限自由选择</span></div>
+                        <div class="more"><s>查看详情</s></div>
+                    </li>
+                    <li><h3>小额贷款</h3>
+                        <p>40，000-70，000</p>
+                        <div class="daikuaninfo"><span>无抵押无担保</span><span>贷款期限自由选择</span></div>
+                        <div class="more"><s>查看详情</s></div>
+                    </li>
+                    <li><h3>小额贷款</h3>
+                        <p>80，000-100，000</p>
+                        <div class="daikuaninfo"><span>最高可贷50万</span><span>贷款期限自由选择</span></div>
+                        <div class="more"><s>查看详情</s></div>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+        <div class="daikuanright">
+            <h3>贷款热门问答</h3>
+            <ul>
+                <li th:each="dkaskobj,dkaskstat:${dkask}"
+                    th:if="${dkaskstat.count}<6 "><a
+                        th:href="@{${#httpServletRequest.getContextPath()}+'/'+${dkaskobj.columnurlname2}+'/ask/'+${dkaskobj.id}+'.html'}">
+                    <p th:text="${#strings.abbreviate(dkaskobj.ask,15)}">贷款未到期，我可以提前还款吗？</p> <span
+                        th:text="${dkaskobj.id%200}+'人问过'">1234人问过</span></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="xinyongka">
+    <div class="center">
+        <div class="productnav">
+            <h2>信用卡产品</h2>
+            <ul class="navlist">
+                <li class="cur">标准卡</li>
+                <li>白金卡</li>
+                <li>旅游卡</li>
+            </ul>
+        </div>
+        <div class="xinyongkapro">
+            <ul class="xinyongkalist cur">
+                <li><img src="new_pc/images/ka1.png">
+                    <h3>中信银行标准卡</h3>
+                    <p>终身免年费</p>
+                    <p>周六消费部分商品半价</p><s>了解详情 ></s></li>
+                <li><img src="new_pc/images/ka2.png">
+                    <h3>平安银行标准信用卡</h3>
+                    <p>刷卡免年费</p>
+                    <p>积分永久有效</p><s>了解详情 ></s></li>
+                <li><img src="new_pc/images/ka3.png">
+                    <h3>工商银行信用卡</h3>
+                    <p>快速申请</p>
+                    <p>纯数字信用卡</p><s>了解详情 ></s></li>
+                <li><img src="new_pc/images/ka4.png">
+                    <h3>兴业银行标准信用卡</h3>
+                    <p>刷卡免年费</p>
+                    <p>积分永久有效</p><s>了解详情 ></s></li>
+                <li><img src="new_pc/images/ka5.png">
+                    <h3>招商银行标准信用卡</h3>
+                    <p>生日月尊享双倍积分</p>
+                    <p>特约商户最低5折优惠</p><s>了解详情 ></s></li>
+            </ul>
+            <ul class="xinyongkalist">
+                <li><img src="new_pc/images/ka3.png">
+                    <h3>工商银行白金卡</h3>
+                    <p>快速申请</p>
+                    <p>纯数字信用卡</p><s>了解详情 ></s></li>
+                <li><img src="new_pc/images/ka4.png">
+                    <h3>兴业银行白金卡</h3>
+                    <p>刷卡免年费</p>
+                    <p>积分永久有效</p><s>了解详情 ></s></li>
+                <li><img src="new_pc/images/ka1.png">
+                    <h3>中信银行白金卡</h3>
+                    <p>终身免年费</p>
+                    <p>周六消费部分商品半价</p><s>了解详情 ></s></li>
+                <li><img src="new_pc/images/ka2.png">
+                    <h3>平安银行白金卡</h3>
+                    <p>刷卡免年费</p>
+                    <p>积分永久有效</p><s>了解详情 ></s></li>
+                <li><img src="new_pc/images/ka5.png">
+                    <h3>招商银行白金卡</h3>
+                    <p>生日月尊享双倍积分</p>
+                    <p>特约商户最低5折优惠</p><s>了解详情 ></s></li>
+            </ul>
+            <ul class="xinyongkalist">
+                <li><img src="new_pc/images/ka4.png">
+                    <h3>兴业银行旅游卡</h3>
+                    <p>刷卡免年费</p>
+                    <p>积分永久有效</p><s>了解详情 ></s></li>
+                <li><img src="new_pc/images/ka5.png">
+                    <h3>招商银行旅游卡</h3>
+                    <p>生日月尊享双倍积分</p>
+                    <p>特约商户最低5折优惠</p><s>了解详情 ></s></li>
+                <li><img src="new_pc/images/ka1.png">
+                    <h3>中信银行旅游卡</h3>
+                    <p>终身免年费</p>
+                    <p>周六消费部分商品半价</p><s>了解详情 ></s></li>
+                <li><img src="new_pc/images/ka2.png">
+                    <h3>平安银行旅游卡</h3>
+                    <p>刷卡免年费</p>
+                    <p>积分永久有效</p><s>了解详情 ></s></li>
+                <li><img src="new_pc/images/ka3.png">
+                    <h3>工商银行旅游卡</h3>
+                    <p>快速申请</p>
+                    <p>纯数字信用卡</p><s>了解详情 ></s></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="otherall">
+    <div class="center">
+        <div class="otherleft">
+            <div class="concentration_video">
+                <h2>视频精选</h2>
+                <ul class="videolist">
+                    <li><a href="/video/17.html"><img src="new_pc/images/nv1.jpg" class="nvibg"><img
+                            src="new_pc/images/bf2.png" class="nbf"><h4>医疗保险报销条件?</h4></a></li>
+                    <li><a href="/video/33.html"><img src="new_pc/images/nv2.jpg" class="nvibg"><img
+                            src="new_pc/images/bf2.png" class="nbf"><h4>工伤保险理赔流程?</h4></a></li>
+                    <li><a href="/video/3.html"><img src="new_pc/images/nv3.jpg" class="nvibg"><img
+                            src="new_pc/images/bf2.png" class="nbf"><h4>申请公积金贷款需要满足的条件?</h4></a></li>
+                </ul>
+            </div>
+            <div class="fande_class">
+                <h2>财经课堂</h2>
+                <div class="classlist">
+                    <ul class="xyklist">
+                        <li><img src="new_pc/images/xykkt.png"/></li>
+                        <li th:each="xykobj,xykstat:${xyk}"><a
+                                th:href="@{${#httpServletRequest.getContextPath()}+'/'+${xykobj.columnurlname2}+'/article/'+${xykobj.id}+'.html'}"
+                                th:text="${#strings.abbreviate(xykobj.title,12)}">60岁老年人可以买重疾险划算吗？</a></li>
+
+                    </ul>
+                    <ul class="dklist">
+                        <li><img src="new_pc/images/dkkt.png"/></li>
+                        <li th:each="dkobj,dkstat:${dk}"><a
+                                th:href="@{${#httpServletRequest.getContextPath()}+'/'+${dkobj.columnurlname2}+'/article/'+${dkobj.id}+'.html'}"
+                                th:text="${#strings.abbreviate(dkobj.title,12)}">60岁老年人可以买重疾险划算吗？</a></li>
+
+                    </ul>
+                    <ul class="bxlist">
+                        <li><img src="new_pc/images/bxkt.png"/></li>
+                        <li th:each="bxobj,bxstat:${bx}" th:if="${bxstat.count}<4"><a
+                                th:href="@{${#httpServletRequest.getContextPath()}+'/'+${bxobj.columnurlname2}+'/article/'+${bxobj.id}+'.html'}"
+                                th:text="${#strings.abbreviate(bxobj.title,11)}">60岁老年人可以买重疾险划算吗？</a></li>
+
+                        <li th:each="bxobj,bxstat:${bx}" th:if="${bxstat.count}>=4"><a
+                                th:href="@{${#httpServletRequest.getContextPath()}+'/'+${bxobj.columnurlname2}+'/article/'+${bxobj.id}+'.html'}"
+                                th:text="${#strings.abbreviate(bxobj.title,18)}">60岁老年人可以买重疾险划算吗？</a></li>
+
+
+                    </ul>
+                </div>
+            </div>
+            <div class="zixun">
+                <div class="leftpart">
+                    <ul class="typenav">
+                        <li class="cur"><h2><a href="javascript:void(0);">推荐</a></h2></li>
+                        <li><h2><a href="javascript:void(0);">资讯</a></h2></li>
+                        <li><h2><a href="javascript:void(0);">问答</a></h2></li>
+                        <li><h2><a href="javascript:void(0);">专题</a></h2></li>
+                    </ul>
+                    <div class="typezixun">
+                        <ul class="cur">
+                            <li th:each="recommendobj,recommendstat:${recommend}" th:if="${recommendstat.count}<=15">
+                                <a th:href="@{${#httpServletRequest.getContextPath()}+'/'+${recommendobj.columnurlname2}+'/article/'+${recommendobj.id}+'.html'}">
+                                    <img th:src="@{${#httpServletRequest.getContextPath()}+'/image/zx'+${recommendstat.count}+'.jpg'}"/>
+                                    <div class="zixunxiangqing">
+                                        <h3 th:text="${#strings.abbreviate(recommendobj.title,25)}"></h3>
+                                        <p th:utext="${#strings.abbreviate(recommendobj.articlecontent,70)}"></p>
+                                        <!--                                <span><s>关键词1</s><s>关键词</s><s>关键词</s></span><b>刚刚</b>-->
+                                        <span><s th:text="${recommendobj.keywords}"></s></span>
+                                        <b th:text="${recommendobj.insertdate}">刚刚</b>
+                                    </div>
+                                </a>
+                            </li>
+
+                        </ul>
+                        <ul>
+                            <li th:each="recommendobj,recommendstat:${recommend}"
+                                th:if="${recommendstat.count}>10 and ${recommendstat.count}<=20">
+                                <a th:href="@{${#httpServletRequest.getContextPath()}+'/'+${recommendobj.columnurlname2}+'/article/'+${recommendobj.id}+'.html'}">
+                                    <img th:src="@{${#httpServletRequest.getContextPath()}+'/image/zx'+${recommendstat.count}+'.jpg'}"/>
+                                    <div class="zixunxiangqing">
+                                        <h3 th:text="${#strings.abbreviate(recommendobj.title,25)}"></h3>
+                                        <p th:utext="${#strings.abbreviate(recommendobj.articlecontent,70)}"></p>
+                                        <!--                                <span><s>关键词1</s><s>关键词</s><s>关键词</s></span><b>刚刚</b>-->
+                                        <span><s th:text="${recommendobj.keywords}"></s></span>
+                                        <b th:text="${recommendobj.insertdate}">刚刚</b>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li th:each="askobj,askstat:${ask}"
+                                th:if="${askstat.count}<10 ">
+                                <a th:href="@{${#httpServletRequest.getContextPath()}+'/'+${askobj.columnurlname2}+'/ask/'+${askobj.id}+'.html'}">
+                                    <!--                            <img src="pc/images/tj1.jpg"/>-->
+                                    <img th:src="@{${#httpServletRequest.getContextPath()}+'/image/zx'+${askstat.count}+'.jpg'}"/>
+                                    <div class="zixunxiangqing">
+                                        <h3 th:text="${#strings.abbreviate(askobj.ask,25)}"></h3>
+                                        <p th:utext="${#strings.abbreviate(askobj.bestanswer,65)}"></p>
+                                        <!--                                <span><s>关键词1</s><s>关键词</s><s>关键词</s></span><b>刚刚</b>-->
+                                        <span><s th:text="${askobj.keywords}"></s></span>
+                                        <b th:text="${askobj.insertdate}">刚刚</b>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li th:each="recommendobj,recommendstat:${recommend}"
+                                th:if="${recommendstat.count}>10 and ${recommendstat.count}>20 and ${recommendstat.count}<28">
+                                <a th:href="@{${#httpServletRequest.getContextPath()}+'/'+${recommendobj.columnurlname2}+'/article/'+${recommendobj.id}+'.html'}">
+                                    <img th:src="@{${#httpServletRequest.getContextPath()}+'/image/zx'+${recommendstat.count}+'.jpg'}"/>
+                                    <div class="zixunxiangqing">
+                                        <h3 th:text="${#strings.abbreviate(recommendobj.title,25)}"></h3>
+                                        <p th:utext="${#strings.abbreviate(recommendobj.articlecontent,70)}"></p>
+                                        <!--                                <span><s>关键词1</s><s>关键词</s><s>关键词</s></span><b>刚刚</b>-->
+                                        <span><s th:text="${recommendobj.keywords}"></s></span>
+                                        <b th:text="${recommendobj.insertdate}">刚刚</b>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="otherright">
+            <div class="baike">
+                <img src="new_pc/images/bk.jpg"/>
+                <ul>
+                    <li th:each="recommendobj,recommendstat:${recommend}"
+                        th:if="${recommendstat.count}>=28 and ${recommendstat.count}<33"><a
+                            th:href="@{${#httpServletRequest.getContextPath()}+'/'+${recommendobj.columnurlname2}+'/article/'+${recommendobj.id}+'.html'}"
+                            th:text="${#strings.abbreviate(recommendobj.title,18)}">60岁老年人可以买重疾险划算吗？</a></li>
+
+                </ul>
+            </div>
+            <div class="rightfix">
+                <div class="gongzhonghao">
+                    <div class="follow">
+                        <h3>关注官方公众号</h3>
+                        <a href="#">获取更多内容</a>
+                    </div>
+                    <img src="new_pc/images/gzh.jpg" class="gzh"/>
+                </div>
+
+                <div class="mokuai">
+                    <h4>今日热议</h4>
+                    <ul>
+                        <li th:each="recommendobj,recommendstat:${recommend}"
+                            th:if="${recommendstat.count}>=34 and ${recommendstat.count}<39"><a
+                                th:href="@{${#httpServletRequest.getContextPath()}+'/'+${recommendobj.columnurlname2}+'/article/'+${recommendobj.id}+'.html'}">
+                            <p th:text="${#strings.abbreviate(recommendobj.title,18)}"></p><span
+                                th:text="${recommendobj.insertdate}">5分钟前</span></a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="copyright">
+    <div class="center">
+        <p class="bqlianxi">维思迈财经网提供中立的理财投资知识服务，汇集信用卡、基金、贷款、股票、保险等财经领域常识，用浅显的生活语言把专业金融知识变成您生活的一部分，助力您的财智人生！</p>
+       <!-- <p class="bqlianxi"><a href="javascript:void(0);">关于我们</a> | <a href="javascript:void(0);">商务洽谈</a> | <a
+                href="javascript:void(0);">内容合作</a> | 电话0351-7020802 | 邮箱contact@openvsm.com </p>
+        <p class="information">-->
+            <a href="http://beian.miit.gov.cn/state/outPortal/loginPortal.action;jsessionid=b4ojmap5WXcjMNUhGdqvr97kMZymlITl_4rhbxCDVnUgF6Mv2nn5!1935156451">
+                版权所有： 维思迈财经
+                <img src="new_pc/images/kx.png"/>
+            </a>
+          <!--  <a href="javascript:void(0);"> 违法和不良信息举报电话：0351-7020802</a>-->
+        </p>
+    </div>
+</div>
+
+<script type="text/javascript" src="new_pc/js/index.js"></script>
+<script type="text/javascript">
+</script>
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        slidesPerView: 1,
+        paginationClickable: true,
+        spaceBetween: 30,
+        loop: true
+    });
+</script>
+<script type="text/javascript">
+    var a = $(".rightfix").offset();
+    $(window).scroll(function () {
+        var scrollheight = $(window).scrollTop();
+        if ($(window).scrollTop() >= 2102) {
+            $(".rightfix").css({
+                "top": scrollheight - 2102
+            });
+        } else {
+            $(".rightfix").css({
+                "top": "0"
+            });
+        }
+    });
+</script>
+</body>
+</html>

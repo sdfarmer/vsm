@@ -1,0 +1,517 @@
+
+.position {
+    font-size: 14px;
+    color: #757575;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.thisp {
+    color: #0e0e0e;
+}
+
+.buy {
+    padding: 20px;
+    height:342px;
+    background: #fff;
+    border-radius: 3px;
+}
+
+.buyright {
+    float: left;
+    width: 740px;
+}
+
+.buy .curimg {
+    float: left;
+    margin-right: 20px;
+    width: 400px;
+}
+
+.buyright h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    margin-top: 5px;
+}
+
+.main_informationlist li {
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.main_informationlist li:nth-child(2) {
+    margin-bottom: 20px;
+}
+
+.main_informationlist li p {
+    float: left;
+    font-size: 18px;
+}
+
+.main_informationlist li .data {
+    color: #757575;
+}
+
+.main_informationlist li .price {
+    font-size: 40px;
+    font-weight: bold;
+    padding-right: 2px;
+}
+
+.main_informationlist li:nth-child(3) {
+    line-height: 50px;
+}
+
+.main_informationlist li:nth-child(3) span {
+    color: #ff9110;
+}
+
+.main_informationlist li:nth-child(3) p:first-child {
+    position: relative;
+    top: 3px;
+}
+
+.fuction {
+    width: 300px;
+    float: right;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    z-index:88;
+}
+.fuction a {
+    width: 130px;
+    height: 52px;
+    float: left;
+    margin-left: 20px;
+    background: #ff9110;
+    color: #fff;
+    text-align: center;
+    line-height: 52px;
+    border-radius: 3px;
+    font-size: 22px;
+}
+    .fuction .ljgz{
+        position:absolute;
+        top:-206px;
+        right:-30px;
+        z-index:99;
+        display:none;
+    }
+    .main_information {
+        position: relative;
+        border-bottom: 1px solid #f0f0f0;
+    }
+
+.fuction .consult {
+    background: #0071e3;
+}
+
+.characteristic {
+    margin-top: 15px;
+}
+
+.characteristic p {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.characteristic li {
+    padding-left: 20px;
+    background: url(../images/ts.png) left center no-repeat;
+    color: #494d51;
+    line-height: 28px;
+}
+
+.fuction a.insure:hover {
+    background: #ff6c00;
+}
+
+.fuction a.consult:hover {
+    background: #007fff;
+}
+
+
+.detailnav {
+    overflow: hidden;
+    border-bottom: 1px solid #f0f0f0;
+    box-sizing: border-box;
+    background: #fff;
+    padding: 15px;
+    padding-bottom: 0;
+}
+
+.detailnav li {
+    float: left;
+    margin-right: 90px;
+}
+
+.detailnav li.cur a {
+    color: #0071e3;
+    border-bottom: 3px solid #0071e3;
+}
+
+.detailnav a {
+    display: block;
+    height: 48px;
+    color: #4d4d4d;
+    text-align: left;
+    border-bottom: 3px solid #fff;
+    line-height: 48px;
+    font-size: 22px;
+}
+
+.detaillist {
+    margin-top: 15px;
+}
+
+.maindetail_change {
+    display: none;
+}
+
+.maindetail_change.cur {
+    display: block;
+}
+
+.maindetail_change h3 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.nomalask li {
+    line-height: 26px;
+    border-bottom: 1px dashed #f0f0f0;
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+
+.tips {
+    margin-top: 10px;
+}
+
+.tips li {
+    line-height: 34px;
+}
+
+.tips li:nth-child(2n) {
+    color: #757575;
+}
+
+.nomalask li:last-child {
+    border-bottom: 0;
+}
+
+.nomalask li p {
+}
+
+.nomalask li span {
+    color: #757575;
+    display: block;
+}
+
+
+.listleft {
+    width: 855px;
+    float: left;
+    margin-right: 15px;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+.listright {
+    width: 330px;
+    float: left;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+.maindetail {
+    background: #fff;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding: 15px;
+}
+
+.maindetail img {
+    display: block;
+    margin: 0 auto;
+}
+
+table {
+    width: 100%;
+    table-layout: fixed;
+    border-left: 1px solid #a8cff7;
+    border-top: 1px solid #a8cff7;
+    background: #f0f7ff;
+}
+
+th, td {
+    border-right: 1px solid #a8cff7;
+    border-bottom: 1px solid #a8cff7;
+    vertical-align: middle;
+    text-align: center;
+    padding: 12px 0;
+    font-size: 16px;
+}
+
+th {
+    font-weight: normal;
+}
+
+.first_line {
+    line-height: 40px;
+}
+
+.first_line th {
+    font-size: 18px;
+}
+
+.claims_service {
+    background: #fff;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding: 20px;
+    margin-top: 15px;
+}
+
+.claims_service h2 {
+    margin-right: 60px;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 40px;
+    margin-bottom: 10px;
+}
+
+.claims_service img {
+    display: block;
+    margin: 0 auto;
+}
+
+.claimslist {
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.claimslist li {
+    width: 25%;
+    float: left;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+.claimslist li img {
+    width: 30px;
+}
+
+.claimslist li p {
+    text-align: center;
+    color: #ff9110;
+    font-size: 18px;
+    line-height: 30px;
+    margin-top: 9px;
+    margin-bottom: 5px;
+}
+
+.claimslist li span {
+    text-align: left;
+    display: block;
+    color: #757575;
+    font-size: 14px;
+    line-height: 22px;
+}
+
+.goodness {
+    width: 100%;
+    margin: 0 auto;
+    background: #fff;
+    margin-top: 15px;
+    padding: 40px 0;
+}
+
+.goodnesslist {
+    overflow: hidden;
+}
+
+.goodnesslist li {
+    float: left;
+    width: 20%;
+    box-sizing: border-box;
+    background: url(../images/y1.png) left center no-repeat;
+    padding: 10px 0;
+    padding-left: 52px;
+}
+
+.goodnesslist li p {
+    color: #0071e3;
+}
+
+.goodnesslist li span {
+    color: #757575;
+}
+
+.copyright {
+    margin-top: 0;
+}
+
+.goodnesslist li:nth-child(2) {
+    background: url(../images/y2.png) left center no-repeat;
+}
+
+.goodnesslist li:nth-child(3) {
+    background: url(../images/y3.png) left center no-repeat;
+}
+
+.goodnesslist li:nth-child(4) {
+    background: url(../images/y4.png) left center no-repeat;
+}
+
+.goodnesslist li:nth-child(5) {
+    background: url(../images/y5.png) left center no-repeat;
+}
+
+.check {
+    background: #fff;
+    box-sizing: border-box;
+    padding: 15px;
+}
+
+.check h3 {
+    margin-right: 60px;
+    font-size: 22px;
+    line-height: 40px;
+    margin-bottom: 10px;
+}
+
+.checklist {
+    overflow: hidden;
+    clear: both;
+}
+
+.checklist li {
+    position: relative;
+    margin-bottom: 10px;
+
+}
+
+.checklist li span {
+    color: #494d51;
+    display: block;
+    line-height: 40px;
+}
+
+.checklist li span:hover {
+    text-decoration: underline;
+}
+
+.checklist li:first-child {
+    width: 100%;
+    height: 159px;
+    background: url(../images/cp.jpg) top center no-repeat;
+    background-size: 100%;
+    margin-bottom: 10px;
+}
+
+
+.checklist li:first-child span {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding-left: 5px;
+    box-sizing: border-box;
+    height: 30px;
+    line-height: 30px;
+}
+
+.checklist li:not(:first-child) {
+    padding-left: 30px;
+}
+
+.checklist li:nth-child(2):before {
+    content: "1";
+    color: #fff;
+    background: #f04938;
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    position: absolute;
+    top: 10px;
+    left: 3px;
+    z-index: 1;
+    font-size: 14px;
+    text-align: center;
+    line-height: 20px;
+}
+
+.checklist li:nth-child(3):before {
+    content: "2";
+    color: #fff;
+    background: #ff9110;
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    position: absolute;
+    top: 10px;
+    left: 3px;
+    z-index: 1;
+    font-size: 14px;
+    text-align: center;
+    line-height: 20px;
+}
+
+.checklist li:not(:first-child) s {
+    display: block;
+    color: #757575;
+}
+
+/*¹«ÖÚºÅ*/
+.gongzhonghao {
+    width: 100%;
+    padding-top: 20px;
+    overflow: hidden;
+    background: url(../images/kf.png) top center no-repeat;
+    background-size: 100%;
+    padding-bottom: 49px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.gongzhonghao .gzh {
+    float: right;
+    margin-right: 20px;
+}
+
+.gongzhonghao .follow {
+    float: left;
+    margin-left: 30px;
+}
+    .gongzhonghao .follow img{
+        margin-left:17px;
+        margin-bottom:5px;
+    }
+    .gongzhonghao .follow h3 {
+        font-size: 20px;
+        color: #fff;
+        margin-bottom: 10px;
+    }
+
+.gongzhonghao .follow a {
+    width: 145px;
+    height: 40px;
+    display: block;
+    background: #fff;
+    color: #0071e3;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 3px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.gongzhonghao .follow a:hover {
+    background: #ff9110;
+    color: #fff;
+}

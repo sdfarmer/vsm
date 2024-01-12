@@ -1,0 +1,200 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title th:text="${article.title}+'—维思迈财经'">金融综合资讯</title>
+    <meta name="description" th:attr="content=${#strings.abbreviate(article.articlecontent,200)}">
+    <meta name="keywords" th:attr="content=${article.keywords}">
+    <link th:href="@{${#httpServletRequest.getContextPath()}+'/pc/css/reset.css'}" rel="stylesheet" type="text/css" />
+    <script type="text/javascript"
+            th:src="@{${#httpServletRequest.getContextPath()}+'/pc/js/jquery-1.10.1.min.js'}"></script>
+    <link th:href="@{${#httpServletRequest.getContextPath()}+'/pc/css/index.css'}" rel="stylesheet" type="text/css" />
+    <link th:href="@{${#httpServletRequest.getContextPath()}+'/pc/css/article.css?2022222812'}" rel="stylesheet" type="text/css" />
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?dc514ac2d86a287446d54c8b1504b4b2";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</head>
+<body>
+<div class="nav">
+    <div class="center">
+        <ul>
+            <li><a href="/"><h1><img th:src="@{${#httpServletRequest.getContextPath()}+'/pc/images2/logo.png?2023'}"
+                                              class="logo"/></h1></a></li>
+            <li><a href="/">首页</a></li>
+            <li><a href="/ot/ot_xyk.html">信用卡</a></li>
+            <li><a href="/ot/ot_bx.html">保险</a></li>
+            <li><a href="/ot/ot_lc.html">理财</a></li>
+            <li><a href="/ot/ot_gp.html">股票</a></li>
+            <li><a href="/ot/ot_dk.html">贷款</a></li>
+            <li><a href="/wd.html">问答</a></li>
+            <li><a href="/aboutus.html">关于我们</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="zixun">
+    <div class="center">
+        <div class="leftpart">
+            <div class="weizhi">
+                <span><a href="/">维思迈财经</a>></span><span>
+                    <a th:href="@{${#httpServletRequest.getContextPath()}+'/ot/'+${article.columnurlname2}+'.html'}"
+                       th:text="${article.columnshortname2}">理财</a>
+                </span>><span>
+                    <a th:href="@{${#httpServletRequest.getContextPath()}+'/'+${article.columnurlname2}+'/article/'+${article.id}+'.html'}"
+                       th:text="${article.title}">资讯</a>
+                </span>
+            </div>
+            <div class="wenti">
+                <h4 th:text="${article.title}">如何策划一次高回报的PGC?</h4>
+                <p class="wentixinxi">
+                    <span>来源：维思迈财经</span><span class="wentishijian" th:text="${article.insertdate}">2022-05-11    01:02:03</span>
+                </p>
+            </div>
+            <div class="huida" th:utext="${article.articlecontent}">
+                如
+                EPR中文为生产者责任延伸，是一项欧盟的环境政策要求。主要是基于“污染者付费”原则，要求生产者必须在整个商品生命周期内降低其商品对环境产生的影响，对他们投放到市场的产品的整个生命周期负责。这里的生产者不完全指生产产品的工厂，还包含销售方，就是说谁把这个产品从欧盟的境外带到欧盟境内去卖，在这个定义里面也叫生产者。
+
+                并且EPR并不是单一电商平台的政策，而让电商平台执行主要是为了让政策执行落地。所以平台方包括亚马逊、速卖通、乐天等，都跟欧盟有合约，去确保在欧盟境内销售产品都是合规的。
+
+                另外特别要提到的是EPR是欧盟的一个环保要求，但欧盟并非制定统一具体的操作细节，由各国自行规定具体的回收要求。故不同欧盟国家注册EPR号是无法共用的。目前除了德国和法国之外，西班牙、意大利、英国等国家也将陆续推出相应的EPR政策。
+
+                由于不同欧盟国家注册EPR号是无法共用的，所以对于卖家来说，只要产品有被哪几个国家的买家购买的话，就需要为EPR进行注册申报。注册的目的是，在欧盟的这个系统里面有公司主体的资料，在溯源追查的时候就查得到。申报就是针对销量，假设销售了5吨的产品，未来理应会产生相应的回收物，那利用申报的数据，可以给到当地的回收公司，最后方便二次生产利用，产生另外的经济价值。报的
+                如何策划一次高回报的如何策划一次高回报的如何策划一次高回报的如何策划一次高回报的 如何策划一次高回报的如何策划一次高回报的如何策划一次高回报的如何策划一次高回报的
+                如何策划一次高回报的如何策划一次高回报的如何策划一次高回报的如何策划一次高回报的
+            </div>
+            <p class="biaoqian">
+                <span th:each="keysobj,keysobjstat : ${keys}" th:if="${keysobj.length()>1}">
+                    <a th:text="${keysobj}"></a>
+                </span>
+            </p>
+            <!--长条信用卡20221123-->
+            
+           	<div class="yqh_ad adhx">
+                <!--<img src="https://www.openvsm.com/pc/images/ppdpc.jpg?2222" />-->
+                <a href="https://www.xiaolu.io/"><img src="https://www.openvsm.com/pc/images/详情页图1_1029_300.jpg" /></a>
+                <!--<div class="zujian"><span class="tip_360">广告</span><span class="yiwen_360">?</span><span class="close_hx">x</span></div>-->
+                <!--<div class="des_yiwen"><p>风险提示：广告信息均来自平台方，不代表平台安全性，不构成建议！贷款利率、年化收益率、期限、额度、生效时间等数据仅供参考，实际数据以平台方为准。红包、体验金、理财金、大礼包、加息券、满减券、优惠券等都不直接等同于现金。参考收益说明不是收益承诺，不代表最终真实收益。理财有风险，投资需谨慎！</p><span class="close_yiwen">x</span></div>-->
+            </div>
+            <!--长条信用卡-->
+
+            <p class="shengming">
+                【声明】维思迈倡导尊重与保护知识产权。未经许可，任何人不得复制、转载、或以其他方式使用本网站的内容。
+            </p>
+            <div class="typezixun">
+                <h4><a href="javascript:void(0);">相关阅读</a></h4>
+                
+               
+               
+
+                <ul class="cl">
+                    <li th:each="recommendobj,recommendstat:${recommend}" th:if="${recommendstat.count}<=2">
+                        <a th:href="@{${#httpServletRequest.getContextPath()}+'/'+${recommendobj.columnurlname2}+'/article/'+${recommendobj.id}+'.html'}">
+                            <img th:src="@{${#httpServletRequest.getContextPath()}+'/image/zx'+${recommendstat.count}+'.jpg'}" />
+                            <div class="zixunxiangqing">
+                                <h3 th:text="${#strings.abbreviate(recommendobj.title,25)}">2央行：保持人民币汇率在合理...</h3>
+                                <p th:utext="${#strings.abbreviate(recommendobj.articlecontent,70).replace('<br>','')}">
+                                    2022年1月24日，易观分析发布《2022年企业数字化技术应用10大趋势伴随日前《“十四五”数字经济发展规划》印发...
+                                </p>
+                                <span><s th:text="${recommendobj.keywords}"></s></span><b th:text="${recommendobj.insertdate}">刚刚</b>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="rightpart">
+            <div class="mokuai top5">
+                
+                <!--两个在一起-->
+                <h4><a href="javascript:void(0);">为你推荐</a></h4>
+                <!--单独36020221123-->
+                
+                <div class="ad_360">
+                    <!--<img src="https://www.openvsm.com/image/360.jpg?1" /></a>-->
+                	<a href="https://www.xiaolu.io/"><img src="https://www.openvsm.com/pc/images/详情页图2  300_386.jpg" /></a>
+                    <!--<img src="https://www.openvsm.com/pc/images/pcright.jpg?202211" /></a>-->
+                    <!--<div class="zujian"><span class="tip_360">广告</span><span class="yiwen_360">?</span><span class="close_360">x</span></div>-->
+                    <!--<div class="des_yiwen"><p>风险提示：广告信息均来自平台方，不代表平台安全性，不构成建议！贷款利率、年化收益率、期限、额度、生效时间等数据仅供参考，实际数据以平台方为准。红包、体验金、理财金、大礼包、加息券、满减券、优惠券等都不直接等同于现金。参考收益说明不是收益承诺，不代表最终真实收益。理财有风险，投资需谨慎！</p><span class="close_yiwen">x</span></div>-->
+                </div>
+                <!--单独360-->
+                <ul>
+                    <li th:each="recommendobj,recommendstat:${recommend}"
+                        th:if="${recommendstat.count}>=3 and ${recommendstat.count}<8">
+                        <a th:href="@{${#httpServletRequest.getContextPath()}+'/'+${recommendobj.columnurlname2}+'/article/'+${recommendobj.id}+'.html'}">
+                            <div class="topimg">
+                                <img th:src="@{${#httpServletRequest.getContextPath()}+'/image/'+${recommendstat.count}+'.jpg'}" />
+                            </div>
+                            <div class="topzixun">
+                                <p th:text="${#strings.abbreviate(recommendobj.title,18)}">
+                                    要保持货币信贷和社会融资规模稳...
+                                </p><span th:text="${recommendobj.insertdate}">5分钟前</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <!--gg20221123-->
+                
+                
+            
+            <div class="mokuai zuixin">
+                <h4><a href="javascript:void(0);">最新文章</a></h4>
+                <ul>
+                    <li th:each="recommendobj,recommendstat:${recommend}"
+                        th:if="${recommendstat.count}>=8 and ${recommendstat.count}<13"><a
+                            th:href="@{${#httpServletRequest.getContextPath()}+'/'+${recommendobj.columnurlname2}+'/article/'+${recommendobj.id}+'.html'}">
+                        <p th:text="${#strings.abbreviate(recommendobj.title,18)}">要保持货币信贷和社会融资规模稳...</p>
+                        <span th:text="${recommendobj.insertdate}">5分钟前</span></a></li>
+                </ul>
+            </div>
+            
+        </div>
+    </div>
+</div>
+<div class="copyright">
+
+    <div class="center">
+        <h5 class="bqlianxi">
+            <span>维思迈财经网为您提供关于"</span><span th:text="${article.title}" class="gl">财经</span><span>"的资讯</span></h5>
+        <!--<p class="bqlianxi">
+            <a href="/aboutus.html">关于我们</a> | <a href="/aboutus.html#shangwuqiatan">商务洽谈</a> | <a href="/aboutus.html#neironghezuo">内容合作</a> | 电话0351-7020802 | 邮箱66212664@qq.com
+        </p>-->
+        <p class="information">
+            <a href="https://beian.miit.gov.cn/#/Integrated/index">
+                版权所有： 沈阳维思迈科技有限公司 Copyright©2022 www.openvsm.com All Rights
+                Reserved. 京ICP备15008691号-17
+                <img th:src="@{${#httpServletRequest.getContextPath()}+'/pc/images/kx.png'}" />
+            </a>
+           <!-- <a href="javascript:void(0);"> 违法和不良信息举报电话：0351-7020802</a>-->
+        </p>
+    </div>
+</div>
+<script type="text/javascript" th:src="@{${#httpServletRequest.getContextPath()}+'/pc/js/index.js'}"></script>
+<script type="text/javascript">
+    $(".close_yqh").click(function () {
+        $(".ad360dk").css("display", "none");
+    });
+    $(".close_hx").click(function () {
+        $(".adhx").css("display", "none");
+    });
+    $(".close_360").click(function () {
+        $(".ad_360").css("display", "none");
+    });
+    $(".close_ad360").click(function () {
+        $(".ad360").css("display", "none");
+    });
+    $(".yiwen_360").click(function () {
+        $(".des_yiwen").css("display", "block");
+    });
+    $(".close_yiwen").click(function () {
+        $(".des_yiwen").css("display", "none");
+    });
+</script>
+</body>
+</html>

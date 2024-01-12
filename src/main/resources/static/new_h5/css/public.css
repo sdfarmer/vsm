@@ -1,0 +1,44 @@
+
+body {
+    background: #f7f7f7;
+    padding-bottom: 20px;
+    color: #0e0e0e;
+}
+
+a {
+    text-decoration: none;
+    color: #0e0e0e;
+}
+.copyright {
+    padding: 20px 0;
+}
+
+    .copyright p {
+        width: 94%;
+        margin: 0 auto;
+        font-size: 12px;
+        text-align: center;
+        color: #8e8e8e;
+        line-height: 22px;
+        margin-bottom: 5px;
+    }
+
+    .copyright img {
+        display: block;
+        margin: 0 auto;
+        width: 26%;
+        margin-top: 5px;
+    }
+
+.back {
+    position: fixed;
+    right: 2%;
+    bottom: 12%;
+    z-index: 88;
+}
+
+    .back img {
+        width: 34px;
+        display: block;
+        margin: 0 auto;
+    }

@@ -1,0 +1,7 @@
+User-agent:Baiduspider
+
+Disallow:h5/js/
+
+User-agent:*
+
+Disallow:h5/js/

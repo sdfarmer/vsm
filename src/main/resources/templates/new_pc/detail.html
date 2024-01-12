@@ -1,0 +1,191 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>维思迈财经-提供中立的理财投资知识服务</title>
+    <meta name="description" content='维思迈财经网提供中立的理财投资知识服务，汇集信用卡、基金、贷款、股票、保险等财经领域常识，助力您的财智人生！'/>
+    <meta name="keywords" content='维思迈财经，财经知识类网站，理财投资，如何投资'/>
+    <link th:href="@{${#httpServletRequest.getContextPath()}+'/new_pc/css/reset.css'}" rel="stylesheet"
+          type="text/css"/>
+    <script type="text/javascript"
+            th:src="@{${#httpServletRequest.getContextPath()}+'/new_pc/js/jquery-1.10.1.min.js'}"></script>
+    <link th:href="@{${#httpServletRequest.getContextPath()}+'/new_pc/css/public.css'}" rel="stylesheet"
+          type="text/css"/>
+    <link th:href="@{${#httpServletRequest.getContextPath()}+'/new_pc/css/detail.css'}" rel="stylesheet"
+          type="text/css"/>
+    <link th:href="@{${#httpServletRequest.getContextPath()}+'/new_pc/css/swiper.min.css'}" rel="stylesheet"
+          type="text/css">
+    <script type="text/javascript"
+            th:src="@{${#httpServletRequest.getContextPath()}+'/new_pc/js/swiper.min.js'}"></script>
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?dc514ac2d86a287446d54c8b1504b4b2";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</head>
+<body>
+<div class="nav">
+    <div class="center">
+        <ul>
+            <li><a href="index.html"><h2><img
+                    th:src="@{${#httpServletRequest.getContextPath()}+'/new_pc/images/logo.png'}" class="logo"/></h2>
+            </a></li>
+            <li><a href="/index.html">首页</a></li>
+            <li><a href="/ot/ot_xyk.html">信用卡</a></li>
+            <li><a href="/ot/ot_bx.html">保险</a></li>
+            <li><a href="/ot/ot_lc.html">理财</a></li>
+            <li><a href="/ot/ot_gp.html">股票</a></li>
+            <li><a href="/ot/ot_dk.html">贷款</a></li>
+            <li><a href="/wd.html">问答</a></li>
+            <li><a href="/aboutus.html">关于我们</a></li>
+
+        </ul>
+    </div>
+</div>
+<div class="detail">
+    <div class="center">
+        <p class="position"><span>当前位置：</span><span>首页</span> > <span>保险</span> > <span class="thisp" th:text="${content.name}">金盈年年养老年金保险</span>
+        </p>
+        <div class="buy">
+            <img th:src="@{${#httpServletRequest.getContextPath()}+'/bxcpimg/b'+${content.img}+'.jpg'}" class="curimg"/>
+            <div class="buyright">
+                <div class="main_information">
+                    <h1 th:text="${content.name}">金盈年年养老年金保险</h1>
+                    <ul class="main_informationlist">
+                        <li><p>投保年龄：</p>
+                            <p class="data" th:text="${content.age}">0-60岁</p></li>
+                        <li><p>投保期限：</p>
+                            <p class="data" th:text="${content.riqi}">10年、20年、30年</p></li>
+                        <li><p>保费：</p>
+                            <p><span>￥</span><span class="price" th:text="${content.money}">666.00</span></p></li>
+                    </ul>
+                    <div class="fuction">
+                        <a th:attr="href=${content.url}" class="insure">立即投保</a>
+                        <a th:attr="href=${content.url2}" class="consult">在线咨询</a>
+                        <img th:src="@{${#httpServletRequest.getContextPath()}+'/new_pc/images/gz.png'}" class="ljgz" />
+                    </div>
+                </div>
+                <div class="characteristic">
+                    <p>三大特色：</p>
+                    <ul>
+                        <li th:text="${content.t1}"></li>
+                        <li th:text="${content.t2}"></li>
+                        <li th:text="${content.t3}"></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="detaillist">
+    <div class="center">
+        <div class="listleft">
+
+            <div class="maindetail" th:utext="${content.content}">
+
+            </div>
+            <div class="claims_service">
+                <h2>理赔服务</h2>
+                <img th:src="@{${#httpServletRequest.getContextPath()}+'/new_pc/images/lp.jpg'}"/>
+                <ul class="claimslist">
+                    <li>
+                        <img th:src="@{${#httpServletRequest.getContextPath()}+'/new_pc/images/i1.png'}"/>
+                        <p>多种渠道</p>
+                        <span>线上、线下多渠道理赔，轻轻松松理赔</span>
+                    </li>
+                    <li>
+                        <img th:src="@{${#httpServletRequest.getContextPath()}+'/new_pc/images/i2.png'}"/>
+                        <p>自由选择</p>
+                        <span>自由选择理赔条件，人性化理赔</span>
+                    </li>
+                    <li>
+                        <img th:src="@{${#httpServletRequest.getContextPath()}+'/new_pc/images/i3.png'}"/>
+                        <p>材料简单</p>
+                        <span>理赔所需材料一目了然</span>
+                    </li>
+                    <li>
+                        <img th:src="@{${#httpServletRequest.getContextPath()}+'/new_pc/images/i4.png'}"/>
+                        <p>安心快捷</p>
+                        <span>24小时在线客服，打造“温馨、快捷”理赔服务</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="listright">
+            <div class="check">
+                <h3>相关测评</h3>
+                <ul class="checklist">
+                    <li th:each="recommendobj,recommendstat:${recommend}"><a th:href="@{${#httpServletRequest.getContextPath()}+'/'+${recommendobj.columnurlname2}+'/article/'+${recommendobj.id}+'.html'}"><span th:text="${#strings.abbreviate(recommendobj.title,18)}">购买医疗保险的三大理由</span></a></li>
+
+                </ul>
+            </div>
+            <div class="gongzhonghao">
+                <div class="follow">
+                    <img th:src="@{${#httpServletRequest.getContextPath()}+'/new_pc/images/gzh.jpg'}" />
+                    <h3>扫码获取1v1服务</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="goodness">
+    <div class="center">
+        <ul class="goodnesslist">
+            <li><p>正品保障</p><span>中国银保会监制</span></li>
+            <li><p>快捷投保</p><span>全方位快速投保</span></li>
+            <li><p>贴心服务</p><span>24小时客服在线</span></li>
+            <li><p>安全可靠</p><span>合法、安全、保密</span></li>
+            <li><p>品牌实力</p><span>大品牌值得信赖</span></li>
+        </ul>
+    </div>
+</div>
+<div class="copyright">
+    <div class="center">
+        <p class="bqlianxi">维思迈财经网提供中立的理财投资知识服务，汇集信用卡、基金、贷款、股票、保险等财经领域常识，用浅显的生活语言把专业金融知识变成您生活的一部分，助力您的财智人生！</p>
+        <!--<p class="bqlianxi"><a href="javascript:void(0);">关于我们</a> | <a href="javascript:void(0);">商务洽谈</a> | <a
+                href="javascript:void(0);">内容合作</a> | 电话0351-7020802 | 邮箱contact@openvsm.com </p>-->
+        <p class="information">
+            <a href="http://beian.miit.gov.cn/state/outPortal/loginPortal.action;jsessionid=b4ojmap5WXcjMNUhGdqvr97kMZymlITl_4rhbxCDVnUgF6Mv2nn5!1935156451">
+                版权所有： 维思迈财经
+                <img th:src="@{${#httpServletRequest.getContextPath()}+'/new_pc/images/kx.png'}"/>
+            </a>
+           <!-- <a href="javascript:void(0);"> 违法和不良信息举报电话：0351-7020802</a>-->
+        </p>
+    </div>
+</div>
+
+<script type="text/javascript" th:src="@{${#httpServletRequest.getContextPath()}+'/new_pc/js/index.js'}"></script>
+<script type="text/javascript">
+</script>
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        slidesPerView: 1,
+        paginationClickable: true,
+        spaceBetween: 30,
+        loop: true
+    });
+</script>
+<script type="text/javascript">
+    //产品详情切换
+    $(".detailnav li").click(function () {
+        $(this).addClass("cur").siblings().removeClass("cur");
+        $(".maindetail_change").eq($(this).index()).addClass("cur");
+        $(".maindetail_change").eq($(this).index()).siblings().removeClass("cur");
+    });
+    // $(".consult").click(function () {
+    //     $(".ljgz").fadeIn();
+    // });
+    // $(".ljgz").click(function () {
+    //     $(".ljgz").fadeOut();
+    // });
+</script>
+</body>
+</html>

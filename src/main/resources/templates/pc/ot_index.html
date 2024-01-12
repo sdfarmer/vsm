@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title th:text="${tdk.title}+'—维思迈财经'"></title>
+    <meta name="description" th:attr="content=${tdk.description}">
+    <meta name="keywords" th:attr="content=${tdk.keywords}">
+    <link th:href="@{${#httpServletRequest.getContextPath()}+'/pc/css/reset.css'}" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript"
+            th:src="@{${#httpServletRequest.getContextPath()}+'/pc/js/jquery-1.10.1.min.js'}"></script>
+    <link th:href="@{${#httpServletRequest.getContextPath()}+'/pc/css/index.css'}" type="text/css" rel="stylesheet"/>
+    <link th:href="@{${#httpServletRequest.getContextPath()}+'/pc/css/ot.css'}" rel="stylesheet" type="text/css"/>
+     <script>
+		var _hmt = _hmt || [];
+		(function() {
+		  var hm = document.createElement("script");
+		  hm.src = "https://hm.baidu.com/hm.js?dc514ac2d86a287446d54c8b1504b4b2";
+		  var s = document.getElementsByTagName("script")[0]; 
+		  s.parentNode.insertBefore(hm, s);
+		})();
+		</script>
+</head>
+<body>
+<div class="nav">
+    <div class="center">
+        <ul>
+            <li><a href="/index.html"><h1><img th:src="@{${#httpServletRequest.getContextPath()}+'/pc/images2/logo.png?2023'}"
+                                               class="logo"/></h1></a></li>
+            <li><a href="/index.html">首页</a></li>
+            <li><a href="/ot/ot_xyk.html">信用卡</a></li>
+            <li><a href="/ot/ot_bx.html">保险</a></li>
+            <li><a href="/ot/ot_lc.html">理财</a></li>
+            <li><a href="/ot/ot_gp.html">股票</a></li>
+            <li><a href="/ot/ot_dk.html">贷款</a></li>
+            <li><a href="/wd.html">问答</a></li>
+            <li><a href="/aboutus.html">关于我们</a></li>
+        </ul>
+    </div>
+</div>
+<div class="jrbanner">
+    <div class="center">
+        <img th:src="@{${#httpServletRequest.getContextPath()}+'/pc/images/'+${tdk.imageurl}}">
+    </div>
+</div>
+<div class="zixun">
+<!--    <div class="fixed-banner l">-->
+<!--        <a href="https://www.xiaolu.io/"><img th:src="@{${#httpServletRequest.getContextPath()} + '/pc/images/两侧悬浮-左450_900.jpg'}" /></a>-->
+<!--    </div>-->
+<!--    <div class="fixed-banner r">-->
+<!--        <a href="https://www.xiaolu.io/"><img th:src="@{${#httpServletRequest.getContextPath()} + '/pc/images/两侧悬浮-右450_900.jpg'}" /></a>-->
+<!--    </div>-->
+    <div class="center">
+        <div class="leftpart">
+            <div class="typezixun jrzixun">
+                <ul>
+                    <li th:each="recommendobj,recommendstat:${recommend}"
+                        th:if="${recommendstat.count}<=15">
+                        <a th:href="@{${#httpServletRequest.getContextPath()}+'/'+${recommendobj.columnurlname2}+'/article/'+${recommendobj.id}+'.html'}">
+                            <img th:src="@{${#httpServletRequest.getContextPath()}+'/image/zx'+${recommendstat.count}+'.jpg'}"/>
+                            <div class="zixunxiangqing">
+                                <h3 th:text="${#strings.abbreviate(recommendobj.title,25)}"></h3>
+                                <p th:utext="${#strings.abbreviate(recommendobj.articlecontent,70)}"></p>
+                                <!--                                <span><s>关键词1</s><s>关键词</s><s>关键词</s></span><b>刚刚</b>-->
+                                <span><s th:text="${recommendobj.keywords}"></s></span>
+                                <b th:text="${recommendobj.insertdate}">刚刚</b>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="rightpart">
+            <div class="mokuai remen">
+                <h4><a href="javascript:void(0);">热门知识</a></h4>
+                <ul>
+                    <li th:each="recommendobj,recommendstat:${recommend}"
+                        th:if="${recommendstat.count}>10 and ${recommendstat.count}<=16"><a
+                            th:href="@{${#httpServletRequest.getContextPath()}+'/'+${recommendobj.columnurlname2}+'/article/'+${recommendobj.id}+'.html'}">
+                        <p th:text="${#strings.abbreviate(recommendobj.title,20)}"></p></a></li>
+                </ul>
+            </div>
+            <div class="mokuai top5">
+                <h4><a href="javascript:void(0);">专业资讯</a></h4>
+                <ul>
+                    <li th:each="recommendobj,recommendstat:${recommend}"
+                        th:if="${recommendstat.count}>16 and ${recommendstat.count}<=22"><a
+                            th:href="@{${#httpServletRequest.getContextPath()}+'/'+${recommendobj.columnurlname2}+'/article/'+${recommendobj.id}+'.html'}">
+                        <div class="topimg"><img th:src="@{${#httpServletRequest.getContextPath()}+'/image/'+${recommendstat.count}+'.jpg'}"/></div>
+                        <div class="topzixun"><p th:text="${#strings.abbreviate(recommendobj.title,28)}"></p>
+                            <span th:text="${recommendobj.insertdate}">5分钟前</span></div>
+                    </a></li>
+                </ul>
+            </div>
+            <div class="mokuai jingxuan">
+                <h4><a href="javascript:void(0);">精选问答</a></h4>
+                <img th:src="@{${#httpServletRequest.getContextPath()}+'/pc/images/bx.jpg'}"/>
+                <ul>
+                    <li th:each="askobj,askstat:${ask}"
+                        th:if="${askstat.count}<6 "><a
+                            th:href="@{${#httpServletRequest.getContextPath()}+'/'+${askobj.columnurlname2}+'/ask/'+${askobj.id}+'.html'}"><span th:text="${askstat.count}"></span>
+                        <p th:text="${#strings.abbreviate(askobj.ask,20)}"></p></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="copyright">
+    <div class="center">
+        <p class="bqlianxi">维思迈财经网提供中立的理财投资知识服务，汇集信用卡、基金、贷款、股票、保险等财经领域常识，用浅显的生活语言把专业金融知识变成您生活的一部分，助力您的财智人生！</p>
+        <!--<p class="bqlianxi">
+            <a href="/aboutus.html">关于我们</a> | <a href="/aboutus.html#shangwuqiatan">商务洽谈</a> | <a href="/aboutus.html#neironghezuo">内容合作</a> | 电话0351-7020802 | 邮箱66212664@qq.com
+        </p>-->
+        <p class="information">
+            <a href="https://beian.miit.gov.cn/#/Integrated/index">
+                版权所有： 维思迈财经
+                <img th:src="@{${#httpServletRequest.getContextPath()}+'/pc/images/kx.png'}" />
+            </a>
+           <!-- <a href="javascript:void(0);"> 违法和不良信息举报电话：0351-7020802</a>-->
+
+        </p>
+<!--        <p class="information"> 友情链接：</p>-->
+<!--        <span th:each="link : ${friendly_link}" class="information">-->
+<!--            <a th:href="@{${link.link}}">[[${link.name}]]</a>-->
+<!--        </span>-->
+    </div>
+</div>
+<script type="text/javascript" th:src="@{${#httpServletRequest.getContextPath()}+'/pc/js/index.js'}"></script>
+</body>
+</html>

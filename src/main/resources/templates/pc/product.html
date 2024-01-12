@@ -1,0 +1,192 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title th:text="${article.title}+'—维思迈财经'">金融综合资讯</title>
+    <meta name="description" th:attr="content=${#strings.abbreviate(article.articlecontent,200)}">
+    <meta name="keywords" th:attr="content=${article.keywords}">
+    <link th:href="@{${#httpServletRequest.getContextPath()}+'/pc/css/reset.css'}" rel="stylesheet" type="text/css" />
+    <script type="text/javascript"
+            th:src="@{${#httpServletRequest.getContextPath()}+'/pc/js/jquery-1.10.1.min.js'}"></script>
+    <link th:href="@{${#httpServletRequest.getContextPath()}+'/pc/css/index.css'}" rel="stylesheet" type="text/css" />
+    <link th:href="@{${#httpServletRequest.getContextPath()}+'/pc/css/product.css?21'}" rel="stylesheet" type="text/css" />
+
+<!--    <link href="css/reset.css" rel="stylesheet" type="text/css" />-->
+<!--    <script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>-->
+<!--    <link href="css/index.css" rel="stylesheet" type="text/css" />-->
+<!--    <link href="css/product.css" rel="stylesheet" type="text/css" />-->
+
+
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?dc514ac2d86a287446d54c8b1504b4b2";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</head>
+<body>
+    <div class="nav">
+        <div class="center">
+            <ul>
+                <li>
+                    <a href="/">
+                        <h1>
+                            <img th:src="@{${#httpServletRequest.getContextPath()}+'/pc/images/logo.png?2023'}"
+                                 class="logo" />
+                        </h1>
+                    </a>
+                </li>
+                <li><a href="/">首页</a></li>
+                <li><a href="/ot/ot_xyk.html">信用卡</a></li>
+                <li><a href="/ot/ot_bx.html">保险</a></li>
+                <li><a href="/ot/ot_lc.html">理财</a></li>
+                <li><a href="/ot/ot_gp.html">股票</a></li>
+                <li><a href="/ot/ot_dk.html">贷款</a></li>
+                <li><a href="/wd.html">问答</a></li>
+                <li><a href="/aboutus.html">关于我们</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="zixun">
+<!--        <div class="fixed-banner l">-->
+<!--            <a href="https://www.xiaolu.io/"><img th:src="@{${#httpServletRequest.getContextPath()} + '/pc/images/两侧悬浮-左450_900.jpg'}" /></a>-->
+<!--        </div>-->
+<!--        <div class="fixed-banner r">-->
+<!--            <a href="https://www.xiaolu.io/"><img th:src="@{${#httpServletRequest.getContextPath()} + '/pc/images/两侧悬浮-右450_900.jpg'}" /></a>-->
+<!--        </div>-->
+        <div class="center">
+            <div class="leftpart">
+                <div class="weizhi">
+                    <span><a href="/">维思迈财经</a>></span><span>
+                        <a
+                           th:text="${article.columnshortname2}">理财</a>
+                    </span>><span>
+                        <a th:href="@{${#httpServletRequest.getContextPath()}+'/'+${article.columnurlname2}+'/article/'+${article.id}+'.html'}"
+                           th:text="${article.title}">资讯</a>
+                    </span>
+                </div>
+                <div class="wenti">
+                    <h4 th:text="${article.title}">去屑洗发水用了一年还是有头屑，产品不对还是方法不对？</h4>
+                    <section class="author">
+                        <div class="headbg"><img th:src="@{${#httpServletRequest.getContextPath()}+'/pc/pcimg/tx0.jpg'}" class="headimg" /><img th:src="@{${#httpServletRequest.getContextPath()}+'/pc/pcimg/vvip.png'}" class="vvip" /></div>
+
+                        <div class="author_des">
+                            <span class="author_name">大喜美妆</span>
+                            <span class="author_detail"><s class="author_signature">优质护肤领域博主</s>&nbsp;&nbsp;|&nbsp;&nbsp;<s class="author_position"></s><s class="author_time" th:text=${article.insertdate}>2023-09-06 10:00</s></span>
+                        </div>
+                    </section>
+                </div>
+                <div class="huida" th:utext="${article.articlecontent}">
+
+                </div>
+                <div class="biaoqian">
+                    <p class="all_ask">大家都在搜</p>
+                    <ul>
+                        <li th:each="commentobj,commentstat:${recommend}" th:if="${commentstat.count}>=0 and ${commentstat.count}<=3">
+                            <a th:href="@{${#httpServletRequest.getContextPath()}+'/article/product/'+${commentobj.id}+'.html'}" th:text="${commentobj.title}">分，花诉妍分，花诉妍专研去专研去屑还含有多种</a></li>
+                    </ul>
+                </div>
+                <div class="comment">
+                    <h4 style="font-weight:bold;">精彩评论</h4>
+                    <ul class="comlist">
+                        <li th:each="commentobj,commentstat:${comment}">
+                            <img class="com_headimg" th:src="@{${#httpServletRequest.getContextPath()}+'/headimg/tx'+${commentobj.userimg}+'.jpg'}">
+                            <div class="desbg">
+                                <span class="com_name" th:text="${commentobj.user}">边同民</span>
+                                <span class="com_time"><s th:text="${commentobj.insertdate}+'分钟前'">11分钟前</s><s th:text="${commentobj.city}">济南</s></span>
+                                <span class="com_inner" th:text="${commentobj.txt}">头头屑为我们带来了烦屑头屑为我们带来了烦为头屑为我们带来了烦我们头屑为我们带来了烦带来了烦恼。</span>
+                                <div class="feedback">
+                                    <span class="dianzan" th:text="${commentobj.num}">11</span>
+                                </div>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+
+
+            </div>
+            <div class="rightpart">
+                <div class="guess">
+                    <h5>相似商品</h5>
+                    <ul>
+                        <li>
+                            <div class="product product_top">
+                                <a href="https://www.openvsm.com/clickproduct/xfs">
+                                    <img src="https://www.openvsm.com/h5/images/tu/slt_trxhjhy.jpg" class="productimg2"/>
+                                    <div class="pro_detail">
+                                        <h4>【推荐】极赫弹润修护精华液官方旗舰店</h4>
+                                        <p class="price_buy"><span class="price">￥<b>169.00</b>元起</span><span class="buy">去看看</span></p>
+                                        <p class="channel"><span>淘宝</span>&nbsp;&nbsp;|&nbsp;&nbsp;<span>回购率99%</span></p>
+                                    </div>
+
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="product product_top">
+                                <a href="https://www.openvsm.com/clickproduct/jhtrxfjhy">
+                                    <img src="https://www.openvsm.com/h5/images/tu/slt_dwsyjzjhy.jpg" class="productimg2"/>
+                                    <div class="pro_detail">
+                                        <h4>【推荐】极赫多维塑颜紧致精华液官方旗舰店</h4>
+                                        <p class="price_buy"><span class="price">￥<b>489.00</b>元起</span><span class="buy">去看看</span></p>
+                                        <p class="channel"><span>淘宝</span>&nbsp;&nbsp;|&nbsp;&nbsp;<span>回购率99%</span></p>
+                                    </div>
+
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="product product_top">
+                                <a href="https://www.openvsm.com/clickproduct/jhdwsykzstmm">
+                                    <img src="https://www.openvsm.com/h5/images/tu/slt_dwsykzstmm.jpg" class="productimg2"/>
+                                    <div class="pro_detail">
+                                        <h4>【推荐】极赫多维塑颜抗皱霜态面膜官方旗舰店</h4>
+                                        <p class="price_buy"><span class="price">￥<b>389.00</b>元起</span><span class="buy">去看看</span></p>
+                                        <p class="channel"><span>淘宝</span>&nbsp;&nbsp;|&nbsp;&nbsp;<span>回购率99%</span></p>
+                                    </div>
+
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="guess hot">
+                    <h5>热门资讯</h5>
+                    <ul>
+                        <li th:each="commentobj,commentstat:${recommend}" th:if="${commentstat.count}>=4 and ${commentstat.count}<=7">
+                            <a th:href="@{${#httpServletRequest.getContextPath()}+'/article/product/'+${commentobj.id}+'.html'}" th:text="${commentobj.title}">到一款更好的去屑洗发水？本文将为您提供答案。我们将探讨不同洗发水</a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <div class="center">
+            <h5 class="bqlianxi">
+                <span>维思迈财经网为您提供关于"</span><span th:text="${article.title}" class="gl">财经</span><span>"的资讯</span>
+            </h5>
+            <p class="bqlianxi">
+                <a href="/aboutus.html">关于我们</a> | <a href="/aboutus.html#shangwuqiatan">商务洽谈</a> | <a href="/aboutus.html#neironghezuo">内容合作</a> | 电话0351-7020802 | 邮箱66212664@qq.com
+            </p>
+            <p class="information">
+                <a href="https://beian.miit.gov.cn/#/Integrated/index">
+                    版权所有： 维思迈财经
+                    <img th:src="@{${#httpServletRequest.getContextPath()}+'/pc/pcimg/kx.png'}" />
+                </a>
+                <a href="javascript:void(0);"> 违法和不良信息举报电话：0351-7020802</a>
+            </p>
+        </div>
+    </div>
+    <script type="text/javascript" th:src="@{${#httpServletRequest.getContextPath()}+'/pc/js/index.js'}"></script>
+    <script type="text/javascript">
+        var width = $(".comlist  li").width();
+        $(".desbg").width(width - 50);
+    </script>
+</body>
+</html>
