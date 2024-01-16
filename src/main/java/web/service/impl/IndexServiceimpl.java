@@ -40,40 +40,50 @@ public class IndexServiceimpl implements IndexService {
     }
 
     public List<Map<String, String>> getFriendlyLink() {
-        try {
-            // 创建 URL 对象
-            URL obj = new URL("http://43.132.234.70:8007/friendly_link/search");
-            // 打开连接
-            HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-            // 设置请求方法为 GET
-            con.setRequestMethod("GET");
-            // 获取响应代码
-            int responseCode = con.getResponseCode();
-            // 读取响应内容
-            BufferedReader in = new BufferedReader(new InputStreamReader(con.getInputStream()));
-            String inputLine;
-            StringBuilder response = new StringBuilder();
-            while ((inputLine = in.readLine()) != null) {
-                response.append(inputLine);
-            }
-            in.close();
-            String links = response.toString();
-            JSONObject parse1 = JSONObject.parseObject(links);
-            if (!parse1.getBoolean("ret")){
-                return null;
-            }
-            List<Map<String, String>> result = new ArrayList<>();
-            for (JSONObject data : parse1.getJSONArray("data").toJavaList(JSONObject.class)) {
-                Map<String, String> v = new HashMap<>();
-                v.put("name", data.getString("name"));
-                v.put("link", data.getString("link"));
-                result.add(v);
-            }
-            return result;
-        } catch (Exception e) {
-            System.out.println("获取友情链接异常, e:" + e);
+
+        List<FriendlyLink> friendlyLinks = indexDao.getFriendlyLink();
+        List<Map<String, String>> result = new ArrayList<>();
+        for (FriendlyLink friendlyLink:friendlyLinks) {
+            Map<String, String> v = new HashMap<>();
+            v.put("name",friendlyLink.getName());
+            v.put("link",  friendlyLink.getLink());
+            result.add(v);
         }
-        return null;
+        return result;
+//        try {
+//            // 创建 URL 对象
+//            URL obj = new URL("http://43.132.234.70:8007/friendly_link/search");
+//            // 打开连接
+//            HttpURLConnection con = (HttpURLConnection) obj.openConnection();
+//            // 设置请求方法为 GET
+//            con.setRequestMethod("GET");
+//            // 获取响应代码
+//            int responseCode = con.getResponseCode();
+//            // 读取响应内容
+//            BufferedReader in = new BufferedReader(new InputStreamReader(con.getInputStream()));
+//            String inputLine;
+//            StringBuilder response = new StringBuilder();
+//            while ((inputLine = in.readLine()) != null) {
+//                response.append(inputLine);
+//            }
+//            in.close();
+//            String links = response.toString();
+//            JSONObject parse1 = JSONObject.parseObject(links);
+//            if (!parse1.getBoolean("ret")){
+//                return null;
+//            }
+//            List<Map<String, String>> result = new ArrayList<>();
+//            for (JSONObject data : parse1.getJSONArray("data").toJavaList(JSONObject.class)) {
+//                Map<String, String> v = new HashMap<>();
+//                v.put("name", data.getString("name"));
+//                v.put("link", data.getString("link"));
+//                result.add(v);
+//            }
+//            return result;
+//        } catch (Exception e) {
+//            System.out.println("获取友情链接异常, e:" + e);
+//        }
+//        return null;
     }
 
     @Override
@@ -84,6 +94,11 @@ public class IndexServiceimpl implements IndexService {
     @Override
     public Channel findChannelByType(String ot_index) {
         return indexDao.findChannelByType(ot_index);
+    }
+
+    @Override
+    public List<Channel> findChannelLimit(int limit) {
+        return indexDao.findChannelLimit(limit);
     }
 
     @Override

@@ -16,6 +16,8 @@ public interface IndexService {
 
     Channel findChannelByType(String ot_index);
 
+    List<Channel> findChannelLimit(int limit);
+
     List<Ask> findAskByType(String ask, int i, int i1);
 
     List<Answer> findAnswerByAskId(Integer id);

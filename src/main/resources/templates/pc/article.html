@@ -28,11 +28,11 @@
             <li><a href="/"><h1><img th:src="@{${#httpServletRequest.getContextPath()}+'/pc/images2/logo.png?2023'}"
                                               class="logo"/></h1></a></li>
             <li><a href="/">首页</a></li>
-            <li><a href="/ot/ot_xyk.html">信用卡</a></li>
-            <li><a href="/ot/ot_bx.html">保险</a></li>
-            <li><a href="/ot/ot_lc.html">理财</a></li>
-            <li><a href="/ot/ot_gp.html">股票</a></li>
-            <li><a href="/ot/ot_dk.html">贷款</a></li>
+            <li th:each="channelobj:${channel}" >
+                <a th:href="@{${#httpServletRequest.getContextPath()}+'/ot/'+${channelobj.type}+'.html'}"
+                   th:text="${channelobj.name}">
+                </a>
+            </li>
             <li><a href="/wd.html">问答</a></li>
             <li><a href="/aboutus.html">关于我们</a></li>
         </ul>
@@ -180,10 +180,6 @@
             </a>
            <!-- <a href="javascript:void(0);"> 违法和不良信息举报电话：0351-7020802</a>-->
         </p>
-<!--        <p class="information"> 友情链接：</p>-->
-<!--        <span th:each="link : ${friendly_link}" class="information">-->
-<!--            <a th:href="@{${link.link}}">[[${link.name}]]</a>-->
-<!--        </span>-->
     </div>
 </div>
 <script type="text/javascript" th:src="@{${#httpServletRequest.getContextPath()}+'/pc/js/index.js'}"></script>

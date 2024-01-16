@@ -41,11 +41,11 @@
                     </a>
                 </li>
                 <li><a href="/">首页</a></li>
-                <li><a href="/ot/ot_xyk.html">信用卡</a></li>
-                <li><a href="/ot/ot_bx.html">保险</a></li>
-                <li><a href="/ot/ot_lc.html">理财</a></li>
-                <li><a href="/ot/ot_gp.html">股票</a></li>
-                <li><a href="/ot/ot_dk.html">贷款</a></li>
+                <li th:each="channelobj:${channel}" >
+                    <a th:href="@{${#httpServletRequest.getContextPath()}+'/ot/'+${channelobj.type}+'.html'}"
+                       th:text="${channelobj.name}">
+                    </a>
+                </li>
                 <li><a href="/wd.html">问答</a></li>
                 <li><a href="/aboutus.html">关于我们</a></li>
             </ul>

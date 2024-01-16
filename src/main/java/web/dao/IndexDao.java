@@ -19,6 +19,10 @@ public interface IndexDao {
 
     Channel findChannelByType(String ot_index);
 
+    List<Channel> findChannelLimit(int limit);
+
+    List<FriendlyLink> getFriendlyLink();
+
     List<Ask> findAskByType(HashMap<String, Object> map);
 
     List<Answer> findAnswerByAskId(Integer askid);

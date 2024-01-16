@@ -9,13 +9,11 @@ import lombok.experimental.Accessors;
 @AllArgsConstructor
 @NoArgsConstructor
 @Accessors(chain = true)
-public class Channel {
+public class FriendlyLink {
     private Integer id;
     private String name;
-    private String imageurl;
-    private String content;
-    private String type;
-    private String title;
-    private String description;
-    private String keywords;
+    private String link;
+    private Integer status;
+    private String created_at;
+    private String updated_at;
 }

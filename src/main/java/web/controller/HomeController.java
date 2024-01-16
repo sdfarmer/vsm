@@ -134,6 +134,7 @@ public class HomeController {
 
         try {
             String ua = request.getHeader("User-Agent");
+            map.addAttribute("channel",indexService.findChannelLimit(5));
             if (checkAgentIsMobile(ua)) {
                 //h5
                 log.info("进入h5");
@@ -144,8 +145,6 @@ public class HomeController {
 //                map.addAttribute("lybxp", indexService.findbxcpByType("lybx", 0, 4));
 //                map.addAttribute("ywbxp", indexService.findbxcpByType("ywbx", 0, 4));
 //                map.addAttribute("dkask", indexService.findAskByType("dk", 0, 5));
-
-
                 map.addAttribute("recommend", indexService.findArticleByType("recommend", 0, 45));
                 map.addAttribute("friendly_link", indexService.getFriendlyLink());
                 map.addAttribute("sy", indexService.findArticleByType("sy", 0, 5));
@@ -209,6 +208,7 @@ public class HomeController {
                            @PathVariable("ot_index") String ot_index) {
         ot_index = ot_index.replace("_index", "").replace(".html", "");
         log.info(ot_index);
+        map.addAttribute("channel",indexService.findChannelLimit(5));
         map.addAttribute("tdk", indexService.findChannelByType(ot_index));
         map.addAttribute("friendly_link", indexService.getFriendlyLink());
         map.addAttribute("recommend", indexService.findArticleByType(ot_index, 0, 30));
@@ -245,6 +245,7 @@ public class HomeController {
     public String wd(ModelMap map,
                      HttpServletResponse response,
                      HttpServletRequest request) {
+        map.addAttribute("channel",indexService.findChannelLimit(5));
         map.addAttribute("ask", indexService.findAskByType("hot2", 0, 22));
         map.addAttribute("recommend", indexService.findArticleByType("recommend", 0, 10));
         return "pc/wd.html";
@@ -257,7 +258,8 @@ public class HomeController {
      * @return
      */
     @RequestMapping(value = {"/aboutus", "/aboutus.html"}, method = RequestMethod.GET)
-    public String aboutus() {
+    public String aboutus(ModelMap map) {
+        map.addAttribute("channel",indexService.findChannelLimit(5));
         return "pc/aboutus.html";
     }
 
@@ -281,6 +283,7 @@ public class HomeController {
             log.error("没有对应的id" + id);
             return "pc/ask.html";
         }
+        map.addAttribute("channel",indexService.findChannelLimit(5));
         try {
             String ua = request.getHeader("User-Agent");
             if (checkAgentIsMobile(ua)) {
@@ -333,6 +336,7 @@ public class HomeController {
             if(!article.getColumnurlname2().equals("product")){
                 return "redirect:/";
             }
+            map.addAttribute("channel",indexService.findChannelLimit(5));
             try {
                 String ua = request.getHeader("User-Agent");
                 if (checkAgentIsMobile(ua)) {

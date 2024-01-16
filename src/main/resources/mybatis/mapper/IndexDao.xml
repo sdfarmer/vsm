@@ -48,6 +48,11 @@
         where type = #{type}
     </select>
 
+    <select id="findChannelLimit" resultType="web.model.Channel">
+        select *
+        from channel where status = 1 limit #{limit}
+    </select>
+
     <select id="findAskByType" resultType="web.model.Ask">
         select *
         from ask
@@ -120,6 +125,10 @@
             </if>
         </where>
 
+    </select>
+    <select id="getFriendlyLink" resultType="web.model.FriendlyLink">
+        select *
+        from friendly_link where status = 1
     </select>
 
 </mapper>
