@@ -372,6 +372,7 @@ public class HomeController {
         Article article = indexService.findArticleById(id);
         try {
             String ua = request.getHeader("User-Agent");
+            map.addAttribute("channel",indexService.findChannelLimit(5));
             if (checkAgentIsMobile(ua)) {
                 //h5
                 log.info("进入h5");
