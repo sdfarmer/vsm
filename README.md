@@ -22,4 +22,5 @@ src/main/java/VsmApplication.java
 
 部署方式: nohup java -jar /data/apps/VSM_NEW/target/vsm_new.jar 2>&1 &
 
-
+### chatgpt生成文章和上传文章的脚本
+/data/apps/article_sidecar
